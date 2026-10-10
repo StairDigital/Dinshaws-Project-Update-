@@ -1,1 +1,1239 @@
 
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dinshaw’s, Step by Step · STAIR Digital</title>
+<meta name="description" content="STAIR Digital’s advisory journey with Dinshaw’s, September 2025 to October 2026. Prepared for the Board of Dinshaw’s.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B1F33'/%3E%3Cpath d='M5 25h6v-5h6v-5h6v-5h4' fill='none' stroke='%238C6D3F' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<script>
+  /* Progressive enhancement: hide reveal targets only when motion is allowed,
+     and give them back after 3s if the animation libraries never arrive. */
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      d.classList.add('motion');
+      window.__motionFallback = setTimeout(function () { d.classList.remove('motion'); }, 3000);
+    }
+  })();
+</script>
+<style>
+  :root {
+    --paper: #FFFFFF;
+    --alt: #F6F7F9;
+    --ink: #0B1F33;
+    --body: #1F2933;
+    --muted: #5B6670;
+    --rule: #D9DEE3;
+    --accent: #8C6D3F;
+    --done-fg: #2F6B4F;  --done-bg: #E8F1EC;
+    --prog-fg: #0B1F33;  --prog-bg: #E6EAF0;
+    --open-fg: #8A6A1F;  --open-bg: #F5EFE2;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: rgba(255, 255, 255, 0.74);
+    --on-navy-rule: rgba(255, 255, 255, 0.18);
+
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    --mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
+
+    --nav-h: 56px;
+    --maxw: 1200px;
+    --gutter: 40px;
+    --sec-pad: 120px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: var(--nav-h); }
+  @media (prefers-reduced-motion: no-preference) { html:not(.lenis) { scroll-behavior: smooth; } }
+  html.lenis, html.lenis body { height: auto; }
+  .lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--body);
+    font-family: var(--sans);
+    font-size: 18px;
+    line-height: 1.6;
+    font-variant-numeric: tabular-nums;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; color: var(--ink); margin: 0; line-height: 1.15; letter-spacing: -0.01em; }
+  p { margin: 0; }
+  ol, ul { margin: 0; padding: 0; list-style: none; }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+  .num { font-variant-numeric: tabular-nums lining-nums; }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .hero :focus-visible, .site-footer :focus-visible { outline-color: #FFFFFF; }
+
+  .sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .skip { position: absolute; left: 16px; top: -48px; z-index: 100; background: var(--ink); color: #fff; padding: 8px 14px; font-family: var(--mono); font-size: 13px; text-decoration: none; }
+  .skip:focus { top: 8px; }
+
+  .label {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  .mono { font-family: var(--mono); font-size: 13px; letter-spacing: 0.02em; }
+
+  /* ---------- Reading progress + navigation ---------- */
+  .progress { position: fixed; inset: 0 0 auto 0; height: 2px; z-index: 60; pointer-events: none; }
+  .progress span { display: block; height: 100%; background: var(--accent); transform-origin: 0 50%; transform: scaleX(0); }
+
+  .site-nav {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    height: var(--nav-h);
+  }
+  .site-nav .inner {
+    max-width: calc(var(--maxw) + 2 * var(--gutter));
+    margin: 0 auto; padding: 0 var(--gutter);
+    height: 100%;
+    display: flex; align-items: center; gap: 28px;
+  }
+  .brand { display: flex; align-items: center; text-decoration: none; flex: none; }
+  .brand img { display: block; height: 32px; width: auto; }
+  .nav-links {
+    display: flex; gap: 2px; flex: 1 1 auto; min-width: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a {
+    position: relative;
+    display: block; padding: 6px 10px;
+    font-size: 15px; color: var(--muted); text-decoration: none; white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a[aria-current="true"] { color: var(--ink); }
+  .nav-links a[aria-current="true"]::after {
+    content: ""; position: absolute; left: 10px; right: 10px; bottom: -11px; height: 2px; background: var(--accent);
+  }
+  .nav-tools { display: flex; gap: 4px; flex: none; }
+  .tool {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: none; border: 1px solid transparent; border-radius: 2px;
+    padding: 5px 8px; cursor: pointer;
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+  }
+  .tool:hover { color: var(--ink); border-color: var(--rule); }
+  .tool svg { width: 16px; height: 16px; stroke-width: 1.5; }
+
+  .counter {
+    position: fixed; right: 20px; bottom: 18px; z-index: 40;
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 2px;
+    padding: 4px 10px;
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--ink);
+  }
+  .counter .sep { color: var(--muted); padding: 0 2px; }
+
+  /* ---------- Section shell ---------- */
+  .wrap { max-width: calc(var(--maxw) + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter); }
+  .section { padding: var(--sec-pad) 0; border-top: 1px solid var(--rule); }
+  .section.tint { background: var(--alt); }
+  .grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; }
+  .sec-label { grid-column: 1 / span 3; }
+  .sec-label .label { color: var(--accent); position: sticky; top: calc(var(--nav-h) + 32px); display: block; padding-top: 14px; }
+  .sec-body { grid-column: 4 / span 9; min-width: 0; }
+  .sec-full { grid-column: 1 / -1; min-width: 0; }
+  .sec-title { font-size: clamp(32px, 3.4vw, 46px); max-width: 22ch; text-wrap: balance; }
+  h1, h3 { text-wrap: balance; }
+  .intro { margin-top: 20px; max-width: 68ch; font-size: 19px; color: var(--body); }
+  .block { margin-top: 56px; }
+  .sub-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+  .sub-head h3 { font-size: 26px; }
+
+  /* ---------- Opening ---------- */
+  .hero { background: var(--ink); color: var(--on-navy); padding: 104px 0 96px; }
+  .hero .label { color: var(--on-navy-muted); }
+  .hero h1 { color: #fff; font-size: clamp(44px, 5.6vw, 80px); margin-top: 20px; letter-spacing: -0.015em; }
+  .hero .sub { margin-top: 24px; max-width: 64ch; font-size: 20px; line-height: 1.55; color: var(--on-navy-muted); }
+
+  .stair { position: relative; height: 260px; margin-top: 64px; }
+  .stair svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .stair .line { stroke: var(--accent); }
+  .stair ol { position: absolute; inset: 0; }
+  .stair li { position: absolute; width: 20%; padding-right: 12px; }
+  .stair li:nth-child(1) { left: 0;   top: 212px; }
+  .stair li:nth-child(2) { left: 20%; top: 176px; }
+  .stair li:nth-child(3) { left: 40%; top: 140px; }
+  .stair li:nth-child(4) { left: 60%; top: 104px; }
+  .stair li:nth-child(5) { left: 80%; top: 68px; }
+  .stair li:not(:first-child) { padding-left: 14px; }
+  .stair .ph { display: block; font-family: var(--serif); font-weight: 600; font-size: 19px; color: #fff; line-height: 1.25; }
+  .stair .dt { display: block; margin-top: 2px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--on-navy-muted); text-transform: uppercase; }
+
+  .keys { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 72px; border-top: 1px solid var(--on-navy-rule); }
+  .keys li { padding: 24px 20px 0 20px; border-left: 1px solid var(--on-navy-rule); }
+  .keys li:first-child { border-left: 0; padding-left: 0; }
+  .keys b { display: block; font-family: var(--serif); font-weight: 600; font-size: clamp(40px, 4vw, 58px); line-height: 1; color: #fff; }
+  .keys span { display: block; margin-top: 12px; font-size: 16px; line-height: 1.45; color: var(--on-navy-muted); }
+
+  /* ---------- 01 Where it started ---------- */
+  .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .panel { background: var(--paper); border: 1px solid var(--rule); padding: 32px; }
+  .panel .label { color: var(--accent); }
+  .panel h3 { font-size: 23px; }
+  .panel p { margin-top: 14px; }
+  .agenda { margin-top: 18px; counter-reset: ag; }
+  .agenda li { counter-increment: ag; display: grid; grid-template-columns: 40px 1fr; padding: 11px 0; border-top: 1px solid var(--rule); }
+  .agenda li::before { content: counter(ag, decimal-leading-zero); font-family: var(--mono); font-size: 13px; color: var(--accent); padding-top: 3px; }
+
+  /* ---------- 02 Journey ---------- */
+  .phases { position: relative; margin-top: 64px; padding-left: 48px; }
+  .track { position: absolute; left: 7px; top: 10px; bottom: 0; width: 1px; background: var(--rule); }
+  .track span { position: absolute; inset: 0; background: var(--accent); transform-origin: 50% 0; }
+  .phase { position: relative; padding-bottom: 72px; }
+  .phase:last-child { padding-bottom: 0; }
+  .marker {
+    position: absolute; left: -48px; top: 6px;
+    width: 15px; height: 15px; border-radius: 50%;
+    background: var(--accent); border: 1px solid var(--accent);
+    transition: background-color .3s ease;
+  }
+  .motion .marker { background: var(--paper); }
+  .motion .phase.is-reached .marker { background: var(--accent); }
+  .phase .label { color: var(--accent); }
+  .phase h3 { font-size: 34px; margin-top: 6px; }
+  .phase .theme { margin-top: 10px; max-width: 62ch; font-size: 19px; }
+  .ms { margin-top: 26px; border-bottom: 1px solid var(--rule); }
+  .ms li { display: grid; grid-template-columns: 168px 1fr; gap: 16px; padding: 11px 12px; border-top: 1px solid var(--rule); transition: background-color .15s ease; }
+  .ms li:hover, .rows tr:hover, .lib li:hover { background: var(--alt); }
+  .ms time { font-family: var(--mono); font-size: 13px; color: var(--muted); padding-top: 3px; letter-spacing: 0.02em; }
+  .decision { margin-top: 22px; padding: 18px 22px; background: var(--alt); border-left: 2px solid var(--accent); }
+  .decision .label { color: var(--accent); display: block; margin-bottom: 6px; }
+  .decision p { color: var(--ink); max-width: 68ch; }
+
+  /* ---------- 03 Results ---------- */
+  .results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 56px; }
+  .result { background: var(--paper); border: 1px solid var(--rule); padding: 28px 26px 24px; display: flex; flex-direction: column; min-width: 0; }
+  .result .fig { font-family: var(--serif); font-weight: 600; font-size: clamp(36px, 3.4vw, 46px); line-height: 1; color: var(--ink); white-space: nowrap; }
+  .result p { margin-top: 14px; font-size: 17px; line-height: 1.5; }
+  .result .src { margin-top: auto; padding-top: 18px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.02em; color: var(--muted); }
+  .chart { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .chart .cap { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .chart .canvas-box { position: relative; height: 76px; display: none; }
+  .chart.has-chart .canvas-box { display: block; }
+  .chart.has-chart .fallback { display: none; }
+  .fallback li { display: grid; grid-template-columns: 52px 1fr; align-items: center; gap: 8px; height: 30px; }
+  .fallback .k { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .fallback .b { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--ink); white-space: nowrap; }
+  .fallback .b i { display: block; height: 16px; width: var(--w); background: var(--ink); }
+  .fallback .b i.prev { background: var(--rule); }
+
+  /* ---------- 04 Leadership ---------- */
+  .roles { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 56px; }
+  .role { background: var(--paper); border: 1px solid var(--rule); padding: 24px 26px; display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; align-items: start; }
+  .role h3 { font-size: 21px; }
+  .role .who { grid-column: 1 / -1; font-size: 17px; color: var(--body); }
+  .role .who.note { color: var(--muted); }
+  .role .when { grid-column: 1 / -1; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--muted); }
+  .pill { display: inline-block; padding: 3px 9px; border-radius: 2px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; line-height: 1.5; }
+  .pill.done { color: var(--done-fg); background: var(--done-bg); }
+  .pill.prog { color: var(--prog-fg); background: var(--prog-bg); }
+  .pill.open { color: var(--open-fg); background: var(--open-bg); }
+
+  .process { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); margin-top: 8px; }
+  .process li { position: relative; padding: 30px 14px 0 0; }
+  .process li::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 1px; background: var(--rule); }
+  .process li:last-child::before { right: auto; width: 15px; }
+  .process li::after { content: ""; position: absolute; left: 0; top: 0; width: 15px; height: 15px; border-radius: 50%; background: var(--paper); border: 1px solid var(--accent); }
+  .process .n { display: block; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--accent); }
+  .process .t { display: block; margin-top: 4px; font-size: 16px; line-height: 1.4; color: var(--ink); }
+
+  /* ---------- Filters ---------- */
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 40px 0 14px; }
+  .filters button {
+    display: inline-flex; align-items: baseline; gap: 8px;
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 2px;
+    padding: 7px 12px; cursor: pointer; font-size: 15px; color: var(--body);
+  }
+  .filters button:hover { border-color: var(--muted); }
+  .filters button .c { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .filters button[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: #fff; }
+  .filters button[aria-pressed="true"] .c { color: rgba(255,255,255,.75); }
+  .status-line { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--muted); }
+
+  /* ---------- 05 Decisions ---------- */
+  .register { background: var(--paper); border: 1px solid var(--rule); }
+  .rows { width: 100%; border-collapse: collapse; }
+  .rows th { text-align: left; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 12px 16px; border-bottom: 1px solid var(--rule); }
+  .rows td { padding: 14px 16px; border-top: 1px solid var(--rule); vertical-align: top; }
+  .rows tbody tr:first-child td { border-top: 0; }
+  .rows tr { transition: background-color .15s ease; }
+  .rows .d { width: 128px; font-family: var(--mono); font-size: 13px; color: var(--muted); white-space: nowrap; padding-top: 17px; }
+  .rows .what { color: var(--ink); }
+  .rows .by { display: block; margin-top: 3px; font-size: 14px; color: var(--muted); }
+  .rows .ws { width: 190px; text-align: right; }
+  .tag { display: inline-block; padding: 2px 8px; border: 1px solid var(--rule); border-radius: 2px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+
+  /* ---------- 06 Value ---------- */
+  .values { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 56px; }
+  .value { background: var(--paper); border: 1px solid var(--rule); padding: 24px 26px; }
+  .value .top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .value h3 { font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--ink); letter-spacing: 0; line-height: 1.4; }
+  .value time { flex: none; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--muted); }
+  .value .out { margin-top: 14px; font-family: var(--serif); font-weight: 600; font-size: 25px; line-height: 1.25; color: var(--accent); }
+  .value p { margin-top: 8px; font-size: 16px; line-height: 1.5; color: var(--body); }
+
+  /* ---------- 07 Research ---------- */
+  .research { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 56px; }
+  .rcard { background: var(--paper); border: 1px solid var(--rule); padding: 24px; min-width: 0; }
+  .rcard .label { color: var(--accent); font-size: 12px; line-height: 1.5; margin: 0; }
+  .rcard h3 { font-size: 21px; margin-top: 8px; }
+  .rcard p { margin-top: 10px; font-size: 16px; line-height: 1.5; }
+  .rcard.wide { grid-column: span 2; grid-row: span 2; padding: 32px; display: flex; flex-direction: column; }
+  .rcard.wide h3 { font-size: 30px; max-width: 18ch; }
+  .rstats { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 0 36px; margin-top: 24px; }
+  .rstats b { display: block; font-family: var(--serif); font-weight: 600; font-size: 40px; line-height: 1; color: var(--ink); }
+  .rstats span { display: block; margin-top: 6px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .rcard.wide .desc { margin-top: 22px; font-size: 17px; }
+  .ideas { margin-top: auto; padding-top: 22px; }
+  .ideas .label { color: var(--muted); display: block; margin-bottom: 6px; }
+  .ideas ul { display: grid; grid-template-columns: 1fr 1fr; }
+  .ideas li { padding: 9px 12px 9px 0; border-top: 1px solid var(--rule); font-size: 16px; color: var(--ink); }
+
+  .library { margin-top: 64px; }
+  .lib-box { background: var(--paper); border: 1px solid var(--rule); padding: 8px 24px; }
+  .lib { columns: 2; column-gap: 40px; }
+  .lib li { break-inside: avoid; display: grid; grid-template-columns: 84px 1fr; gap: 12px; padding: 10px 8px; border-bottom: 1px solid var(--rule); transition: background-color .15s ease; }
+  .lib time { font-family: var(--mono); font-size: 12px; color: var(--muted); padding-top: 3px; white-space: nowrap; }
+  .lib .nm { font-size: 16px; line-height: 1.45; color: var(--ink); }
+  .lib .cat { display: block; margin-top: 2px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+  /* ---------- 08 Next ---------- */
+  .next { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); margin-top: 64px; }
+  .next li { position: relative; padding: 32px 18px 0 0; }
+  .next li::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 1px; background: var(--accent); }
+  .next li:last-child::before { right: auto; width: 15px; }
+  .next li::after { content: ""; position: absolute; left: 0; top: 0; width: 15px; height: 15px; border-radius: 50%; background: var(--paper); border: 1px solid var(--accent); }
+  .next time { display: block; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--accent); }
+  .next h3 { margin-top: 8px; font-family: var(--sans); font-weight: 600; font-size: 17px; line-height: 1.3; color: var(--ink); letter-spacing: 0; }
+  .next p { margin-top: 6px; font-size: 15px; line-height: 1.45; color: var(--body); }
+
+  /* ---------- Footer ---------- */
+  .site-footer { background: var(--ink); color: var(--on-navy-muted); padding: 56px 0; font-size: 15px; }
+  .site-footer .grid { row-gap: 16px; }
+  .site-footer .l { grid-column: 1 / span 6; }
+  .site-footer .r { grid-column: 7 / span 6; text-align: right; }
+  .site-footer b { font-family: var(--serif); font-weight: 600; color: #fff; font-size: 17px; }
+
+  /* ---------- Reveal (only when animation is live) ---------- */
+  .motion .hero [data-hero] { opacity: 0; }
+  .motion [data-reveal] { opacity: 0; transform: translateY(12px); }
+
+  /* ---------- Responsive ---------- */
+  @media (min-width: 1800px) {
+    .hero { padding: 120px 0 112px; }
+  }
+  @media (max-width: 1180px) {
+    .tool .t { display: none; }
+    .next { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 40px; }
+    .next li:nth-child(4)::before { right: auto; width: 15px; }
+  }
+  @media (max-width: 1023px) {
+    :root { --gutter: 32px; }
+    .results { grid-template-columns: 1fr 1fr; }
+    .research { grid-template-columns: 1fr 1fr; }
+    .rcard.wide { grid-row: auto; }
+    .keys { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 28px; }
+    .keys li:nth-child(4) { border-left: 0; padding-left: 0; }
+    .process { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 28px; }
+    .process li:nth-child(3)::before { right: auto; width: 15px; }
+    .nav-tools { display: none; }
+  }
+  @media (max-width: 860px) {
+    :root { --sec-pad: 72px; --gutter: 20px; }
+    .grid { grid-template-columns: minmax(0, 1fr); }
+    .sec-label, .sec-body, .sec-full { grid-column: 1 / -1; }
+    .sec-label .label { position: static; padding-top: 0; margin-bottom: 14px; }
+    .site-nav .inner { gap: 16px; }
+    .brand img { height: 26px; }
+    .panels, .roles, .values { grid-template-columns: minmax(0, 1fr); }
+    .lib { columns: 1; }
+    .rows thead { display: none; }
+    .rows, .rows tbody, .rows tr, .rows td { display: block; width: auto; }
+    .rows tr { padding: 14px 16px; border-top: 1px solid var(--rule); }
+    .rows tbody tr:first-child { border-top: 0; }
+    .rows td { padding: 0; border: 0; }
+    .rows .d { display: inline-block; padding: 0; }
+    .rows .ws { display: inline-block; float: right; text-align: right; }
+    .rows .what { clear: both; padding-top: 6px; }
+    .next { grid-template-columns: minmax(0, 1fr); row-gap: 0; padding-left: 0; }
+    .next li { padding: 0 0 28px 36px; }
+    .next li::before, .next li:nth-child(4)::before { left: 7px; right: auto; top: 0; bottom: 0; width: 1px; height: auto; }
+    .next li:last-child::before { display: none; }
+    .process { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
+    .process li { padding: 0 0 18px 36px; }
+    .process li::before, .process li:nth-child(3)::before { left: 7px; right: auto; top: 0; bottom: 0; width: 1px; height: auto; }
+    .process li:last-child::before { display: none; }
+    .site-footer .l, .site-footer .r { grid-column: 1 / -1; text-align: left; }
+  }
+  @media (max-width: 720px) {
+    .hero { padding: 64px 0 64px; }
+    .hero .sub { font-size: 18px; }
+    .stair { height: auto; margin-top: 44px; }
+    .stair svg { position: relative; display: block; height: 110px; }
+    .stair ol { position: static; margin-top: 20px; }
+    .stair li, .stair li:not(:first-child) { position: static; width: auto; padding: 10px 0; border-top: 1px solid var(--on-navy-rule); display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .stair .ph { font-size: 17px; }
+    .keys { grid-template-columns: 1fr 1fr; margin-top: 48px; }
+    .keys li, .keys li:nth-child(4) { border-left: 0; padding: 22px 12px 0 0; }
+    .keys li:nth-child(odd) { padding-right: 16px; }
+    .results, .research { grid-template-columns: minmax(0, 1fr); }
+    .rcard.wide { grid-column: auto; padding: 24px; }
+    .rcard.wide h3 { font-size: 25px; }
+    .rstats { gap: 0 24px; }
+    .rstats b { font-size: 32px; }
+    .ideas ul { grid-template-columns: minmax(0, 1fr); }
+    .phases { padding-left: 32px; }
+    .marker { left: -32px; }
+    .phase h3 { font-size: 28px; }
+    .ms li { grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 10px 8px; }
+    .panel { padding: 24px; }
+    .lib-box { padding: 4px 12px; }
+    .lib li { grid-template-columns: 72px 1fr; }
+    .counter { display: none; }
+    .intro { font-size: 18px; }
+  }
+
+  /* ---------- Print: clean black-and-white handout ---------- */
+  @media print {
+    @page { size: A4; margin: 16mm 14mm; }
+    :root { --accent: #000; --ink: #000; --body: #111; --muted: #444; --rule: #999; --alt: #fff; }
+    body { font-size: 11pt; background: #fff; color: #111; }
+    .progress, .site-nav, .counter, .skip, .filters, .nav-tools { display: none !important; }
+    [data-reveal], [data-hero] { opacity: 1 !important; transform: none !important; }
+    .section, .hero, .site-footer { padding: 0 0 8mm; background: #fff !important; border-top: 0; }
+    .section { break-before: page; }
+    .hero, .hero h1, .hero .label, .hero .sub, .stair .ph, .stair .dt, .keys b, .keys span, .site-footer, .site-footer b { color: #000 !important; }
+    .stair .line { stroke: #000; }
+    .keys, .keys li { border-color: #999 !important; }
+    .wrap { max-width: none; padding: 0; }
+    .sec-label .label { position: static; }
+    .grid { display: block; }
+    .sec-label { margin-bottom: 4mm; }
+    .marker, .motion .marker { background: #000 !important; border-color: #000; }
+    .track span { transform: none !important; background: #000; }
+    .panel, .result, .role, .value, .rcard, .register, .lib-box, .decision { border-color: #999; background: #fff; }
+    .result, .role, .value, .rcard, .ms li, .decision, .phase .theme, .rows tr, .lib li, .next li, .process li { break-inside: avoid; }
+    .pill { border: 1px solid #000; background: #fff !important; color: #000 !important; }
+    .filterable [hidden] { display: revert !important; }
+    .rows tr[hidden] { display: table-row !important; }
+    .chart.has-chart .canvas-box { display: none; }
+    .chart.has-chart .fallback { display: block; }
+    .fallback .b i { background: #000 !important; }
+    .fallback .b i.prev { background: #bbb !important; }
+    .site-footer { border-top: 1px solid #999; padding-top: 6mm; }
+    .site-footer .r { text-align: left; }
+    .panels, .roles, .values, .results { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+    .research { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+    .rcard.wide { grid-column: span 2 !important; grid-row: auto; }
+    .lib { columns: 2 !important; }
+    .panel, .role, .value, .rcard, .result { padding: 14px 16px; break-inside: avoid; }
+    .section .block, .results, .roles, .values, .research, .phases, .next { margin-top: 8mm; }
+    a { text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#start">Skip to content</a>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="site-nav">
+  <div class="inner">
+    <a class="brand" href="#top" aria-label="STAIR Digital, back to the opening section"><img src="data:image/png;base64,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" alt="STAIR Digital" width="119" height="32"></a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#start" data-nav="start">Where It Started</a>
+      <a href="#journey" data-nav="journey">Journey</a>
+      <a href="#results" data-nav="results">Results</a>
+      <a href="#leadership" data-nav="leadership">Leadership</a>
+      <a href="#decisions" data-nav="decisions">Decisions</a>
+      <a href="#value" data-nav="value">Value Secured</a>
+      <a href="#research" data-nav="research">Research</a>
+      <a href="#next" data-nav="next">What’s Next</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="tool" type="button" id="btnPrint" aria-label="Print this page"><i data-lucide="printer" aria-hidden="true"></i><span class="t">Print</span></button>
+      <button class="tool" type="button" id="btnFull" aria-label="Toggle full screen (F)"><i data-lucide="maximize" aria-hidden="true"></i><span class="t">Full screen</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== OPENING ===================== -->
+<section class="hero" id="top" data-section aria-labelledby="title">
+  <div class="wrap">
+    <p class="label" data-hero>Consulting Journey · September 2025 to October 2026</p>
+    <h1 id="title" data-hero>Dinshaw’s, Step by Step</h1>
+    <p class="sub" data-hero>How a 90+ year old Nagpur dairy and ice cream house is building a professional leadership team, a digital backbone and new growth engines, with STAIR working alongside the promoters at every step.</p>
+
+    <div class="stair" role="img" aria-label="A 5-step staircase showing the 5 phases: Foundation, Sep to Dec 2025; Design, Jan to Apr 2026; Build, May to Jul 2026; Scale, Aug to Sep 2026; Now, Oct 2026.">
+      <svg viewBox="0 0 1000 260" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs><clipPath id="stairClip"><rect id="stairClipRect" x="-10" y="-10" width="1020" height="280"/></clipPath></defs>
+        <path class="line" clip-path="url(#stairClip)" d="M0 200 H200 V164 H400 V128 H600 V92 H800 V56 H1000" fill="none" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+      </svg>
+      <ol aria-hidden="true">
+        <li data-hero><span class="ph">Foundation</span><span class="dt">Sep to Dec 2025</span></li>
+        <li data-hero><span class="ph">Design</span><span class="dt">Jan to Apr 2026</span></li>
+        <li data-hero><span class="ph">Build</span><span class="dt">May to Jul 2026</span></li>
+        <li data-hero><span class="ph">Scale</span><span class="dt">Aug to Sep 2026</span></li>
+        <li data-hero><span class="ph">Now</span><span class="dt">Oct 2026</span></li>
+      </ol>
+    </div>
+
+    <ul class="keys" aria-label="Key numbers">
+      <li data-hero><b class="num" data-count="13">13</b><span>months of partnership</span></li>
+      <li data-hero><b class="num" data-count="8">8</b><span>working visits to Nagpur</span></li>
+      <li data-hero><b class="num" data-count="130" data-suffix="+">130+</b><span>meetings, reviews and interviews</span></li>
+      <li data-hero><b class="num" data-count="110" data-suffix="+">110+</b><span>documents, frameworks and reports</span></li>
+      <li data-hero><b class="num" data-count="7">7</b><span>leadership roles designed and searched</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== 01 WHERE IT STARTED ===================== -->
+<section class="section tint" id="start" data-section aria-labelledby="h-start">
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">01 · Where It Started</span></div>
+    <div class="sec-body">
+      <h2 class="sec-title" id="h-start" data-reveal>One Hiring Conversation Became a Full Transformation Agenda</h2>
+      <p class="intro" data-reveal>The engagement began in September 2025 with a single brief: help Dinshaw’s find its first CHRO. By the first plant visit 6 weeks later, the promoters and STAIR had agreed a far wider agenda.</p>
+      <div class="panels block">
+        <article class="panel" data-reveal>
+          <h3>The Starting Point</h3>
+          <p>A promoter-led, ~₹1,000 Cr business with strong roots in Central India across ice cream, dairy, bakery and namkeen, ready to move from a family-run model to a professionally managed company.</p>
+          <p>The first STAIR deliverable was a CHRO job description and skill matrix, scored with the promoters’ own weightages.</p>
+        </article>
+        <article class="panel" data-reveal>
+          <h3>The Agenda Set on 31 October 2025</h3>
+          <p>STAIR’s first visit to the Nagpur office and plant set the 5 areas that still frame the work.</p>
+          <ol class="agenda">
+            <li>HR and leadership hiring</li>
+            <li>Sales enablement</li>
+            <li>Data, reporting and ERP</li>
+            <li>Quick commerce and e-commerce</li>
+            <li>Finance and operations analytics</li>
+          </ol>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 02 THE JOURNEY ===================== -->
+<section class="section" id="journey" data-section aria-labelledby="h-journey">
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">02 · The Journey</span></div>
+    <div class="sec-body">
+      <h2 class="sec-title" id="h-journey" data-reveal>5 Phases, Each One a Step Up</h2>
+
+      <div class="phases" id="phases">
+        <div class="track" aria-hidden="true"><span id="trackFill"></span></div>
+        <ol>
+
+        <li class="phase" data-stop>
+          <span class="marker" aria-hidden="true"></span>
+          <article aria-labelledby="ph1">
+            <p class="label">Phase 1 · Sep to Dec 2025</p>
+            <h3 id="ph1">Foundation</h3>
+            <p class="theme">Setting the hiring standard, choosing search partners and resetting how marketing money is spent.</p>
+            <ol class="ms" aria-label="Phase 1 milestones">
+              <li><time>Sep 2025</time><span>First CHRO discussion with the promoters; JD and scored skill matrix created</span></li>
+              <li><time datetime="2025-09-23">23 Sep 2025</time><span>SalesCode.ai assessed as a tool for retailer-facing sales teams</span></li>
+              <li><time datetime="2025-10-14">14 Oct 2025</time><span>4 executive search firms introduced: Gilbert Tweed, Executive Access, Questa and EMA Partners</span></li>
+              <li><time datetime="2025-10-31">31 Oct 2025</time><span>First Nagpur visit to the office and plant; 5-area agenda agreed</span></li>
+              <li><time datetime="2025-11-15">15 Nov 2025</time><span>EMA Partners appointed, on terms strengthened by STAIR</span></li>
+              <li><time datetime="2025-11-20">20 Nov 2025</time><span>First SAP integrator meeting; ERP journey begins</span></li>
+              <li><time datetime="2025-12-05">5 Dec 2025</time><span>Marketing Spends Gold Standard: a ~₹15 Cr plan with a channel-by-channel split</span></li>
+              <li><time datetime="2025-12-15">15 Dec 2025</time><span>Second Nagpur visit: quality circles and IoT work begin; agency timeline set</span></li>
+              <li><time>Dec 2025</time><span>6 marketing agencies pitch; Values Manual for incoming leaders drafted</span></li>
+            </ol>
+            <div class="decision"><span class="label">Key Decision</span><p>Marketing moves to performance-led digital (10 Dec), and the 2 CEO roles become Business Heads for Dairy and Ice Cream (15 Dec).</p></div>
+          </article>
+        </li>
+
+        <li class="phase" data-stop>
+          <span class="marker" aria-hidden="true"></span>
+          <article aria-labelledby="ph2">
+            <p class="label">Phase 2 · Jan to Apr 2026</p>
+            <h3 id="ph2">Design</h3>
+            <p class="theme">Choosing the ERP, shaping the organisation and launching the season’s campaigns.</p>
+            <ol class="ms" aria-label="Phase 2 milestones">
+              <li><time datetime="2026-03-04">4 Mar 2026</time><span>PR for the Dildaar campaign re-scoped, reducing the fee from ~₹30 lakh to ~₹7 lakh</span></li>
+              <li><time datetime="2026-03-13">13 Mar 2026</time><span>SAP Implementation Scope of Work and ERP Blueprint delivered</span></li>
+              <li><time>Mar 2026</time><span>Nagpur reviews on hiring, factory, financials, forecasting, sales automation and SAP; factory AI vendors met</span></li>
+              <li><time datetime="2026-04-11">11 Apr 2026</time><span>BEI Confluence onboarded as the marketing agency</span></li>
+              <li><time datetime="2026-04-13">13 Apr 2026</time><span>ERP evaluation, organisation structure and Milky Mist case study presented</span></li>
+              <li><time datetime="2026-04-20">20 Apr 2026</time><span>Cold-room energy pilot approved, with a path to all 60 cold rooms at Butibori</span></li>
+              <li><time datetime="2026-04-28">28 Apr 2026</time><span>3x Chocolate Cone campaign and TVC released</span></li>
+              <li><time datetime="2026-04-30">30 Apr 2026</time><span>Nagpur visit: SAP S/4HANA Public Cloud with a clean-core design agreed</span></li>
+            </ol>
+            <div class="decision"><span class="label">Key Decision</span><p>SAP chosen over QAD, and a 2-tier leadership model adopted with Business Heads under the promoters (13 Apr).</p></div>
+          </article>
+        </li>
+
+        <li class="phase" data-stop>
+          <span class="marker" aria-hidden="true"></span>
+          <article aria-labelledby="ph3">
+            <p class="label">Phase 3 · May to Jul 2026</p>
+            <h3 id="ph3">Build</h3>
+            <p class="theme">The first leaders sign on, quick commerce takes off and the SAP programme gets its partner.</p>
+            <ol class="ms" aria-label="Phase 3 milestones">
+              <li><time datetime="2026-05-07">7 May 2026</time><span>Cumulative quick commerce revenue crosses ₹1 Cr; SAP task force formed</span></li>
+              <li><time datetime="2026-05-19">19 May 2026</time><span>Business Head mandates for Ice Cream and Dairy signed</span></li>
+              <li><time datetime="2026-06-02">2 Jun 2026</time><span>Low-cost AI vision on existing CCTV chosen over heavy IoT hardware</span></li>
+              <li><time datetime="2026-06-22">22 Jun 2026</time><span>SAP gap analysis and solution design workshops</span></li>
+              <li><time>1–4 Jul 2026</time><span>Nagpur Strategic Review: hiring, ERP, factory AI, Base and Aspiration Plans, peer benchmarking</span></li>
+              <li><time datetime="2026-07-06">6 Jul 2026</time><span>Q1 FY 2026-27 progress report issued</span></li>
+              <li><time datetime="2026-07-09">9 Jul 2026</time><span>Business Head Dairy accepts the appointment</span></li>
+              <li><time datetime="2026-07-17">17 Jul 2026</time><span>Plant energy audit reviewed: ₹2.38 Cr a year of savings identified</span></li>
+              <li><time datetime="2026-07-28">28 Jul 2026</time><span>SAP governance pack submitted; Executive Access agreement closed</span></li>
+            </ol>
+            <div class="decision"><span class="label">Key Decision</span><p>GFI preferred as SAP partner: 7-month implementation plus 12 months of support, with AI added after ERP stabilises (4 Jul).</p></div>
+          </article>
+        </li>
+
+        <li class="phase" data-stop>
+          <span class="marker" aria-hidden="true"></span>
+          <article aria-labelledby="ph4">
+            <p class="label">Phase 4 · Aug to Sep 2026</p>
+            <h3 id="ph4">Scale</h3>
+            <p class="theme">Focusing on one market, setting factory priorities and building the governance model.</p>
+            <ol class="ms" aria-label="Phase 4 milestones">
+              <li><time datetime="2026-08-01">1 Aug 2026</time><span>Pay philosophy agreed: at least 65% fixed, performance variable and 36-month retention</span></li>
+              <li><time datetime="2026-08-12">12 Aug 2026</time><span>Brand Manager joins</span></li>
+              <li><time>12–13 Aug 2026</time><span>Nagpur visit: Ice Cream and Dairy confirmed as the 2 lead verticals; 4 factory priorities set</span></li>
+              <li><time datetime="2026-08-21">21 Aug 2026</time><span>Project Pune named the quick commerce priority; RFID discovery with ID Tech</span></li>
+              <li><time datetime="2026-08-28">28 Aug 2026</time><span>Business Head Ice Cream signs</span></li>
+              <li><time datetime="2026-08-31">31 Aug 2026</time><span>HRMS demos by ZingHR and BlueTree in Nagpur</span></li>
+              <li><time datetime="2026-09-05">5 Sep 2026</time><span>Dairy quick commerce campaign goes live (Ghee, Paneer, Curd, Milk)</span></li>
+              <li><time>Sep 2026</time><span>Spain and Malta shelf research; Promoter-Professional Engagement Framework and Board Structure note</span></li>
+              <li><time datetime="2026-09-21">21 Sep 2026</time><span>PMG Engineers order received for a 3-year plant upgrade; skyr chosen as the R&amp;D focus</span></li>
+            </ol>
+            <div class="decision"><span class="label">Key Decision</span><p>Win Pune first: platform advertising over discounting, with new cities opened only once Pune performs (21 Aug).</p></div>
+          </article>
+        </li>
+
+        <li class="phase" data-stop>
+          <span class="marker" aria-hidden="true"></span>
+          <article aria-labelledby="ph5">
+            <p class="label">Phase 5 · October 2026</p>
+            <h3 id="ph5">Now</h3>
+            <p class="theme">New products, a reset with Instamart, and the leadership team close to complete.</p>
+            <ol class="ms" aria-label="Phase 5 milestones">
+              <li><time>30 Sep–1 Oct 2026</time><span>Nagpur review: 32 action items; Base Plan signed off; separate P&amp;Ls by vertical; store design chosen</span></li>
+              <li><time datetime="2026-10-01">1 Oct 2026</time><span>New product note delivered: skyr and an unflavoured probiotic dahi</span></li>
+              <li><time datetime="2026-10-03">3 Oct 2026</time><span>Meeting with Ms Nandita Sinha, CEO of Instamart</span></li>
+              <li><time datetime="2026-10-05">5 Oct 2026</time><span>Sales Head Namkeen &amp; Bakery finalised</span></li>
+              <li><time datetime="2026-10-08">8 Oct 2026</time><span>CHRO final offer issued; Head IT interviews begin</span></li>
+              <li><time datetime="2026-10-09">9 Oct 2026</time><span>Q2 progress report issued; HRMS pilot secured from both vendors at no cost</span></li>
+            </ol>
+            <div class="decision"><span class="label">Key Decision</span><p>Skyr over Greek yogurt: high protein, low fat, no added sugar, sold through quick commerce and corporate channels (30 Sep).</p></div>
+          </article>
+        </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 03 RESULTS ===================== -->
+<section class="section tint" id="results" data-section aria-labelledby="h-results">
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">03 · Results So Far</span></div>
+    <div class="sec-body">
+      <h2 class="sec-title" id="h-results" data-reveal>Focused Bets Are Already Paying Back</h2>
+      <p class="intro" data-reveal>Figures as reported in the weekly quick commerce reviews and the Nagpur meetings.</p>
+
+      <div class="results">
+        <article class="result" data-reveal>
+          <p class="fig num">~₹5 Cr</p>
+          <p>Blinkit sales, April to September 2026, against ~₹60 lakh in the same months last year.</p>
+          <div class="chart" data-chart="blinkit">
+            <span class="cap" id="cap-blinkit">Blinkit sales, Apr to Sep</span>
+            <div class="canvas-box"><canvas role="img" aria-labelledby="cap-blinkit" aria-describedby="desc-blinkit"></canvas></div>
+            <ul class="fallback" id="desc-blinkit">
+              <li><span class="k">2025</span><span class="b"><i class="prev" style="--w:9%"></i>₹0.6 Cr</span></li>
+              <li><span class="k">2026</span><span class="b"><i style="--w:72%"></i>₹5 Cr</span></li>
+            </ul>
+          </div>
+          <p class="src">Source: Instamart CEO brief, Oct 2026</p>
+        </article>
+
+        <article class="result" data-reveal>
+          <p class="fig num">3 → 20</p>
+          <p>Blinkit pockets served, across 32 cities and 5 distribution centres.</p>
+          <p class="src">Source: Instamart CEO brief, Oct 2026</p>
+        </article>
+
+        <article class="result" data-reveal>
+          <p class="fig num">~3x</p>
+          <p>Pune Blinkit ice cream sales, from ~₹4 lakh to ₹11–12 lakh a month on ~₹2.5 lakh of search spend.</p>
+          <div class="chart" data-chart="pune">
+            <span class="cap" id="cap-pune">Pune ice cream, a month</span>
+            <div class="canvas-box"><canvas role="img" aria-labelledby="cap-pune" aria-describedby="desc-pune"></canvas></div>
+            <ul class="fallback" id="desc-pune">
+              <li><span class="k">Before</span><span class="b"><i class="prev" style="--w:24%"></i>₹4 lakh</span></li>
+              <li><span class="k">After</span><span class="b"><i style="--w:68%"></i>₹11–12 lakh</span></li>
+            </ul>
+          </div>
+          <p class="src">Source: Weekly review, 8 Sep 2026</p>
+        </article>
+
+        <article class="result" data-reveal>
+          <p class="fig num">~₹1 Cr</p>
+          <p>Monthly quick commerce run-rate across ice cream and dairy by September.</p>
+          <p class="src">Source: Promoter review, 21 Sep 2026</p>
+        </article>
+
+        <article class="result" data-reveal>
+          <p class="fig num">30x</p>
+          <p>Ghee on quick commerce: ₹50,000 of advertising returned ₹15 lakh of sales.</p>
+          <p class="src">Source: Nagpur review, 1 Oct 2026</p>
+        </article>
+
+        <article class="result" data-reveal>
+          <p class="fig num">₹2.38 Cr</p>
+          <p>Annual energy savings identified at the plant, on ~₹1.89 Cr of investment.</p>
+          <p class="src">Source: Plant energy audit, Jul 2026</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 04 LEADERSHIP ===================== -->
+<section class="section" id="leadership" data-section aria-labelledby="h-lead">
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">04 · Leadership Team</span></div>
+    <div class="sec-body">
+      <h2 class="sec-title" id="h-lead" data-reveal>From Family-Run to Professionally Led</h2>
+      <p class="intro" data-reveal>7 senior roles were designed from scratch, each with a JD and a scored skill matrix. 3 are secured and the CHRO has a final offer.</p>
+
+      <div class="roles">
+        <article class="role" data-reveal><h3>Business Head, Dairy</h3><span class="pill done">Signed</span><p class="who">Mr Venkataramani Santhanam</p><p class="when">Joining ~26 October 2026</p></article>
+        <article class="role" data-reveal><h3>Business Head, Ice Cream</h3><span class="pill done">Signed</span><p class="who">Mr Aditya Mittal</p><p class="when">Joining 4 January 2027</p></article>
+        <article class="role" data-reveal><h3>Sales Head, Namkeen &amp; Bakery</h3><span class="pill done">Finalised</span><p class="who">Mr Pravesh Kumar Mittal</p><p class="when">Confirmed 5 October 2026</p></article>
+        <article class="role" data-reveal><h3>CHRO</h3><span class="pill prog">Offer Issued</span><p class="who note">Final offer sent 8 October 2026</p><p class="when">Acceptance awaited</p></article>
+        <article class="role" data-reveal><h3>CFO</h3><span class="pill prog">Interviewing</span><p class="who note">Lead candidate met 9 October 2026</p><p class="when">2 backup candidates in hand</p></article>
+        <article class="role" data-reveal><h3>Head IT</h3><span class="pill prog">Interviewing</span><p class="who note">Systems role for SAP, plant IT and data</p><p class="when">Interviews from 8 October 2026</p></article>
+        <article class="role" data-reveal><h3>Channel Commercial Head</h3><span class="pill open">Search Active</span><p class="who note">Quick commerce and modern trade</p><p class="when">Brief sharpened 6 October 2026</p></article>
+      </div>
+
+      <div class="block" data-stop>
+        <div class="sub-head" data-reveal><h3>How Each Leader Is Hired</h3></div>
+        <ol class="process" data-reveal aria-label="The 6-step hiring process">
+          <li><span class="n">01</span><span class="t">JD and scored skill matrix</span></li>
+          <li><span class="n">02</span><span class="t">Mandate with search partner</span></li>
+          <li><span class="n">03</span><span class="t">Full candidate dossier</span></li>
+          <li><span class="n">04</span><span class="t">Virtual panel interviews</span></li>
+          <li><span class="n">05</span><span class="t">Salary verification</span></li>
+          <li><span class="n">06</span><span class="t">Full day in Nagpur with plant visit</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 05 DECISIONS ===================== -->
+<section class="section tint" id="decisions" data-section aria-labelledby="h-dec">
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">05 · Decisions Register</span></div>
+    <div class="sec-body filterable" data-filterable="decisions">
+      <h2 class="sec-title" id="h-dec" data-reveal>The Calls That Shaped the Company</h2>
+      <p class="intro" data-reveal>Major decisions taken by the promoters with STAIR’s input.</p>
+
+      <div class="filters" role="group" aria-label="Filter decisions by workstream" data-reveal>
+        <button type="button" data-filter="all" aria-pressed="true">All <span class="c">32</span></button>
+        <button type="button" data-filter="Leadership" aria-pressed="false">Leadership <span class="c">5</span></button>
+        <button type="button" data-filter="Marketing" aria-pressed="false">Marketing <span class="c">4</span></button>
+        <button type="button" data-filter="Digital" aria-pressed="false">Digital <span class="c">6</span></button>
+        <button type="button" data-filter="Factory" aria-pressed="false">Factory <span class="c">6</span></button>
+        <button type="button" data-filter="Strategy &amp; New Products" aria-pressed="false">Strategy &amp; New Products <span class="c">7</span></button>
+        <button type="button" data-filter="Governance" aria-pressed="false">Governance <span class="c">4</span></button>
+      </div>
+      <p class="status-line" aria-live="polite" data-status data-noun="decisions">Showing all 32 decisions</p>
+
+      <div class="register" data-reveal style="margin-top:14px">
+        <table class="rows">
+          <caption class="sr-only">Decisions register, December 2025 to October 2026</caption>
+          <thead><tr><th scope="col">Date</th><th scope="col">Decision and who decided</th><th scope="col" style="text-align:right">Workstream</th></tr></thead>
+          <tbody>
+            <tr data-cat="Marketing"><td class="d">10 Dec 2025</td><td class="what">Shift marketing to performance-led digital, away from conventional TV<span class="by">Recommended by STAIR; endorsed by Mr Shailesh Haribhakti</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
+            <tr data-cat="Leadership"><td class="d">15 Dec 2025</td><td class="what">Hire Business Heads for Dairy and Ice Cream instead of CEOs<span class="by">Promoters</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
+            <tr data-cat="Digital"><td class="d">15 Dec 2025</td><td class="what">Run a Dinshaw’s-specific AI programme after SAP goes live, not a generic one<span class="by">Promoters with STAIR</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Digital"><td class="d">13 Apr 2026</td><td class="what">SAP selected over QAD as the ERP<span class="by">Promoters, on STAIR’s evaluation</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Leadership"><td class="d">13 Apr 2026</td><td class="what">2-tier leadership model; hiring order set as CHRO, CFO, then Business Heads<span class="by">Promoters</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
+            <tr data-cat="Factory"><td class="d">20 Apr 2026</td><td class="what">Cold-room energy pilot approved, to extend to all 60 cold rooms if it works<span class="by">Promoters</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">30 Apr 2026</td><td class="what">Dairy to focus on value-added and niche products, not volume-led fresh milk<span class="by">Nagpur review</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Digital"><td class="d">30 Apr 2026</td><td class="what">Clean-core SAP S/4HANA Public Cloud architecture<span class="by">Nagpur review</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Factory"><td class="d">2 Jun 2026</td><td class="what">Use low-cost AI vision on existing CCTV rather than heavy IoT<span class="by">On STAIR’s recommendation</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
+            <tr data-cat="Leadership"><td class="d">13 Jun 2026</td><td class="what">Bakery and Namkeen role repositioned as a sales-led head<span class="by">Mr Jimmy Rana, on STAIR’s recommendation</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
+            <tr data-cat="Digital"><td class="d">4 Jul 2026</td><td class="what">GFI preferred as SAP partner: 7-month build plus 12 months of support<span class="by">Strategic review</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Factory"><td class="d">4 Jul 2026</td><td class="what">AI after ERP stabilises; vendors as technology partners, business logic kept in-house<span class="by">Strategic review</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
+            <tr data-cat="Factory"><td class="d">4 Jul 2026</td><td class="what">Solar project to proceed only with guaranteed performance<span class="by">Promoters</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
+            <tr data-cat="Factory"><td class="d">10 Jul 2026</td><td class="what">AI rollout starts in Ice Cream, without biometrics or facial recognition<span class="by">Promoters with STAIR</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
+            <tr data-cat="Leadership"><td class="d">30 Jul 2026</td><td class="what">Every search runs on a signed, role-specific mandate document<span class="by">Promoters</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
+            <tr data-cat="Leadership"><td class="d">1 Aug 2026</td><td class="what">Pay philosophy: at least 65% fixed, variable pay and 36-month retention; no joining bonus<span class="by">Promoters</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">13 Aug 2026</td><td class="what">Ice Cream and Dairy confirmed as the 2 primary verticals<span class="by">Nagpur visit</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Factory"><td class="d">13 Aug 2026</td><td class="what">4 factory priorities: Hygiene, FIFO, Manpower and Energy, low-capex first<span class="by">Nagpur visit</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
+            <tr data-cat="Marketing"><td class="d">21 Aug 2026</td><td class="what">Project Pune is the quick commerce priority to mid-November<span class="by">Mr Zervin Rana</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
+            <tr data-cat="Marketing"><td class="d">26 Aug 2026</td><td class="what">New city launches wait until Pune performs<span class="by">Promoters with STAIR</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
+            <tr data-cat="Governance"><td class="d">2 Sep 2026</td><td class="what">Set up a governance board with independent and executive directors<span class="by">Mr Jimmy Rana with STAIR</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">21 Sep 2026</td><td class="what">R&amp;D focus on skyr; yogurt plant designed to global standards<span class="by">Mr Jimmy Rana</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">21 Sep 2026</td><td class="what">Africa expansion revisited once plant upgrades progress<span class="by">Promoters</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Governance"><td class="d">30 Sep 2026</td><td class="what">Professionals get phased authority, with full ownership including budget by 24 months<span class="by">Promoters</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
+            <tr data-cat="Governance"><td class="d">30 Sep 2026</td><td class="what">Non-statutory governance board first, meeting quarterly; statutory board later<span class="by">Promoters</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">1 Oct 2026</td><td class="what">Only 2 plans: Base and Aspiration. Base Plan signed off<span class="by">Promoters</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">1 Oct 2026</td><td class="what">Build the cheese market on sourced product for ~1 year before any plant<span class="by">Promoters</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Digital"><td class="d">1 Oct 2026</td><td class="what">Logistics cost allocated by crate volume in SAP, not by sales value<span class="by">Promoters</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Governance"><td class="d">1 Oct 2026</td><td class="what">Separate P&amp;L, balance sheet and cash flow for each vertical<span class="by">Promoters</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
+            <tr data-cat="Marketing"><td class="d">1 Oct 2026</td><td class="what">Pune target reset to a top-3 position with ~20% share<span class="by">Promoters</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">1 Oct 2026</td><td class="what">Own stores are company-owned and company-operated; design Proposal 1 chosen<span class="by">Promoters</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Digital"><td class="d">9 Oct 2026</td><td class="what">HRMS pilots run one after the other on 2 months of real data<span class="by">Mr Zervin Rana</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 06 VALUE SECURED ===================== -->
+<section class="section" id="value" data-section aria-labelledby="h-val">
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">06 · Value Secured</span></div>
+    <div class="sec-body">
+      <h2 class="sec-title" id="h-val" data-reveal>Better Terms, Negotiated on Dinshaw’s Behalf</h2>
+      <p class="intro" data-reveal>Every partner contract and invoice was reviewed clause by clause. These are the outcomes.</p>
+
+      <div class="values">
+        <article class="value" data-reveal><div class="top"><h3>Ad Factors · Dildaar PR</h3><time>Mar 2026</time></div><p class="out num">~₹30 lakh → ~₹7 lakh</p><p>PR fee re-scoped to the core brief.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>EMA Partners · Ice Cream search invoice</h3><time>Sep 2026</time></div><p class="out num">₹15.50 lakh → ₹10 lakh + GST</p><p>Stage 3 billing brought back in line with the parent agreement.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>EMA Partners · Search agreement</h3><time>Nov 2025</time></div><p class="out num">Replacement guarantee 6 → 12 months</p><p>Admin fee capped at ₹3.5 lakh or 10% of the fee, whichever is lower; first 3 candidate assessments included.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>EMA Partners · Fee base</h3><time>Jul 2026</time></div><p class="out">Only year-1 LTIP counted in fees</p><p>Applies to every ongoing mandate.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>Executive Access · Agreement</h3><time>Jul–Aug 2026</time></div><p class="out num">50% cancellation fee removed</p><p>Replaced with milestone payments; STAIR’s own referral fee waived for Dinshaw’s.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>Executive Access · CFO budget</h3><time>Aug 2026</time></div><p class="out num">Search run at ₹1.20 Cr budget</p><p>Against a market benchmark of ~₹1.50 Cr for the role.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>Questa Search Partners</h3><time>Jul 2026</time></div><p class="out num">Tiered 8.33–16% → flat 8.33%</p><p>For roles up to ₹40 lakh fixed pay; invoice only after the hire completes 15 days.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>Prompt Personnel</h3><time>Sep 2026</time></div><p class="out num">Pay only after 15 days</p><p>Free replacement if the hire leaves within 6 months.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>ZingHR · HRMS pilot</h3><time>Oct 2026</time></div><p class="out num">₹2 lakh pilot fee waived</p><p>Agreed directly with the founder, so both HRMS vendors pilot on equal terms.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>IoT freezer monitoring pilot</h3><time>Apr 2026</time></div><p class="out num">₹7,800 per unit</p><p>Negotiated unit cost for the freezer asset-tracking proof of concept.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 07 RESEARCH ===================== -->
+<section class="section tint" id="research" data-section aria-labelledby="h-res">
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">07 · Research and Documents</span></div>
+    <div class="sec-body">
+      <h2 class="sec-title" id="h-res" data-reveal>Evidence Behind Every Recommendation</h2>
+      <p class="intro" data-reveal>Primary research, case studies and frameworks STAIR produced for Dinshaw’s.</p>
+
+      <div class="research">
+        <article class="rcard wide" data-reveal>
+          <p class="label">Primary research · Sep 2026</p>
+          <h3>Spain &amp; Malta Ice Cream and Yogurt Shelves</h3>
+          <div class="rstats">
+            <div><b class="num">91</b><span>Images</span></div>
+            <div><b class="num">18</b><span>Videos</span></div>
+            <div><b class="num">8–9</b><span>Retailers</span></div>
+          </div>
+          <p class="desc">Inputs from retailers on pricing, private labels, packaging and channels.</p>
+          <div class="ideas">
+            <span class="label">Ideas taken forward</span>
+            <ul>
+              <li>Drip-free lolly packs</li>
+              <li>On-pack offers</li>
+              <li>Vertical freezers</li>
+              <li>Mini milk-ice sticks</li>
+            </ul>
+          </div>
+        </article>
+        <article class="rcard" data-reveal><p class="label">New products · Oct 2026</p><h3>Skyr &amp; Yogurt Strategy</h3><p>Mass-premium skyr built around protein, plus probiotic dahi, drinkable and fruit yogurt.</p></article>
+        <article class="rcard" data-reveal><p class="label">Dairy · Oct 2026</p><h3>Protein, Whey, Casein &amp; Cheese</h3><p>Mapping every product Dinshaw’s could make from protein, fat and lactose.</p></article>
+        <article class="rcard" data-reveal><p class="label">Economics · Oct 2026</p><h3>Value per Litre of Milk</h3><p>Judging each product by net value per litre after channel and cold-chain costs.</p></article>
+        <article class="rcard" data-reveal><p class="label">Case study · Apr 2026</p><h3>Milky Mist</h3><p>How a regional dairy built a value-added portfolio and scaled it.</p></article>
+        <article class="rcard" data-reveal><p class="label">Benchmarking · Sep 2026</p><h3>10 Listed Peers</h3><p>Dinshaw’s compared with listed Indian dairy and ice cream companies, FY24 to FY26.</p></article>
+        <article class="rcard" data-reveal><p class="label">Growth · Sep 2026</p><h3>Africa Opportunity</h3><p>Using opposite-hemisphere summers to fill India’s lean-season factory capacity.</p></article>
+        <article class="rcard" data-reveal><p class="label">Retail · Oct 2026</p><h3>Own Store Formats</h3><p>Ice cream studio, company store and kiosk, designed with Incubis.</p></article>
+        <article class="rcard" data-reveal><p class="label">Risk · May 2026</p><h3>Weather &amp; Cold Chain</h3><p>Seasonal forecast for Mumbai and its effect on cold-chain logistics.</p></article>
+      </div>
+
+      <div class="library filterable" data-filterable="docs" data-stop>
+        <div class="sub-head" data-reveal><h3>Document Library</h3></div>
+        <div class="filters" role="group" aria-label="Filter documents by category" data-reveal style="margin-top:0">
+          <button type="button" data-filter="all" aria-pressed="true">All <span class="c">48</span></button>
+          <button type="button" data-filter="Hiring" aria-pressed="false">Hiring <span class="c">13</span></button>
+          <button type="button" data-filter="Research" aria-pressed="false">Research <span class="c">9</span></button>
+          <button type="button" data-filter="Digital" aria-pressed="false">Digital <span class="c">8</span></button>
+          <button type="button" data-filter="Factory" aria-pressed="false">Factory <span class="c">5</span></button>
+          <button type="button" data-filter="Strategy" aria-pressed="false">Strategy <span class="c">4</span></button>
+          <button type="button" data-filter="Governance" aria-pressed="false">Governance <span class="c">9</span></button>
+        </div>
+        <p class="status-line" aria-live="polite" data-status data-noun="docs">48 key documents shown, from 110+ logged</p>
+        <div class="lib-box" data-reveal style="margin-top:14px">
+          <ol class="lib">
+            <li data-cat="Hiring"><time>Sep 2025</time><span class="nm">CHRO job description and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Research"><time>Sep 2025</time><span class="nm">SalesCode.ai assessment<span class="cat">Research</span></span></li>
+            <li data-cat="Hiring"><time>Oct 2025</time><span class="nm">National Sales Head JD and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Nov 2025</time><span class="nm">Business Head KPI note and skill matrices<span class="cat">Hiring</span></span></li>
+            <li data-cat="Digital"><time>Nov 2025</time><span class="nm">SAP ERP Integration Report<span class="cat">Digital</span></span></li>
+            <li data-cat="Factory"><time>Nov 2025</time><span class="nm">Factory Ergonomics note<span class="cat">Factory</span></span></li>
+            <li data-cat="Hiring"><time>Dec 2025</time><span class="nm">CHRO KPI framework<span class="cat">Hiring</span></span></li>
+            <li data-cat="Strategy"><time>Dec 2025</time><span class="nm">Marketing Spends Gold Standard<span class="cat">Strategy</span></span></li>
+            <li data-cat="Governance"><time>Dec 2025</time><span class="nm">Values Manual for incoming leaders<span class="cat">Governance</span></span></li>
+            <li data-cat="Factory"><time>Dec 2025</time><span class="nm">Factory Optimisation and IoT Vendors List<span class="cat">Factory</span></span></li>
+            <li data-cat="Strategy"><time>Dec 2025</time><span class="nm">Agency brief with digital KPI framework<span class="cat">Strategy</span></span></li>
+            <li data-cat="Digital"><time>Mar 2026</time><span class="nm">SAP Scope of Work and ERP Blueprint<span class="cat">Digital</span></span></li>
+            <li data-cat="Digital"><time>Mar 2026</time><span class="nm">DMS Vendor Skill Assessment Matrix<span class="cat">Digital</span></span></li>
+            <li data-cat="Strategy"><time>Apr 2026</time><span class="nm">Note on Quick Commerce and Marketing<span class="cat">Strategy</span></span></li>
+            <li data-cat="Digital"><time>Apr 2026</time><span class="nm">ERP Evaluation: QAD vs SAP<span class="cat">Digital</span></span></li>
+            <li data-cat="Governance"><time>Apr 2026</time><span class="nm">Organisational Structure<span class="cat">Governance</span></span></li>
+            <li data-cat="Research"><time>Apr 2026</time><span class="nm">Milky Mist Strategic Case Study<span class="cat">Research</span></span></li>
+            <li data-cat="Hiring"><time>May 2026</time><span class="nm">CFO JD and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Research"><time>May 2026</time><span class="nm">Competitor analysis: GetAWay and Heritage Foods<span class="cat">Research</span></span></li>
+            <li data-cat="Research"><time>May 2026</time><span class="nm">Weather and cold-chain risk report<span class="cat">Research</span></span></li>
+            <li data-cat="Research"><time>May 2026</time><span class="nm">Food Pharmer note<span class="cat">Research</span></span></li>
+            <li data-cat="Hiring"><time>May 2026</time><span class="nm">Brand Manager and Marketing Coordinator JDs<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Jun 2026</time><span class="nm">Business Head Snack Foods JD and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Factory"><time>Jul 2026</time><span class="nm">QC Circle Gold Standard research report<span class="cat">Factory</span></span></li>
+            <li data-cat="Digital"><time>Jul 2026</time><span class="nm">SAP Vendor Gap Analysis Scope of Work<span class="cat">Digital</span></span></li>
+            <li data-cat="Governance"><time>Jul 2026</time><span class="nm">Nagpur Strategic Review minutes and action tracker<span class="cat">Governance</span></span></li>
+            <li data-cat="Governance"><time>Jul 2026</time><span class="nm">Q1 FY 2026-27 Strategic Progress Report<span class="cat">Governance</span></span></li>
+            <li data-cat="Factory"><time>Jul 2026</time><span class="nm">AI use-case priorities for IBOTIX<span class="cat">Factory</span></span></li>
+            <li data-cat="Factory"><time>Jul 2026</time><span class="nm">Plant Energy Audit review<span class="cat">Factory</span></span></li>
+            <li data-cat="Digital"><time>Aug 2026</time><span class="nm">SAP governance pack: process owners, steering committee, charter<span class="cat">Digital</span></span></li>
+            <li data-cat="Hiring"><time>Aug 2026</time><span class="nm">Role mandate confirmation template<span class="cat">Hiring</span></span></li>
+            <li data-cat="Governance"><time>Aug 2026</time><span class="nm">Proposed organisation structure<span class="cat">Governance</span></span></li>
+            <li data-cat="Hiring"><time>Aug 2026</time><span class="nm">Marketing Head, Alternate Channels JD<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Sep 2026</time><span class="nm">Sales Head Namkeen &amp; Bakery JD and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Sep 2026</time><span class="nm">Channel Commercial Head JD and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Sep 2026</time><span class="nm">Head IT JD and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Governance"><time>Sep 2026</time><span class="nm">Promoter-Professional Engagement Framework<span class="cat">Governance</span></span></li>
+            <li data-cat="Governance"><time>Sep 2026</time><span class="nm">Board Structure and Governance note<span class="cat">Governance</span></span></li>
+            <li data-cat="Research"><time>Sep 2026</time><span class="nm">Spain &amp; Malta primary research site and report<span class="cat">Research</span></span></li>
+            <li data-cat="Research"><time>Sep 2026</time><span class="nm">Peer benchmarking: 10 listed companies<span class="cat">Research</span></span></li>
+            <li data-cat="Research"><time>Sep 2026</time><span class="nm">Africa opportunity thesis<span class="cat">Research</span></span></li>
+            <li data-cat="Digital"><time>Sep 2026</time><span class="nm">HRMS note: ZingHR vs BlueTree<span class="cat">Digital</span></span></li>
+            <li data-cat="Research"><time>Oct 2026</time><span class="nm">New product note: skyr and probiotic dahi<span class="cat">Research</span></span></li>
+            <li data-cat="Strategy"><time>Oct 2026</time><span class="nm">Instamart CEO brief and Blinkit journey<span class="cat">Strategy</span></span></li>
+            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Leadership travel and relocation policy<span class="cat">Hiring</span></span></li>
+            <li data-cat="Digital"><time>Oct 2026</time><span class="nm">Logistics costing in SAP note<span class="cat">Digital</span></span></li>
+            <li data-cat="Governance"><time>Oct 2026</time><span class="nm">Nagpur review notes and 32-item action plan<span class="cat">Governance</span></span></li>
+            <li data-cat="Governance"><time>Oct 2026</time><span class="nm">Q2 FY 2026-27 Progress Report<span class="cat">Governance</span></span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 08 WHAT'S NEXT ===================== -->
+<section class="section" id="next" data-section aria-labelledby="h-next">
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">08 · What’s Next</span></div>
+    <div class="sec-body">
+      <h2 class="sec-title" id="h-next" data-reveal>The Next Steps, Already Scheduled</h2>
+      <p class="intro" data-reveal>Q3 FY 2026-27 and beyond.</p>
+    </div>
+    <div class="sec-full">
+      <ol class="next" aria-label="Scheduled next steps">
+        <li data-reveal><time>10–20 Oct 2026</time><h3>Europe benchmarking</h3><p>Tetra Pak yogurt and ice cream facilities in Sweden and Denmark.</p></li>
+        <li data-reveal><time>~26 Oct 2026</time><h3>Business Head Dairy joins</h3><p>First professional business head in place.</p></li>
+        <li data-reveal><time>27–29 Oct 2026</time><h3>Instamart, Bangalore</h3><p>Working session with the Instamart team and Mr Zervin Rana.</p></li>
+        <li data-reveal><time>Late Oct 2026</time><h3>HRMS pilots</h3><p>ZingHR and BlueTree tested on 2 months of plant data.</p></li>
+        <li data-reveal><time>Nov 2026</time><h3>Leadership team complete</h3><p>Target to close CHRO, CFO, Head IT and Channel Commercial Head.</p></li>
+        <li data-reveal><time>Dec 2026</time><h3>Quick commerce intelligence</h3><p>Tracking competitors across 23 platforms goes live.</p></li>
+        <li data-reveal><time>4 Jan 2027</time><h3>Business Head Ice Cream joins</h3><p>Ahead of the summer season.</p></li>
+        <li data-reveal><time>Jan–Feb 2027</time><h3>SAP S/4HANA go-live</h3><p>With product-wise costing and volume-based logistics allocation built in.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap grid">
+    <p class="l"><b>STAIR Digital</b> · Prepared for the Board of Dinshaw’s · Updated 9 October 2026</p>
+    <p class="r">Source: STAIR engagement journal, September 2025 to October 2026 · 42 Free Press House, Nariman Point, Mumbai</p>
+  </div>
+</footer>
+
+<div class="counter" aria-hidden="true" title="Arrow keys, Page Up/Down or Space to move · F for full screen"><span id="ctrCur">1</span><span class="sep">/</span><span id="ctrTot">9</span></div>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  'use strict';
+  var root = document.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasGsap = !!(window.gsap && window.ScrollTrigger);
+  var animate = hasGsap && !reduce && root.classList.contains('motion');
+  if (animate) clearTimeout(window.__motionFallback);
+  else root.classList.remove('motion');
+
+  /* ---------- Icons ---------- */
+  try { if (window.lucide) window.lucide.createIcons({ attrs: { 'stroke-width': 1.5, width: 16, height: 16 } }); } catch (e) {}
+
+  /* ---------- Smooth scrolling ---------- */
+  var lenis = null;
+  if (!reduce && window.Lenis) {
+    try {
+      lenis = new window.Lenis({ duration: 1.05, smoothWheel: true });
+      if (hasGsap) {
+        lenis.on('scroll', window.ScrollTrigger.update);
+        window.gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+        window.gsap.ticker.lagSmoothing(0);
+      } else {
+        (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })(0);
+      }
+    } catch (e) { lenis = null; }
+  }
+
+  var nav = document.querySelector('.site-nav');
+  function navH() { return nav ? nav.offsetHeight : 0; }
+  function yOf(el) { return el.getBoundingClientRect().top + window.pageYOffset; }
+  function scrollToY(y) {
+    y = Math.max(0, Math.round(y));
+    if (lenis) lenis.scrollTo(y, { duration: 1.0 });
+    else window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
+  }
+  function scrollToEl(el) { scrollToY(el.id === 'top' ? 0 : yOf(el) - navH()); }
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (ev) {
+      var id = a.getAttribute('href').slice(1);
+      var el = id && document.getElementById(id);
+      if (!el) return;
+      ev.preventDefault();
+      scrollToEl(el);
+      if (id !== 'top' && el.id !== 'main') { el.setAttribute('tabindex', '-1'); el.focus({ preventScroll: true }); }
+    });
+  });
+
+  /* ---------- Current section, nav state, counter, progress ---------- */
+  var sections = Array.prototype.slice.call(document.querySelectorAll('[data-section]'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+  var bar = document.getElementById('progressBar');
+  var ctrCur = document.getElementById('ctrCur');
+  document.getElementById('ctrTot').textContent = sections.length;
+  var current = -1;
+
+  function currentIndex() {
+    var line = window.pageYOffset + navH() + window.innerHeight * 0.3;
+    var idx = 0;
+    for (var i = 0; i < sections.length; i++) if (yOf(sections[i]) <= line) idx = i;
+    if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4) idx = sections.length - 1;
+    return idx;
+  }
+  function onScroll() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.pageYOffset / max) : 0) + ')';
+    var idx = currentIndex();
+    if (idx === current) return;
+    current = idx;
+    ctrCur.textContent = idx + 1;
+    var id = sections[idx].id;
+    navLinks.forEach(function (a) {
+      if (a.getAttribute('data-nav') === id) a.setAttribute('aria-current', 'true');
+      else a.removeAttribute('aria-current');
+    });
+    var active = document.querySelector('.nav-links a[aria-current]');
+    var links = document.querySelector('.nav-links');
+    if (active && links.scrollWidth > links.clientWidth) {
+      links.scrollTo({ left: active.offsetLeft - 16, behavior: reduce ? 'auto' : 'smooth' });
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+
+  /* ---------- Presenter mode ---------- */
+  function stops() {
+    return Array.prototype.slice.call(document.querySelectorAll('[data-section], [data-stop]'))
+      .filter(function (el) { return el.offsetParent !== null || el.id === 'top'; })
+      .map(function (el) { return el.id === 'top' ? 0 : Math.round(yOf(el) - navH()); })
+      .sort(function (a, b) { return a - b; });
+  }
+  function step(dir) {
+    var y = lenis ? lenis.targetScroll : window.pageYOffset;
+    var vh = window.innerHeight - navH();
+    var maxY = document.documentElement.scrollHeight - window.innerHeight;
+    var list = stops(), target = null, i;
+    if (dir > 0) {
+      for (i = 0; i < list.length; i++) if (list[i] > y + 8) { target = list[i]; break; }
+      if (target === null) target = maxY;
+      if (target - y > vh * 1.05) target = y + vh * 0.85;  // long section: page through it
+    } else {
+      for (i = list.length - 1; i >= 0; i--) if (list[i] < y - 8) { target = list[i]; break; }
+      if (target === null) target = 0;
+      if (y - target > vh * 1.05) target = y - vh * 0.85;
+    }
+    scrollToY(Math.min(maxY, Math.max(0, target)));
+  }
+  function toggleFull() {
+    if (!document.fullscreenElement) { if (root.requestFullscreen) root.requestFullscreen().catch(function () {}); }
+    else if (document.exitFullscreen) document.exitFullscreen();
+  }
+  document.addEventListener('keydown', function (ev) {
+    if (ev.altKey || ev.ctrlKey || ev.metaKey) return;
+    var t = ev.target, tag = t && t.tagName;
+    var typing = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || (t && t.isContentEditable);
+    if (typing) return;
+    var onControl = tag === 'BUTTON' || tag === 'A';
+    var k = ev.key;
+    if (k === 'ArrowRight' || k === 'ArrowDown' || k === 'PageDown' || (k === ' ' && !onControl && !ev.shiftKey)) { ev.preventDefault(); step(1); }
+    else if (k === 'ArrowLeft' || k === 'ArrowUp' || k === 'PageUp' || (k === ' ' && !onControl && ev.shiftKey)) { ev.preventDefault(); step(-1); }
+    else if ((k === 'f' || k === 'F') && !ev.shiftKey) { ev.preventDefault(); toggleFull(); }
+  });
+  var bf = document.getElementById('btnFull'); if (bf) bf.addEventListener('click', toggleFull);
+  var bp = document.getElementById('btnPrint'); if (bp) bp.addEventListener('click', function () { window.print(); });
+
+  /* ---------- Filters ---------- */
+  document.querySelectorAll('[data-filterable]').forEach(function (scope) {
+    var buttons = Array.prototype.slice.call(scope.querySelectorAll('[data-filter]'));
+    var items = Array.prototype.slice.call(scope.querySelectorAll('[data-cat]'));
+    var status = scope.querySelector('[data-status]');
+    var noun = status.getAttribute('data-noun');
+    buttons.forEach(function (b) {
+      var f = b.getAttribute('data-filter');
+      var n = f === 'all' ? items.length : items.filter(function (it) { return it.getAttribute('data-cat') === f; }).length;
+      b.querySelector('.c').textContent = n;
+      b.addEventListener('click', function () {
+        buttons.forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+        var shown = 0;
+        items.forEach(function (it) {
+          var on = f === 'all' || it.getAttribute('data-cat') === f;
+          it.hidden = !on; if (on) shown++;
+        });
+        if (noun === 'docs') status.textContent = (f === 'all' ? '' : shown + ' of ') + items.length + ' key documents shown, from 110+ logged';
+        else status.textContent = f === 'all' ? 'Showing all ' + items.length + ' decisions' : 'Showing ' + shown + ' of ' + items.length + ' decisions · ' + f;
+        if (hasGsap) window.ScrollTrigger.refresh();
+      });
+    });
+  });
+
+  /* ---------- Charts (HTML bars stay as the fallback) ---------- */
+  function drawCharts() {
+    if (!window.Chart) return;
+    var Chart = window.Chart;
+    var valueLabels = {
+      id: 'valueLabels',
+      afterDatasetsDraw: function (chart, args, opts) {
+        var ctx = chart.ctx, meta = chart.getDatasetMeta(0);
+        ctx.save();
+        ctx.font = '500 12px "IBM Plex Mono", Consolas, monospace';
+        ctx.fillStyle = '#0B1F33';
+        ctx.textBaseline = 'middle';
+        meta.data.forEach(function (bar, i) { ctx.fillText(opts.text[i], bar.x + 8, bar.y); });
+        ctx.restore();
+      }
+    };
+    var defs = {
+      blinkit: { labels: ['2025', '2026'], data: [0.6, 5], text: ['₹0.6 Cr', '₹5 Cr'] },
+      pune: { labels: ['Before', 'After'], data: [4, 11.5], text: ['₹4 lakh', '₹11–12 lakh'] }
+    };
+    document.querySelectorAll('[data-chart]').forEach(function (box) {
+      var d = defs[box.getAttribute('data-chart')];
+      if (!d) return;
+      try {
+        box.classList.add('has-chart');
+        new Chart(box.querySelector('canvas'), {
+          type: 'bar',
+          data: { labels: d.labels, datasets: [{ data: d.data, backgroundColor: ['#D9DEE3', '#0B1F33'], barThickness: 16, borderRadius: 0, borderSkipped: false }] },
+          options: {
+            indexAxis: 'y', responsive: true, maintainAspectRatio: false, animation: false,
+            events: [],
+            layout: { padding: { right: 96 } },
+            plugins: { legend: { display: false }, tooltip: { enabled: false }, valueLabels: { text: d.text } },
+            scales: {
+              x: { display: false, beginAtZero: true, max: Math.max.apply(null, d.data) },
+              y: { grid: { display: false }, border: { display: false }, ticks: { color: '#5B6670', padding: 6, font: { family: '"IBM Plex Mono", Consolas, monospace', size: 11 } } }
+            }
+          },
+          plugins: [valueLabels]
+        });
+      } catch (e) { box.classList.remove('has-chart'); }
+    });
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawCharts, drawCharts); else drawCharts();
+
+  /* ---------- Motion ---------- */
+  if (!animate) return;
+  var gsap = window.gsap, ST = window.ScrollTrigger;
+  gsap.registerPlugin(ST);
+
+  // Opening: label, title, subtitle and numbers in sequence (~1.2s), staircase drawing alongside.
+  var heroText = gsap.utils.toArray('.hero > .wrap > [data-hero]');
+  var stairLabels = gsap.utils.toArray('.stair li');
+  var keyItems = gsap.utils.toArray('.keys li');
+  gsap.set(heroText.concat(stairLabels, keyItems), { opacity: 0, y: 12 });
+  var clip = document.getElementById('stairClipRect');
+  gsap.set(clip, { attr: { width: 0 } });
+  var tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
+  tl.to(heroText, { opacity: 1, y: 0, duration: 0.5, stagger: 0.15 }, 0.05)
+    .to(clip, { attr: { width: 1020 }, duration: 1.6, ease: 'power1.inOut' }, 0.35)
+    .to(stairLabels, { opacity: 1, y: 0, duration: 0.45, stagger: 0.28 }, 0.5)
+    .to(keyItems, { opacity: 1, y: 0, duration: 0.45, stagger: 0.06 }, 0.75);
+
+  // Key numbers count up once, when first in view.
+  var counted = false;
+  ST.create({
+    trigger: '.keys', start: 'top 92%', once: true,
+    onEnter: function () {
+      if (counted) return; counted = true;
+      document.querySelectorAll('[data-count]').forEach(function (el) {
+        var end = +el.getAttribute('data-count'), suf = el.getAttribute('data-suffix') || '';
+        var o = { v: 0 };
+        el.textContent = '0' + suf;
+        gsap.to(o, { v: end, duration: 1.2, delay: 0.8, ease: 'power2.out', onUpdate: function () { el.textContent = Math.round(o.v) + suf; } });
+      });
+    }
+  });
+
+  // Journey: progress line fills as the reader moves through the phases; markers fill when reached.
+  gsap.fromTo('#trackFill', { scaleY: 0 }, {
+    scaleY: 1, ease: 'none',
+    scrollTrigger: { trigger: '#phases', start: 'top 60%', end: 'bottom 60%', scrub: true }
+  });
+  gsap.utils.toArray('.phase').forEach(function (ph) {
+    ST.create({ trigger: ph, start: 'top 60%', onEnter: function () { ph.classList.add('is-reached'); }, onLeaveBack: function () { ph.classList.remove('is-reached'); } });
+  });
+
+  // Content blocks fade up 12px, once, staggered by 60ms.
+  var reveals = gsap.utils.toArray('[data-reveal]');
+  gsap.set(reveals, { opacity: 0, y: 12 });
+  ST.batch(reveals, {
+    start: 'top 90%', once: true,
+    onEnter: function (batch) { gsap.to(batch, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', stagger: 0.06, overwrite: true }); }
+  });
+
+  window.addEventListener('load', function () { ST.refresh(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { ST.refresh(); });
+});
+</script>
+</body>
+</html>
