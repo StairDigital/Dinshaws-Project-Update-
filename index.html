@@ -5,12 +5,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dinshaw’s, Step by Step · STAIR Digital</title>
-<meta name="description" content="STAIR Digital’s advisory journey with Dinshaw’s, September 2025 to October 2026. Prepared for the Board of Dinshaw’s.">
+<meta name="description" content="STAIR Digital’s consulting journey with Dinshaw’s, September 2025 to November 2026. Prepared for the Board of Dinshaw’s.">
 <meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B1F33'/%3E%3Cpath d='M5 25h6v-5h6v-5h6v-5h4' fill='none' stroke='%238C6D3F' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23DE251E'/%3E%3Cpath d='M5 25h6v-5h6v-5h6v-5h4' fill='none' stroke='%23FFB21A' stroke-width='2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;900&family=Barlow+Condensed:wght@800;900&family=Rozha+One&display=swap">
 <script>
   /* Progressive enhancement: hide reveal targets only when motion is allowed,
      and give them back after 3s if the animation libraries never arrive. */
@@ -24,440 +24,412 @@
   })();
 </script>
 <style>
-  :root {
-    --paper: #FFFFFF;
-    --alt: #F6F7F9;
-    --ink: #0B1F33;
-    --body: #1F2933;
-    --muted: #5B6670;
-    --rule: #D9DEE3;
-    --accent: #8C6D3F;
-    --done-fg: #2F6B4F;  --done-bg: #E8F1EC;
-    --prog-fg: #0B1F33;  --prog-bg: #E6EAF0;
-    --open-fg: #8A6A1F;  --open-bg: #F5EFE2;
-    --on-navy: #FFFFFF;
-    --on-navy-muted: rgba(255, 255, 255, 0.74);
-    --on-navy-rule: rgba(255, 255, 255, 0.18);
+:root {
+  --vanilla: #FFFFFE; --wafer: #F1F1F1; --choc: #1F1A17; --red: #DE251E; --mango: #FFAB00;
+  --pista: #ADD302; --rose: #21A9D1; --berry: #4B2A6F; --sky: #21A9D1; --night: #190A26;
+  --display: "Barlow Condensed", Impact, sans-serif;
+  --body: "Barlow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --nav-h: 64px;
+  --bg: var(--vanilla); --fg: var(--choc);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: var(--nav-h); }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+body { margin: 0; background: var(--vanilla); color: var(--choc); font-family: var(--body); font-size: 19px; line-height: 1.5; overflow-x: clip; -webkit-font-smoothing: antialiased; font-variant-numeric: lining-nums; }
+h1, h2, h3, p, ol, ul { margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+h1, h2 { font-family: var(--display); font-weight: 400; }
+h3 { font-family: var(--body); font-weight: 800; line-height: 1.15; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--berry); outline-offset: 3px; border-radius: 6px; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--choc); color: var(--vanilla); padding: 8px 14px; border-radius: 10px; }
+.skip:focus { top: 8px; }
+.label { font-weight: 800; font-size: 15px; letter-spacing: .1em; text-transform: uppercase; line-height: 1.3; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+.grid { display: block; }
 
-    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-    --sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
-    --mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
+/* navigation */
+.progress { position: fixed; inset: 0 0 auto 0; height: 4px; z-index: 60; pointer-events: none; }
+.progress span { display: block; height: 100%; background: var(--mango); transform-origin: 0 50%; transform: scaleX(0); }
+.site-nav { position: sticky; top: 0; z-index: 50; height: var(--nav-h); background: var(--wafer); }
+.site-nav .inner { max-width: 1280px; height: 100%; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); display: flex; align-items: center; gap: 24px; }
+.brand { flex: none; display: flex; }
+.brand img { height: 36px; width: auto; display: block; }
+.nav-links { display: flex; gap: 2px; flex: 1 1 auto; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a { padding: 5px 13px; border-radius: 99px; font-weight: 600; font-size: 16px; text-decoration: none; white-space: nowrap; transition: background-color .2s, color .2s; }
+.nav-links a:hover { background: var(--vanilla); }
+.nav-links a[aria-current="true"] { background: var(--red); color: #fff; }
+.nav-tools { display: flex; gap: 4px; flex: none; }
+.tool { background: none; border: 0; padding: 5px 11px; border-radius: 99px; cursor: pointer; font-weight: 600; font-size: 15px; }
+.tool:hover { background: var(--vanilla); }
+.counter { position: fixed; right: 18px; bottom: 16px; z-index: 40; background: var(--choc); color: var(--vanilla); border-radius: 99px; padding: 3px 14px; font-weight: 800; font-size: 15px; }
+.counter .sep { opacity: .6; padding: 0 3px; }
 
-    --nav-h: 56px;
-    --maxw: 1200px;
-    --gutter: 40px;
-    --sec-pad: 120px;
-  }
+/* melting edge between flavours */
+.drip { position: absolute; top: -1px; left: 0; width: 100%; height: clamp(46px, 7.5vw, 112px); color: var(--from); transform-origin: 50% 0; pointer-events: none; display: block; z-index: 1; }
 
-  *, *::before, *::after { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; scroll-padding-top: var(--nav-h); }
-  @media (prefers-reduced-motion: no-preference) { html:not(.lenis) { scroll-behavior: smooth; } }
-  html.lenis, html.lenis body { height: auto; }
-  .lenis.lenis-smooth { scroll-behavior: auto !important; }
+/* opening */
+.hero { position: relative; background: var(--red); color: #fff; min-height: calc(100vh - var(--nav-h)); min-height: calc(100svh - var(--nav-h)); display: flex; --rise: clamp(10px, 3vh, 32px); }
+.hero .wrap { width: 100%; display: flex; flex-direction: column; padding-top: clamp(20px, 4.5vh, 48px); padding-bottom: clamp(18px, 3vh, 34px); }
+.hero .label { color: var(--mango); }
+.hero h1 { font-size: min(10.5vw, 17.5vh); line-height: .93; margin-top: 8px; }
+.hero h1 span { display: block; }
+.hero h1 .two { color: var(--mango); }
+.hero .sub { margin-top: clamp(10px, 2.2vh, 22px); max-width: 33em; font-size: clamp(18px, 2.6vh, 23px); line-height: 1.36; font-weight: 500; }
+.keys { margin-top: auto; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(4px, 1vw, 16px); align-items: end; position: relative; }
+.keys { transform: translateY(0); }
+.keys li { position: relative; container-type: inline-size; aspect-ratio: 1 / .86; width: min(100%, 23vh); justify-self: center; margin-bottom: calc(var(--i) * var(--rise)); color: var(--choc); }
+.keys svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.keys .in { position: absolute; left: 16%; right: 16%; top: 16%; text-align: center; }
+.keys b { display: block; font-family: var(--display); font-weight: 400; font-size: 25cqw; line-height: 1; }
+.keys span { display: block; font-size: 7.6cqw; font-weight: 700; line-height: 1.12; margin-top: 2cqw; }
+.keys .dark { color: #fff; }
 
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--body);
-    font-family: var(--sans);
-    font-size: 18px;
-    line-height: 1.6;
-    font-variant-numeric: tabular-nums;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-  }
-  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; color: var(--ink); margin: 0; line-height: 1.15; letter-spacing: -0.01em; }
-  p { margin: 0; }
-  ol, ul { margin: 0; padding: 0; list-style: none; }
-  a { color: inherit; }
-  button { font: inherit; color: inherit; }
-  .num { font-variant-numeric: tabular-nums lining-nums; }
+/* sections */
+.section { position: relative; background: var(--bg); color: var(--fg); padding: clamp(100px, 12vw, 180px) 0 clamp(70px, 8vw, 120px); }
+#start { --bg: var(--vanilla); --from: var(--red); }
+#journey { --bg: var(--vanilla); padding-top: 0; padding-bottom: clamp(40px, 5vw, 70px); }
+#results { --bg: var(--vanilla); --from: var(--berry); }
+#leadership { --bg: var(--sky); --from: var(--vanilla); }
+#decisions { --bg: var(--vanilla); --from: var(--sky); }
+#value { --bg: var(--red); --fg: #fff; --from: var(--vanilla); }
+#research { --bg: var(--vanilla); --from: var(--red); }
+#next { --bg: var(--berry); --fg: #fff; --from: var(--vanilla); }
+.sec-label { margin-bottom: 14px; }
+.sec-title { font-size: clamp(44px, 7vw, 96px); line-height: 1; max-width: 13.5em; text-wrap: balance; }
+.intro { margin-top: 18px; max-width: 36em; font-size: clamp(20px, 2vw, 25px); line-height: 1.35; font-weight: 500; }
+.block { margin-top: clamp(44px, 5vw, 72px); }
+.sub-head { margin-bottom: 18px; }
+.sub-head h3 { font-family: var(--display); font-weight: 400; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.05; }
 
-  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-  .hero :focus-visible, .site-footer :focus-visible { outline-color: #FFFFFF; }
+/* where it started */
+.panels { display: grid; grid-template-columns: 1fr 1.15fr; gap: 18px; }
+.panel { border-radius: 36px; padding: clamp(26px, 3.4vw, 46px); background: var(--wafer); }
+.panel + .panel { background: var(--mango); }
+.panel h3 { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 3.2vw, 44px); line-height: 1.05; }
+.panel p { margin-top: 14px; font-size: 20px; }
+.agenda { margin-top: 18px; counter-reset: ag; }
+.agenda li { counter-increment: ag; display: flex; align-items: center; gap: 14px; padding: 7px 0; font-weight: 700; font-size: clamp(20px, 2vw, 25px); line-height: 1.15; }
+.agenda li::before { content: counter(ag); flex: none; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: var(--choc); color: var(--mango); font-family: var(--display); font-size: 21px; }
 
-  .sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
-  .skip { position: absolute; left: 16px; top: -48px; z-index: 100; background: var(--ink); color: #fff; padding: 8px 14px; font-family: var(--mono); font-size: 13px; text-decoration: none; }
-  .skip:focus { top: 8px; }
+/* the five flavours */
+.journey { position: relative; margin-top: clamp(30px, 4vw, 56px); }
+.rail { position: absolute; inset: 0 auto 0 0; width: 40%; z-index: 3; pointer-events: none; }
+.cone { position: sticky; top: calc(var(--nav-h) + 3vh); height: calc(100vh - var(--nav-h) - 6vh); display: flex; justify-content: center; }
+.cone svg { height: 100%; width: auto; max-width: 100%; overflow: visible; }
+.ph { position: relative; background: var(--bg); color: var(--fg); padding: clamp(110px, 11vw, 170px) 0 clamp(90px, 9vw, 140px); }
+.ph .wrap { position: relative; z-index: 2; }
+.ph-body { margin-left: 40%; }
+.ph-1 { --bg: var(--pista); --fg: var(--choc); --from: var(--vanilla); --tile: var(--choc); --tile-fg: var(--pista); }
+.ph-2 { --bg: var(--mango); --fg: var(--choc); --from: var(--pista); --tile: var(--red); --tile-fg: #fff; }
+.ph-3 { --bg: #DE251E; --fg: #fff; --from: var(--mango); --tile: var(--vanilla); --tile-fg: var(--choc); }
+.ph-4 { --bg: var(--rose); --fg: var(--choc); --from: #DE251E; --tile: var(--berry); --tile-fg: #fff; }
+.ph-5 { --bg: var(--berry); --fg: #fff; --from: var(--rose); --tile: var(--mango); --tile-fg: var(--choc); }
+.ph h3.name { font-family: var(--display); font-weight: 400; font-size: clamp(66px, 10vw, 148px); line-height: .95; margin-top: 4px; }
+.theme { margin-top: 12px; font-size: clamp(21px, 2.2vw, 28px); line-height: 1.25; font-weight: 600; max-width: 26em; }
+.ms { margin-top: 28px; }
+.ms li { display: grid; grid-template-columns: 148px 1fr; gap: 14px; padding: 8px 0; font-size: 19px; line-height: 1.32; }
+.ms time { font-weight: 800; font-size: 16px; padding-top: 2px; }
+.decision { margin-top: 30px; padding: clamp(22px, 2.6vw, 34px); border-radius: 30px; background: var(--tile); color: var(--tile-fg); }
+.decision .label { display: block; margin-bottom: 6px; }
+.decision p { font-size: clamp(21px, 2.1vw, 27px); line-height: 1.22; font-weight: 700; }
+.ph-scoop { display: none; }
 
-  .label {
-    font-family: var(--mono);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    line-height: 1.5;
-  }
-  .mono { font-family: var(--mono); font-size: 13px; letter-spacing: 0.02em; }
+/* results */
+.results { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; margin-top: clamp(36px, 4vw, 60px); }
+.result { grid-column: span 4; border-radius: 34px; padding: clamp(24px, 2.6vw, 34px); display: flex; flex-direction: column; min-width: 0; }
+.result:nth-child(1) { background: var(--red); color: #fff; }
+.result:nth-child(2) { background: var(--pista); }
+.result:nth-child(3) { background: var(--mango); }
+.result:nth-child(4) { background: var(--berry); color: #fff; }
+.result:nth-child(5) { background: var(--rose); }
+.result:nth-child(6) { background: var(--sky); }
+.result .fig { font-family: var(--display); font-size: clamp(54px, 6.4vw, 92px); line-height: 1; white-space: nowrap; }
+.result p { margin-top: 10px; font-size: 19px; line-height: 1.3; font-weight: 500; }
+.result .fig { margin-top: 0; }
+.result .src { margin-top: auto; padding-top: 16px; font-size: 15px; font-weight: 600; opacity: .85; }
+.chart { margin-top: 14px; }
+.chart .cap { display: block; font-size: 15px; font-weight: 800; margin-bottom: 6px; }
+.fallback li { display: grid; grid-template-columns: 58px 1fr; align-items: center; gap: 6px; height: 34px; }
+.fallback .k { font-weight: 700; font-size: 15px; }
+.fallback .b { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; white-space: nowrap; }
+.fallback .b i { display: block; height: 22px; width: var(--w); border-radius: 99px; background: currentColor; }
+.fallback .b i.prev { opacity: .4; }
 
-  /* ---------- Reading progress + navigation ---------- */
-  .progress { position: fixed; inset: 0 0 auto 0; height: 2px; z-index: 60; pointer-events: none; }
-  .progress span { display: block; height: 100%; background: var(--accent); transform-origin: 0 50%; transform: scaleX(0); }
+/* leadership */
+.roles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: clamp(36px, 4vw, 60px); }
+.role { background: var(--wafer); border-radius: 30px; padding: clamp(22px, 2.4vw, 32px); display: grid; grid-template-columns: 1fr auto; gap: 2px 14px; align-items: start; }
+.role h3 { font-family: var(--display); font-weight: 400; font-size: clamp(27px, 2.7vw, 36px); line-height: 1.08; }
+.role .who { grid-column: 1 / -1; font-size: 20px; font-weight: 600; }
+.role .who.note { font-weight: 500; }
+.role .when { grid-column: 1 / -1; margin-top: 8px; font-size: 17px; font-weight: 800; color: var(--red); }
+.pill { display: inline-block; padding: 3px 13px; border-radius: 99px; font-size: 14px; font-weight: 800; white-space: nowrap; }
+.pill.done { background: var(--pista); }
+.pill.prog { background: var(--mango); }
+.pill.open { background: var(--rose); }
+.process { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.process li { position: relative; }
+.process .n { width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; background: var(--choc); color: var(--mango); font-family: var(--display); font-size: 25px; }
+.process .t { display: block; margin-top: 8px; font-size: 18px; font-weight: 700; line-height: 1.2; }
 
-  .site-nav {
-    position: sticky; top: 0; z-index: 50;
-    background: var(--paper);
-    border-bottom: 1px solid var(--rule);
-    height: var(--nav-h);
-  }
-  .site-nav .inner {
-    max-width: calc(var(--maxw) + 2 * var(--gutter));
-    margin: 0 auto; padding: 0 var(--gutter);
-    height: 100%;
-    display: flex; align-items: center; gap: 28px;
-  }
-  .brand { display: flex; align-items: center; text-decoration: none; flex: none; }
-  .brand img { display: block; height: 32px; width: auto; }
-  .nav-links {
-    display: flex; gap: 2px; flex: 1 1 auto; min-width: 0;
-    overflow-x: auto; scrollbar-width: none;
-  }
-  .nav-links::-webkit-scrollbar { display: none; }
-  .nav-links a {
-    position: relative;
-    display: block; padding: 6px 10px;
-    font-size: 15px; color: var(--muted); text-decoration: none; white-space: nowrap;
-  }
-  .nav-links a:hover { color: var(--ink); }
-  .nav-links a[aria-current="true"] { color: var(--ink); }
-  .nav-links a[aria-current="true"]::after {
-    content: ""; position: absolute; left: 10px; right: 10px; bottom: -11px; height: 2px; background: var(--accent);
-  }
-  .nav-tools { display: flex; gap: 4px; flex: none; }
-  .tool {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: none; border: 1px solid transparent; border-radius: 2px;
-    padding: 5px 8px; cursor: pointer;
-    font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
-  }
-  .tool:hover { color: var(--ink); border-color: var(--rule); }
-  .tool svg { width: 16px; height: 16px; stroke-width: 1.5; }
+/* filters and registers */
+.filters { display: flex; flex-wrap: wrap; gap: 7px; margin: 30px 0 10px; }
+.filters button { background: var(--wafer); border: 0; border-radius: 99px; padding: 6px 16px; cursor: pointer; font-weight: 700; font-size: 17px; }
+.filters button .c { opacity: .6; margin-left: 4px; }
+.filters button:hover { background: var(--mango); }
+.filters button[aria-pressed="true"] { background: var(--choc); color: var(--vanilla); }
+.status-line { font-size: 16px; font-weight: 600; }
+.register, .lib-box { background: var(--wafer); border-radius: 34px; overflow: hidden; }
+.rows { width: 100%; border-collapse: collapse; }
+.rows thead { display: none; }
+.rows td { padding: 15px 20px; vertical-align: top; }
+.rows tr + tr td { border-top: 2px solid var(--vanilla); }
+.rows tr { transition: background-color .15s; }
+.rows tbody tr:hover { background: var(--vanilla); }
+.rows .d { width: 130px; font-weight: 800; font-size: 16px; white-space: nowrap; padding-top: 18px; }
+.rows .what { font-size: 20px; font-weight: 600; line-height: 1.25; }
+.rows .by { display: block; font-size: 16px; font-weight: 500; margin-top: 2px; }
+.rows .ws { width: 210px; text-align: right; padding-top: 18px; }
+.tag { display: inline-block; padding: 2px 12px; border-radius: 99px; font-size: 14px; font-weight: 800; white-space: nowrap; background: var(--vanilla); }
+tr[data-cat="Leadership"] .tag { background: var(--sky); }
+tr[data-cat="Marketing"] .tag { background: var(--rose); }
+tr[data-cat="Digital"] .tag { background: var(--pista); }
+tr[data-cat="Factory"] .tag { background: var(--mango); }
+tr[data-cat^="Strategy"] .tag { background: var(--berry); color: #fff; }
+tr[data-cat="Governance"] .tag { background: var(--choc); color: var(--vanilla); }
 
-  .counter {
-    position: fixed; right: 20px; bottom: 18px; z-index: 40;
-    background: var(--paper); border: 1px solid var(--rule); border-radius: 2px;
-    padding: 4px 10px;
-    font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--ink);
-  }
-  .counter .sep { color: var(--muted); padding: 0 2px; }
+/* value */
+.values { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: clamp(36px, 4vw, 60px); }
+.value { background: var(--wafer); color: var(--choc); border-radius: 30px; padding: clamp(22px, 2.4vw, 32px); }
+.value .top { display: flex; justify-content: space-between; gap: 14px; align-items: baseline; }
+.value h3 { font-size: 18px; font-weight: 800; }
+.value time { flex: none; font-size: 15px; font-weight: 700; }
+.value .out { margin-top: 8px; font-family: var(--display); font-size: clamp(28px, 3vw, 40px); line-height: 1.08; color: var(--red); }
+.value p:last-child { margin-top: 6px; font-size: 18px; line-height: 1.3; }
 
-  /* ---------- Section shell ---------- */
-  .wrap { max-width: calc(var(--maxw) + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter); }
-  .section { padding: var(--sec-pad) 0; border-top: 1px solid var(--rule); }
-  .section.tint { background: var(--alt); }
-  .grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; }
-  .sec-label { grid-column: 1 / span 3; }
-  .sec-label .label { color: var(--accent); position: sticky; top: calc(var(--nav-h) + 32px); display: block; padding-top: 14px; }
-  .sec-body { grid-column: 4 / span 9; min-width: 0; }
-  .sec-full { grid-column: 1 / -1; min-width: 0; }
-  .sec-title { font-size: clamp(32px, 3.4vw, 46px); max-width: 22ch; text-wrap: balance; }
-  h1, h3 { text-wrap: balance; }
-  .intro { margin-top: 20px; max-width: 68ch; font-size: 19px; color: var(--body); }
-  .block { margin-top: 56px; }
-  .sub-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
-  .sub-head h3 { font-size: 26px; }
+/* research */
+.research { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: clamp(36px, 4vw, 60px); }
+.rcard { background: var(--wafer); border-radius: 30px; padding: clamp(20px, 2.2vw, 28px); min-width: 0; }
+.rcard .label { font-size: 13px; color: var(--red); }
+.rcard h3 { font-size: 24px; margin-top: 4px; }
+.rcard p:not(.label) { margin-top: 6px; font-size: 18px; line-height: 1.3; }
+.rcard.wide { grid-column: span 2; grid-row: span 2; background: var(--berry); color: #fff; padding: clamp(26px, 3.2vw, 44px); display: flex; flex-direction: column; }
+.rcard.wide .label { color: var(--mango); }
+.rcard.wide h3 { font-family: var(--display); font-weight: 400; font-size: clamp(36px, 4.4vw, 62px); line-height: 1.02; }
+.rstats { display: flex; gap: clamp(20px, 3vw, 44px); margin-top: 20px; }
+.rstats b { display: block; font-family: var(--display); font-weight: 400; font-size: clamp(42px, 4.6vw, 64px); line-height: 1; color: var(--mango); }
+.rstats span { font-weight: 700; font-size: 16px; }
+.ideas { margin-top: auto; padding-top: 18px; }
+.ideas .label { display: block; margin-bottom: 8px; }
+.ideas ul { display: flex; flex-wrap: wrap; gap: 7px; }
+.ideas li { background: var(--wafer); color: var(--choc); border-radius: 99px; padding: 3px 14px; font-weight: 700; font-size: 17px; }
+.library { margin-top: clamp(50px, 6vw, 84px); }
+.lib-box { padding: 12px 22px; margin-top: 12px; }
+.lib { columns: 2; column-gap: 40px; }
+.lib li { break-inside: avoid; display: grid; grid-template-columns: 84px 1fr; gap: 10px; padding: 9px 0; }
+.lib time { font-weight: 800; font-size: 15px; padding-top: 2px; white-space: nowrap; }
+.lib .nm { font-size: 18px; font-weight: 600; line-height: 1.25; }
+.lib .cat { display: block; font-size: 14px; font-weight: 500; }
 
-  /* ---------- Opening ---------- */
-  .hero { background: var(--ink); color: var(--on-navy); padding: 104px 0 96px; }
-  .hero .label { color: var(--on-navy-muted); }
-  .hero h1 { color: #fff; font-size: clamp(44px, 5.6vw, 80px); margin-top: 20px; letter-spacing: -0.015em; }
-  .hero .sub { margin-top: 24px; max-width: 64ch; font-size: 20px; line-height: 1.55; color: var(--on-navy-muted); }
+/* next */
+.next { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: clamp(36px, 4vw, 60px); }
+.next li { border-radius: 30px; padding: clamp(20px, 2vw, 26px); background: var(--wafer); color: var(--choc); }
+.next li:nth-child(4n+1) { background: var(--pista); }
+.next li:nth-child(4n+2) { background: var(--mango); }
+.next li:nth-child(4n+3) { background: var(--rose); }
+.next li:nth-child(4n) { background: var(--sky); }
+.next time { display: block; font-family: var(--display); font-size: 26px; line-height: 1.1; }
+.next h3 { font-size: 21px; margin-top: 8px; }
+.next p { font-size: 17px; line-height: 1.28; margin-top: 4px; }
 
-  .stair { position: relative; height: 260px; margin-top: 64px; }
-  .stair svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-  .stair .line { stroke: var(--accent); }
-  .stair ol { position: absolute; inset: 0; }
-  .stair li { position: absolute; width: 20%; padding-right: 12px; }
-  .stair li:nth-child(1) { left: 0;   top: 212px; }
-  .stair li:nth-child(2) { left: 20%; top: 176px; }
-  .stair li:nth-child(3) { left: 40%; top: 140px; }
-  .stair li:nth-child(4) { left: 60%; top: 104px; }
-  .stair li:nth-child(5) { left: 80%; top: 68px; }
-  .stair li:not(:first-child) { padding-left: 14px; }
-  .stair .ph { display: block; font-family: var(--serif); font-weight: 600; font-size: 19px; color: #fff; line-height: 1.25; }
-  .stair .dt { display: block; margin-top: 2px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--on-navy-muted); text-transform: uppercase; }
+/* footer */
+.site-footer { background: var(--choc); color: var(--vanilla); padding: 44px 0; position: relative; font-size: 17px; }
+.site-footer .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; }
+.site-footer b { font-family: var(--display); font-weight: 400; font-size: 26px; }
+.site-footer .r { text-align: right; }
+.intro-replay { background: none; border: 0; padding: 0; margin-top: 6px; color: var(--mango); font-weight: 700; text-decoration: underline; cursor: pointer; }
 
-  .keys { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 72px; border-top: 1px solid var(--on-navy-rule); }
-  .keys li { padding: 24px 20px 0 20px; border-left: 1px solid var(--on-navy-rule); }
-  .keys li:first-child { border-left: 0; padding-left: 0; }
-  .keys b { display: block; font-family: var(--serif); font-weight: 600; font-size: clamp(40px, 4vw, 58px); line-height: 1; color: #fff; }
-  .keys span { display: block; margin-top: 12px; font-size: 16px; line-height: 1.45; color: var(--on-navy-muted); }
+/* reveal, only when animation is live */
+.motion .hero [data-hero] { opacity: 0; }
+.motion [data-reveal] { opacity: 0; transform: translateY(26px); }
 
-  /* ---------- 01 Where it started ---------- */
-  .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .panel { background: var(--paper); border: 1px solid var(--rule); padding: 32px; }
-  .panel .label { color: var(--accent); }
-  .panel h3 { font-size: 23px; }
-  .panel p { margin-top: 14px; }
-  .agenda { margin-top: 18px; counter-reset: ag; }
-  .agenda li { counter-increment: ag; display: grid; grid-template-columns: 40px 1fr; padding: 11px 0; border-top: 1px solid var(--rule); }
-  .agenda li::before { content: counter(ag, decimal-leading-zero); font-family: var(--mono); font-size: 13px; color: var(--accent); padding-top: 3px; }
+@media (max-width: 1100px) {
+  .nav-tools { display: none; }
+  .brand img { height: 30px; }
+  .result, .result:nth-child(1), .result:nth-child(2) { grid-column: span 6; }
+  .next { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .research { grid-template-columns: 1fr 1fr; }
+  .rcard.wide { grid-row: auto; }
+  .research .rcard:last-child { grid-column: span 2; }
+  .process { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 18px; }
+}
+@media (max-width: 860px) {
+  .rail { display: none; }
+  .ph-body { margin-left: 0; }
+  .ph-scoop { display: block; width: 92px; margin-bottom: 8px; }
+  .panels, .roles, .values { grid-template-columns: minmax(0, 1fr); }
+  .lib { columns: 1; }
+  .hero { min-height: 0; }
+  .hero h1 { font-size: 15vw; }
+  .keys { grid-template-columns: 1fr 1fr; margin-top: 30px; gap: 8px; }
+  .keys li { margin-bottom: 0; width: 100%; }
+  .keys li:last-child { grid-column: 1 / -1; width: 50%; justify-self: center; }
+  .rows, .rows tbody, .rows tr, .rows td { display: block; width: auto; }
+  .rows tr { padding: 14px 18px; }
+  .rows tr + tr { border-top: 2px solid var(--vanilla); }
+  .rows td, .rows tr + tr td { padding: 0; border: 0; }
+  .rows .d { display: inline-block; }
+  .rows .ws { display: inline-block; float: right; width: auto; text-align: right; }
+  .rows .what { clear: both; padding-top: 4px; }
+  .site-footer .grid { grid-template-columns: 1fr; }
+  .site-footer .r { text-align: left; }
+  .counter { display: none; }
+}
+@media (max-width: 640px) {
+  body { font-size: 18px; }
+  .result, .result:nth-child(1), .result:nth-child(2), .next li { grid-column: 1 / -1; }
+  .next, .research { grid-template-columns: minmax(0, 1fr); }
+  .rcard.wide, .research .rcard:last-child { grid-column: auto; }
+  .ms li { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .process { grid-template-columns: 1fr 1fr; }
+  .brand { display: none; }
+}
 
-  /* ---------- 02 Journey ---------- */
-  .phases { position: relative; margin-top: 64px; padding-left: 48px; }
-  .track { position: absolute; left: 7px; top: 10px; bottom: 0; width: 1px; background: var(--rule); }
-  .track span { position: absolute; inset: 0; background: var(--accent); transform-origin: 50% 0; }
-  .phase { position: relative; padding-bottom: 72px; }
-  .phase:last-child { padding-bottom: 0; }
-  .marker {
-    position: absolute; left: -48px; top: 6px;
-    width: 15px; height: 15px; border-radius: 50%;
-    background: var(--accent); border: 1px solid var(--accent);
-    transition: background-color .3s ease;
-  }
-  .motion .marker { background: var(--paper); }
-  .motion .phase.is-reached .marker { background: var(--accent); }
-  .phase .label { color: var(--accent); }
-  .phase h3 { font-size: 34px; margin-top: 6px; }
-  .phase .theme { margin-top: 10px; max-width: 62ch; font-size: 19px; }
-  .ms { margin-top: 26px; border-bottom: 1px solid var(--rule); }
-  .ms li { display: grid; grid-template-columns: 168px 1fr; gap: 16px; padding: 11px 12px; border-top: 1px solid var(--rule); transition: background-color .15s ease; }
-  .ms li:hover, .rows tr:hover, .lib li:hover { background: var(--alt); }
-  .ms time { font-family: var(--mono); font-size: 13px; color: var(--muted); padding-top: 3px; letter-spacing: 0.02em; }
-  .decision { margin-top: 22px; padding: 18px 22px; background: var(--alt); border-left: 2px solid var(--accent); }
-  .decision .label { color: var(--accent); display: block; margin-bottom: 6px; }
-  .decision p { color: var(--ink); max-width: 68ch; }
+@media print {
+  @page { size: A4; margin: 14mm; }
+  :root { --vanilla: #fff; --wafer: #fff; --choc: #000; --red: #000; --mango: #fff; --pista: #fff; --rose: #fff; --berry: #fff; --sky: #fff; }
+  body { font-size: 11pt; background: #fff; color: #000; }
+  .dw, .progress, .site-nav, .counter, .skip, .filters, .rail, .drip, .ph-scoop, .intro-replay { display: none !important; }
+  html.intro-on, html.intro-on body { overflow: visible; }
+  [data-reveal], [data-hero] { opacity: 1 !important; transform: none !important; }
+  .hero, .section, .ph, .site-footer { background: #fff !important; color: #000 !important; padding: 0 0 8mm; min-height: 0; }
+  .hero *, .section *, .ph *, .site-footer * { color: #000 !important; }
+  .section { break-before: page; }
+  .ph-body { margin-left: 0; }
+  .panel, .role, .value, .rcard, .result, .next li, .decision, .register, .lib-box { border: 1px solid #888; background: #fff !important; }
+  .role, .value, .rcard, .result, .next li, .decision, .ms li, .rows tr, .lib li { break-inside: avoid; }
+  .keys li { aspect-ratio: auto; margin: 0; }
+  .keys svg { display: none; }
+  .keys .in { position: static; }
+  .filterable [hidden] { display: revert !important; }
+  .rows tr[hidden] { display: table-row !important; }
+  .fallback .b i { background: #000 !important; opacity: 1; }
+}
 
-  /* ---------- 03 Results ---------- */
-  .results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 56px; }
-  .result { background: var(--paper); border: 1px solid var(--rule); padding: 28px 26px 24px; display: flex; flex-direction: column; min-width: 0; }
-  .result .fig { font-family: var(--serif); font-weight: 600; font-size: clamp(36px, 3.4vw, 46px); line-height: 1; color: var(--ink); white-space: nowrap; }
-  .result p { margin-top: 14px; font-size: 17px; line-height: 1.5; }
-  .result .src { margin-top: auto; padding-top: 18px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.02em; color: var(--muted); }
-  .chart { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--rule); }
-  .chart .cap { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
-  .chart .canvas-box { position: relative; height: 76px; display: none; }
-  .chart.has-chart .canvas-box { display: block; }
-  .chart.has-chart .fallback { display: none; }
-  .fallback li { display: grid; grid-template-columns: 52px 1fr; align-items: center; gap: 8px; height: 30px; }
-  .fallback .k { font-family: var(--mono); font-size: 11px; color: var(--muted); }
-  .fallback .b { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--ink); white-space: nowrap; }
-  .fallback .b i { display: block; height: 16px; width: var(--w); background: var(--ink); }
-  .fallback .b i.prev { background: var(--rule); }
+/* Dinshaw's site language */
+body { font-weight: 600; }
+.site-nav { background: var(--red); color: #fff; }
+.brand { align-items: center; gap: 12px; }
+.brand img { height: 36px; }
+.brand img.st { height: 30px; }
+.brand i { font-style: normal; font-weight: 700; opacity: .8; }
+.nav-links a:hover, .tool:hover { background: rgba(255,255,255,.18); }
+.nav-links a[aria-current="true"] { background: #fff; color: var(--red); }
+.progress span { background: var(--mango); }
+.hero h1 { font-size: min(13.4vw, 21vh); line-height: .9; text-transform: uppercase; }
+.keys b { font-size: 31cqw; line-height: .95; }
+.keys span { font-size: 7.4cqw; }
+h2, .sec-title, .ph h3.name, .sub-head h3, .panel h3, .rcard.wide h3 { text-transform: uppercase; }
+.sec-title { font-size: clamp(58px, 8.8vw, 128px); line-height: .92; max-width: 12em; }
+.ph h3.name { font-size: clamp(64px, 8.6vw, 150px); line-height: .88; overflow-wrap: anywhere; }
+.ph-body { min-width: 0; }
+.panel h3 { font-size: clamp(38px, 4vw, 56px); line-height: .98; }
+.sub-head h3 { font-size: clamp(42px, 4.6vw, 62px); }
+.result { container-type: inline-size; }
+.result .fig { font-size: min(clamp(64px, 8.4vw, 124px), 21cqw); line-height: .95; }
+.value .out { overflow-wrap: anywhere; }
+.hero h1 { font-size: min(13.4vw, 17vh) !important; }
+.keys li { width: min(100%, 27vh); }
+.keys b { font-size: 23cqw !important; line-height: .95; }
+.keys span { font-size: 7cqw !important; line-height: 1.1; }
+/* milestones that are wins stand out from the rest */
+.ms li.win { background: #fff; color: #1F1A17; border-radius: 22px; padding: 14px 20px; margin: 10px 0 10px -20px; }
+.ms li.win span { font-size: clamp(21px, 1.9vw, 25px); line-height: 1.22; font-weight: 900; }
+.ms li.win time { color: var(--red); font-size: 17px; padding-top: 4px; }
+.ms li.win strong { color: var(--red); font-weight: 900; }
+@media (max-width: 640px) { .ms li.win { margin-left: -12px; margin-right: -12px; padding: 12px 14px; } }
+.result:nth-child(6) { background: var(--choc); color: #fff; }
+.role h3 { font-size: clamp(34px, 3.4vw, 46px); line-height: 1; text-transform: uppercase; }
+.value .out { font-size: clamp(36px, 3.8vw, 52px); line-height: 1; }
+.next time { font-size: 34px; }
+.next li:nth-child(4n) { background: #fff; }
+.rcard.wide h3 { font-size: clamp(48px, 5.6vw, 80px); line-height: .95; }
+.rstats b { font-size: clamp(56px, 6vw, 84px); }
+.process .n, .agenda li::before { font-size: 26px; }
+.site-footer { background: var(--red); color: #fff; border-radius: clamp(50px, 8vw, 120px) clamp(50px, 8vw, 120px) 0 0; margin-top: clamp(-90px, -6vw, -50px); z-index: 4; padding: clamp(50px, 6vw, 84px) 0 40px; }
+.site-footer b { font-size: 36px; text-transform: uppercase; }
+.intro-replay { color: #fff; }
+#next { padding-bottom: clamp(130px, 13vw, 190px); }
 
-  /* ---------- 04 Leadership ---------- */
-  .roles { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 56px; }
-  .role { background: var(--paper); border: 1px solid var(--rule); padding: 24px 26px; display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; align-items: start; }
-  .role h3 { font-size: 21px; }
-  .role .who { grid-column: 1 / -1; font-size: 17px; color: var(--body); }
-  .role .who.note { color: var(--muted); }
-  .role .when { grid-column: 1 / -1; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--muted); }
-  .pill { display: inline-block; padding: 3px 9px; border-radius: 2px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; line-height: 1.5; }
-  .pill.done { color: var(--done-fg); background: var(--done-bg); }
-  .pill.prog { color: var(--prog-fg); background: var(--prog-bg); }
-  .pill.open { color: var(--open-fg); background: var(--open-bg); }
-
-  .process { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); margin-top: 8px; }
-  .process li { position: relative; padding: 30px 14px 0 0; }
-  .process li::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 1px; background: var(--rule); }
-  .process li:last-child::before { right: auto; width: 15px; }
-  .process li::after { content: ""; position: absolute; left: 0; top: 0; width: 15px; height: 15px; border-radius: 50%; background: var(--paper); border: 1px solid var(--accent); }
-  .process .n { display: block; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--accent); }
-  .process .t { display: block; margin-top: 4px; font-size: 16px; line-height: 1.4; color: var(--ink); }
-
-  /* ---------- Filters ---------- */
-  .filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 40px 0 14px; }
-  .filters button {
-    display: inline-flex; align-items: baseline; gap: 8px;
-    background: var(--paper); border: 1px solid var(--rule); border-radius: 2px;
-    padding: 7px 12px; cursor: pointer; font-size: 15px; color: var(--body);
-  }
-  .filters button:hover { border-color: var(--muted); }
-  .filters button .c { font-family: var(--mono); font-size: 12px; color: var(--muted); }
-  .filters button[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: #fff; }
-  .filters button[aria-pressed="true"] .c { color: rgba(255,255,255,.75); }
-  .status-line { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--muted); }
-
-  /* ---------- 05 Decisions ---------- */
-  .register { background: var(--paper); border: 1px solid var(--rule); }
-  .rows { width: 100%; border-collapse: collapse; }
-  .rows th { text-align: left; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 12px 16px; border-bottom: 1px solid var(--rule); }
-  .rows td { padding: 14px 16px; border-top: 1px solid var(--rule); vertical-align: top; }
-  .rows tbody tr:first-child td { border-top: 0; }
-  .rows tr { transition: background-color .15s ease; }
-  .rows .d { width: 128px; font-family: var(--mono); font-size: 13px; color: var(--muted); white-space: nowrap; padding-top: 17px; }
-  .rows .what { color: var(--ink); }
-  .rows .by { display: block; margin-top: 3px; font-size: 14px; color: var(--muted); }
-  .rows .ws { width: 190px; text-align: right; }
-  .tag { display: inline-block; padding: 2px 8px; border: 1px solid var(--rule); border-radius: 2px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
-
-  /* ---------- 06 Value ---------- */
-  .values { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 56px; }
-  .value { background: var(--paper); border: 1px solid var(--rule); padding: 24px 26px; }
-  .value .top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
-  .value h3 { font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--ink); letter-spacing: 0; line-height: 1.4; }
-  .value time { flex: none; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--muted); }
-  .value .out { margin-top: 14px; font-family: var(--serif); font-weight: 600; font-size: 25px; line-height: 1.25; color: var(--accent); }
-  .value p { margin-top: 8px; font-size: 16px; line-height: 1.5; color: var(--body); }
-
-  /* ---------- 07 Research ---------- */
-  .research { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 56px; }
-  .rcard { background: var(--paper); border: 1px solid var(--rule); padding: 24px; min-width: 0; }
-  .rcard .label { color: var(--accent); font-size: 12px; line-height: 1.5; margin: 0; }
-  .rcard h3 { font-size: 21px; margin-top: 8px; }
-  .rcard p { margin-top: 10px; font-size: 16px; line-height: 1.5; }
-  .rcard.wide { grid-column: span 2; grid-row: span 2; padding: 32px; display: flex; flex-direction: column; }
-  .rcard.wide h3 { font-size: 30px; max-width: 18ch; }
-  .rstats { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 0 36px; margin-top: 24px; }
-  .rstats b { display: block; font-family: var(--serif); font-weight: 600; font-size: 40px; line-height: 1; color: var(--ink); }
-  .rstats span { display: block; margin-top: 6px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-  .rcard.wide .desc { margin-top: 22px; font-size: 17px; }
-  .ideas { margin-top: auto; padding-top: 22px; }
-  .ideas .label { color: var(--muted); display: block; margin-bottom: 6px; }
-  .ideas ul { display: grid; grid-template-columns: 1fr 1fr; }
-  .ideas li { padding: 9px 12px 9px 0; border-top: 1px solid var(--rule); font-size: 16px; color: var(--ink); }
-
-  .library { margin-top: 64px; }
-  .lib-box { background: var(--paper); border: 1px solid var(--rule); padding: 8px 24px; }
-  .lib { columns: 2; column-gap: 40px; }
-  .lib li { break-inside: avoid; display: grid; grid-template-columns: 84px 1fr; gap: 12px; padding: 10px 8px; border-bottom: 1px solid var(--rule); transition: background-color .15s ease; }
-  .lib time { font-family: var(--mono); font-size: 12px; color: var(--muted); padding-top: 3px; white-space: nowrap; }
-  .lib .nm { font-size: 16px; line-height: 1.45; color: var(--ink); }
-  .lib .cat { display: block; margin-top: 2px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-
-  /* ---------- 08 Next ---------- */
-  .next { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); margin-top: 64px; }
-  .next li { position: relative; padding: 32px 18px 0 0; }
-  .next li::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 1px; background: var(--accent); }
-  .next li:last-child::before { right: auto; width: 15px; }
-  .next li::after { content: ""; position: absolute; left: 0; top: 0; width: 15px; height: 15px; border-radius: 50%; background: var(--paper); border: 1px solid var(--accent); }
-  .next time { display: block; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--accent); }
-  .next h3 { margin-top: 8px; font-family: var(--sans); font-weight: 600; font-size: 17px; line-height: 1.3; color: var(--ink); letter-spacing: 0; }
-  .next p { margin-top: 6px; font-size: 15px; line-height: 1.45; color: var(--body); }
-
-  /* ---------- Footer ---------- */
-  .site-footer { background: var(--ink); color: var(--on-navy-muted); padding: 56px 0; font-size: 15px; }
-  .site-footer .grid { row-gap: 16px; }
-  .site-footer .l { grid-column: 1 / span 6; }
-  .site-footer .r { grid-column: 7 / span 6; text-align: right; }
-  .site-footer b { font-family: var(--serif); font-weight: 600; color: #fff; font-size: 17px; }
-
-  /* ---------- Reveal (only when animation is live) ---------- */
-  .motion .hero [data-hero] { opacity: 0; }
-  .motion [data-reveal] { opacity: 0; transform: translateY(12px); }
-
-  /* ---------- Responsive ---------- */
-  @media (min-width: 1800px) {
-    .hero { padding: 120px 0 112px; }
-  }
-  @media (max-width: 1180px) {
-    .tool .t { display: none; }
-    .next { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 40px; }
-    .next li:nth-child(4)::before { right: auto; width: 15px; }
-  }
-  @media (max-width: 1023px) {
-    :root { --gutter: 32px; }
-    .results { grid-template-columns: 1fr 1fr; }
-    .research { grid-template-columns: 1fr 1fr; }
-    .rcard.wide { grid-row: auto; }
-    .keys { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 28px; }
-    .keys li:nth-child(4) { border-left: 0; padding-left: 0; }
-    .process { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 28px; }
-    .process li:nth-child(3)::before { right: auto; width: 15px; }
-    .nav-tools { display: none; }
-  }
-  @media (max-width: 860px) {
-    :root { --sec-pad: 72px; --gutter: 20px; }
-    .grid { grid-template-columns: minmax(0, 1fr); }
-    .sec-label, .sec-body, .sec-full { grid-column: 1 / -1; }
-    .sec-label .label { position: static; padding-top: 0; margin-bottom: 14px; }
-    .site-nav .inner { gap: 16px; }
-    .brand img { height: 26px; }
-    .panels, .roles, .values { grid-template-columns: minmax(0, 1fr); }
-    .lib { columns: 1; }
-    .rows thead { display: none; }
-    .rows, .rows tbody, .rows tr, .rows td { display: block; width: auto; }
-    .rows tr { padding: 14px 16px; border-top: 1px solid var(--rule); }
-    .rows tbody tr:first-child { border-top: 0; }
-    .rows td { padding: 0; border: 0; }
-    .rows .d { display: inline-block; padding: 0; }
-    .rows .ws { display: inline-block; float: right; text-align: right; }
-    .rows .what { clear: both; padding-top: 6px; }
-    .next { grid-template-columns: minmax(0, 1fr); row-gap: 0; padding-left: 0; }
-    .next li { padding: 0 0 28px 36px; }
-    .next li::before, .next li:nth-child(4)::before { left: 7px; right: auto; top: 0; bottom: 0; width: 1px; height: auto; }
-    .next li:last-child::before { display: none; }
-    .process { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
-    .process li { padding: 0 0 18px 36px; }
-    .process li::before, .process li:nth-child(3)::before { left: 7px; right: auto; top: 0; bottom: 0; width: 1px; height: auto; }
-    .process li:last-child::before { display: none; }
-    .site-footer .l, .site-footer .r { grid-column: 1 / -1; text-align: left; }
-  }
-  @media (max-width: 720px) {
-    .hero { padding: 64px 0 64px; }
-    .hero .sub { font-size: 18px; }
-    .stair { height: auto; margin-top: 44px; }
-    .stair svg { position: relative; display: block; height: 110px; }
-    .stair ol { position: static; margin-top: 20px; }
-    .stair li, .stair li:not(:first-child) { position: static; width: auto; padding: 10px 0; border-top: 1px solid var(--on-navy-rule); display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-    .stair .ph { font-size: 17px; }
-    .keys { grid-template-columns: 1fr 1fr; margin-top: 48px; }
-    .keys li, .keys li:nth-child(4) { border-left: 0; padding: 22px 12px 0 0; }
-    .keys li:nth-child(odd) { padding-right: 16px; }
-    .results, .research { grid-template-columns: minmax(0, 1fr); }
-    .rcard.wide { grid-column: auto; padding: 24px; }
-    .rcard.wide h3 { font-size: 25px; }
-    .rstats { gap: 0 24px; }
-    .rstats b { font-size: 32px; }
-    .ideas ul { grid-template-columns: minmax(0, 1fr); }
-    .phases { padding-left: 32px; }
-    .marker { left: -32px; }
-    .phase h3 { font-size: 28px; }
-    .ms li { grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 10px 8px; }
-    .panel { padding: 24px; }
-    .lib-box { padding: 4px 12px; }
-    .lib li { grid-template-columns: 72px 1fr; }
-    .counter { display: none; }
-    .intro { font-size: 18px; }
-  }
-
-  /* ---------- Print: clean black-and-white handout ---------- */
-  @media print {
-    @page { size: A4; margin: 16mm 14mm; }
-    :root { --accent: #000; --ink: #000; --body: #111; --muted: #444; --rule: #999; --alt: #fff; }
-    body { font-size: 11pt; background: #fff; color: #111; }
-    .progress, .site-nav, .counter, .skip, .filters, .nav-tools { display: none !important; }
-    [data-reveal], [data-hero] { opacity: 1 !important; transform: none !important; }
-    .section, .hero, .site-footer { padding: 0 0 8mm; background: #fff !important; border-top: 0; }
-    .section { break-before: page; }
-    .hero, .hero h1, .hero .label, .hero .sub, .stair .ph, .stair .dt, .keys b, .keys span, .site-footer, .site-footer b { color: #000 !important; }
-    .stair .line { stroke: #000; }
-    .keys, .keys li { border-color: #999 !important; }
-    .wrap { max-width: none; padding: 0; }
-    .sec-label .label { position: static; }
-    .grid { display: block; }
-    .sec-label { margin-bottom: 4mm; }
-    .marker, .motion .marker { background: #000 !important; border-color: #000; }
-    .track span { transform: none !important; background: #000; }
-    .panel, .result, .role, .value, .rcard, .register, .lib-box, .decision { border-color: #999; background: #fff; }
-    .result, .role, .value, .rcard, .ms li, .decision, .phase .theme, .rows tr, .lib li, .next li, .process li { break-inside: avoid; }
-    .pill { border: 1px solid #000; background: #fff !important; color: #000 !important; }
-    .filterable [hidden] { display: revert !important; }
-    .rows tr[hidden] { display: table-row !important; }
-    .chart.has-chart .canvas-box { display: none; }
-    .chart.has-chart .fallback { display: block; }
-    .fallback .b i { background: #000 !important; }
-    .fallback .b i.prev { background: #bbb !important; }
-    .site-footer { border-top: 1px solid #999; padding-top: 6mm; }
-    .site-footer .r { text-align: left; }
-    .panels, .roles, .values, .results { grid-template-columns: 1fr 1fr !important; gap: 10px; }
-    .research { grid-template-columns: 1fr 1fr !important; gap: 10px; }
-    .rcard.wide { grid-column: span 2 !important; grid-row: auto; }
-    .lib { columns: 2 !important; }
-    .panel, .role, .value, .rcard, .result { padding: 14px 16px; break-inside: avoid; }
-    .section .block, .results, .roles, .values, .research, .phases, .next { margin-top: 8mm; }
-    a { text-decoration: none; }
-  }
+/* Diwali sky */
+.sky { position: relative; height: 760vh; background: #04021A; color: #fff; }
+.sky-stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+.sky canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.sky [data-stop] { position: absolute; left: 0; width: 1px; height: 1px; }
+.sky-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.sky-hint { position: absolute; left: 0; right: 0; bottom: 13vh; text-align: center; will-change: opacity; }
+.sky-hint b { display: inline-block; background: #FFD000; color: #04021A; border-radius: 99px; padding: 8px 26px; font-weight: 900; font-size: clamp(18px, 2.6vh, 23px); }
+.sky-deva { position: absolute; left: 0; right: 0; top: 34vh; margin: 0; text-align: center; font-family: "Rozha One", "Nirmala UI", serif; font-size: min(16vw, 24vh); line-height: 1.3; color: #FFD000; text-shadow: 0 0 40px rgba(255,120,0,.75); visibility: hidden; opacity: 0; will-change: transform, opacity; }
+.sky-greet { position: absolute; left: 20px; right: 20px; top: var(--top, 44vh); text-align: center; visibility: hidden; opacity: 0; will-change: transform, opacity; }
+.sky-greet .to { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; text-transform: uppercase; font-size: min(7.4vw, 8.6vh); line-height: 1; color: #00E5FF; text-shadow: 0 2px 22px rgba(0,0,0,.55); }
+.sky-greet .wish { margin: clamp(8px, 1.6vh, 16px) auto 0; max-width: 34em; font-size: clamp(19px, 2.9vh, 27px); line-height: 1.25; font-weight: 700; text-shadow: 0 2px 16px rgba(0,0,0,.7); }
+.sky-greet .sign { margin-top: clamp(10px, 2vh, 20px); font-size: clamp(18px, 2.5vh, 23px); line-height: 1.2; font-weight: 700; text-shadow: 0 2px 16px rgba(0,0,0,.7); }
+.sky-greet .sign b { display: block; font-family: "Barlow Condensed", Impact, sans-serif; text-transform: uppercase; font-size: min(6vw, 6.4vh); line-height: 1.02; color: #FFD000; }
+.sky-bridge { position: absolute; left: 20px; right: 20px; top: 50%; margin: -.5em 0 0; text-align: center; font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; text-transform: uppercase; font-size: min(15vw, 26vh); line-height: .9; visibility: hidden; opacity: 0; will-change: transform, opacity; }
+.sky.is-still { height: 100vh; height: 100svh; }
+html:not(.js) .sky { height: auto; }
+html:not(.js) .sky-stage { position: static; height: auto; padding: 60px 20px; }
+html:not(.js) .sky canvas, html:not(.js) .sky-hint, html:not(.js) .sky-bridge, html:not(.js) .sky-deva { display: none; }
+html:not(.js) .sky-title { position: static; width: auto; height: auto; clip: auto; display: block; text-align: center; font: 900 72px "Barlow Condensed", Impact, sans-serif; }
+html:not(.js) .sky-greet { position: static; visibility: visible; opacity: 1; }
+@media (max-width: 760px) {
+  .sky-greet .to { font-size: 10.6vw; }
+  .sky-greet .sign b { font-size: 9vw; }
+  .sky-greet .wish { font-size: 18px; }
+  .sky-deva { font-size: 19vw; }
+  .sky-bridge { font-size: 19vw; }
+  .ph h3.name { font-size: 15.5vw; }
+  .sec-title { font-size: 12.5vw; }
+  .brand img { height: 26px; }
+  .brand img.st, .brand i { display: none; }
+  .brand { display: flex !important; }
+}
+@media print { .sky { display: none !important; } .brand { display: none; } }
 </style>
 </head>
 <body>
-<a class="skip" href="#start">Skip to content</a>
+<a class="skip" href="#top">Skip to content</a>
 <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
+<section class="sky" id="diwali" data-section aria-label="A Diwali greeting">
+  <div class="sky-stage">
+    <canvas id="skyCanvas" aria-hidden="true"></canvas>
+    <h1 class="sky-title">Happy Diwali</h1>
+    <p class="sky-deva" id="skyDeva" lang="hi">शुभ दीपावली</p>
+    <div class="sky-greet" id="skyGreet">
+      <p class="to">To Mr Jimmy Rana, Mr Zervin Rana and your families</p>
+      <p class="wish">May this festival of lights bring your homes health, happiness and prosperity, and may every step ahead be brighter than the last.</p>
+      <p class="sign">With warm wishes,<b>Shubham Saraff and family</b>and the STAIR Digital team</p>
+    </div>
+    <p class="sky-bridge" id="skyBridge">Our journey together</p>
+    <div class="sky-hint" id="skyHint"><b>Scroll to light up the sky</b></div>
+  </div>
+  <i data-stop style="top:10%"></i>
+  <i data-stop style="top:20%"></i>
+  <i data-stop style="top:30%"></i>
+  <i data-stop style="top:40%"></i>
+  <i data-stop style="top:50%"></i>
+  <i data-stop style="top:60%"></i>
+  <i data-stop style="top:70%"></i>
+  <i data-stop style="top:80%"></i>
+</section>
 <header class="site-nav">
   <div class="inner">
-    <a class="brand" href="#top" aria-label="STAIR Digital, back to the opening section"><img src="data:image/png;base64,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" alt="STAIR Digital" width="119" height="32"></a>
+    <a class="brand" href="#top" aria-label="Dinshaw’s and STAIR Digital, back to the top of the journey"><img src="data:image/png;base64,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" alt="Dinshaw’s"><i aria-hidden="true">×</i><img class="st" src="data:image/png;base64,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" alt="STAIR Digital"></a>
     <nav class="nav-links" aria-label="Sections">
       <a href="#start" data-nav="start">Where It Started</a>
       <a href="#journey" data-nav="journey">Journey</a>
@@ -469,8 +441,8 @@
       <a href="#next" data-nav="next">What’s Next</a>
     </nav>
     <div class="nav-tools">
-      <button class="tool" type="button" id="btnPrint" aria-label="Print this page"><i data-lucide="printer" aria-hidden="true"></i><span class="t">Print</span></button>
-      <button class="tool" type="button" id="btnFull" aria-label="Toggle full screen (F)"><i data-lucide="maximize" aria-hidden="true"></i><span class="t">Full screen</span></button>
+      <button class="tool" type="button" id="btnPrint" aria-label="Print this page"><span class="t">Print</span></button>
+      <button class="tool" type="button" id="btnFull" aria-label="Toggle full screen (F)"><span class="t">Full screen</span></button>
     </div>
   </div>
 </header>
@@ -480,36 +452,22 @@
 <!-- ===================== OPENING ===================== -->
 <section class="hero" id="top" data-section aria-labelledby="title">
   <div class="wrap">
-    <p class="label" data-hero>Consulting Journey · September 2025 to October 2026</p>
-    <h1 id="title" data-hero>Dinshaw’s, Step by Step</h1>
+    <p class="label" data-hero>Consulting Journey · September 2025 to November 2026</p>
+    <h1 id="title" aria-label="Dinshaw’s, Step by Step"><span data-hero aria-hidden="true">Dinshaw’s,</span><span class="two" data-hero aria-hidden="true">step by step</span></h1>
     <p class="sub" data-hero>How a 90+ year old Nagpur dairy and ice cream house is building a professional leadership team, a digital backbone and new growth engines, with STAIR working alongside the promoters at every step.</p>
-
-    <div class="stair" role="img" aria-label="A 5-step staircase showing the 5 phases: Foundation, Sep to Dec 2025; Design, Jan to Apr 2026; Build, May to Jul 2026; Scale, Aug to Sep 2026; Now, Oct 2026.">
-      <svg viewBox="0 0 1000 260" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-        <defs><clipPath id="stairClip"><rect id="stairClipRect" x="-10" y="-10" width="1020" height="280"/></clipPath></defs>
-        <path class="line" clip-path="url(#stairClip)" d="M0 200 H200 V164 H400 V128 H600 V92 H800 V56 H1000" fill="none" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-      </svg>
-      <ol aria-hidden="true">
-        <li data-hero><span class="ph">Foundation</span><span class="dt">Sep to Dec 2025</span></li>
-        <li data-hero><span class="ph">Design</span><span class="dt">Jan to Apr 2026</span></li>
-        <li data-hero><span class="ph">Build</span><span class="dt">May to Jul 2026</span></li>
-        <li data-hero><span class="ph">Scale</span><span class="dt">Aug to Sep 2026</span></li>
-        <li data-hero><span class="ph">Now</span><span class="dt">Oct 2026</span></li>
-      </ol>
-    </div>
-
     <ul class="keys" aria-label="Key numbers">
-      <li data-hero><b class="num" data-count="13">13</b><span>months of partnership</span></li>
-      <li data-hero><b class="num" data-count="8">8</b><span>working visits to Nagpur</span></li>
-      <li data-hero><b class="num" data-count="130" data-suffix="+">130+</b><span>meetings, reviews and interviews</span></li>
-      <li data-hero><b class="num" data-count="110" data-suffix="+">110+</b><span>documents, frameworks and reports</span></li>
-      <li data-hero><b class="num" data-count="7">7</b><span>leadership roles designed and searched</span></li>
+      <li data-hero style="--i:0"><svg viewBox="0 0 200 172" aria-hidden="true" focusable="false"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></svg><div class="in"><b data-count="14">14</b><span>months of partnership</span></div></li>
+      <li data-hero style="--i:1"><svg viewBox="0 0 200 172" aria-hidden="true" focusable="false"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#ADD302" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></svg><div class="in"><b data-count="8">8</b><span>working visits to Nagpur</span></div></li>
+      <li data-hero style="--i:2"><svg viewBox="0 0 200 172" aria-hidden="true" focusable="false"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#FFAB00" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></svg><div class="in"><b data-count="140" data-suffix="+">140+</b><span>meetings, reviews and interviews</span></div></li>
+      <li data-hero style="--i:3"><svg viewBox="0 0 200 172" aria-hidden="true" focusable="false"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#21A9D1" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></svg><div class="in"><b data-count="120" data-suffix="+">120+</b><span>documents, frameworks and reports</span></div></li>
+      <li data-hero style="--i:4"><svg viewBox="0 0 200 172" aria-hidden="true" focusable="false"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#4B2A6F" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></svg><div class="in dark"><b data-count="7">7</b><span>leadership roles designed and searched</span></div></li>
     </ul>
   </div>
 </section>
 
 <!-- ===================== 01 WHERE IT STARTED ===================== -->
 <section class="section tint" id="start" data-section aria-labelledby="h-start">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1430 6 1428 105 1390 105C1352 105 1350 6 1340 6C1326 6 1323 46 1270 46C1218 46 1215 6 1201 6C1189 6 1187 107 1142 107C1098 107 1096 6 1084 6C1071 6 1068 110 1019 110C970 110 967 6 954 6C940 6 937 38 882 38C827 38 824 6 810 6C795 6 792 31 736 31C681 31 678 6 663 6C644 6 641 90 570 90C499 90 496 6 477 6C467 6 465 100 426 100C386 100 384 6 374 6C364 6 362 54 324 54C287 54 285 6 275 6C259 6 256 90 194 90C133 90 130 6 114 6C103 6 100 100 57 100C14 100 11 6 0 6Z"/></svg>
   <div class="wrap grid">
     <div class="sec-label"><span class="label">01 · Where It Started</span></div>
     <div class="sec-body">
@@ -544,123 +502,131 @@
     <div class="sec-body">
       <h2 class="sec-title" id="h-journey" data-reveal>5 Phases, Each One a Step Up</h2>
 
-      <div class="phases" id="phases">
-        <div class="track" aria-hidden="true"><span id="trackFill"></span></div>
-        <ol>
-
-        <li class="phase" data-stop>
-          <span class="marker" aria-hidden="true"></span>
-          <article aria-labelledby="ph1">
+      </div></div>
+<div class="journey">
+  <div class="rail" aria-hidden="false"><div class="cone"><svg viewBox="0 0 300 860" role="img" aria-label="An ice cream cone gaining 1 scoop for each phase of the journey" focusable="false"><defs><clipPath id="wf"><path d="M42 640L258 640L164 850Q150 866 136 850Z"/></clipPath></defs><g data-scoop="0"><g transform="translate(36 470) scale(1.2)"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#ADD302" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></g></g><g data-scoop="1"><g transform="translate(20 374) scale(1.2)"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#FFAB00" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></g></g><g data-scoop="2"><g transform="translate(39 278) scale(1.2)"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#DE251E" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></g></g><g data-scoop="3"><g transform="translate(24 182) scale(1.2)"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#21A9D1" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></g></g><g data-scoop="4"><g transform="translate(34 86) scale(1.2)"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#4B2A6F" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></g></g><path d="M42 640L258 640L164 850Q150 866 136 850Z" fill="#E0A04A" stroke="#FFFFFF" stroke-width="6"/><g clip-path="url(#wf)" stroke="#B26F27" stroke-width="5"><line x1="-180" y1="620" x2="60" y2="870"/><line x1="60" y1="620" x2="-180" y2="870"/><line x1="-134" y1="620" x2="106" y2="870"/><line x1="106" y1="620" x2="-134" y2="870"/><line x1="-88" y1="620" x2="152" y2="870"/><line x1="152" y1="620" x2="-88" y2="870"/><line x1="-42" y1="620" x2="198" y2="870"/><line x1="198" y1="620" x2="-42" y2="870"/><line x1="4" y1="620" x2="244" y2="870"/><line x1="244" y1="620" x2="4" y2="870"/><line x1="50" y1="620" x2="290" y2="870"/><line x1="290" y1="620" x2="50" y2="870"/><line x1="96" y1="620" x2="336" y2="870"/><line x1="336" y1="620" x2="96" y2="870"/><line x1="142" y1="620" x2="382" y2="870"/><line x1="382" y1="620" x2="142" y2="870"/><line x1="188" y1="620" x2="428" y2="870"/><line x1="428" y1="620" x2="188" y2="870"/><line x1="234" y1="620" x2="474" y2="870"/><line x1="474" y1="620" x2="234" y2="870"/><line x1="280" y1="620" x2="520" y2="870"/><line x1="520" y1="620" x2="280" y2="870"/></g></svg></div></div>
+  <article class="ph ph-1" aria-labelledby="ph1" data-stop>
+    <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1427 6 1425 101 1376 101C1328 101 1326 6 1313 6C1295 6 1292 89 1224 89C1155 89 1152 6 1134 6C1121 6 1119 95 1070 95C1022 95 1020 6 1007 6C989 6 986 105 918 105C849 105 846 6 828 6C819 6 817 53 781 53C745 53 743 6 734 6C717 6 713 95 648 95C583 95 579 6 562 6C549 6 546 110 497 110C448 110 445 6 432 6C417 6 414 53 358 53C302 53 299 6 284 6C276 6 274 87 243 87C212 87 210 6 202 6C191 6 189 48 148 48C107 48 105 6 94 6C86 6 84 98 54 98C23 98 21 6 13 6C12 6 11 111 6 111C2 111 1 6 0 6Z"/></svg>
+    <div class="wrap"><div class="ph-body">
+      <div class="ph-scoop"><svg viewBox="0 0 200 172" aria-hidden="true" focusable="false"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#ADD302" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></svg></div>
             <p class="label">Phase 1 · Sep to Dec 2025</p>
-            <h3 id="ph1">Foundation</h3>
+            <h3 class="name" id="ph1">Foundation</h3>
             <p class="theme">Setting the hiring standard, choosing search partners and resetting how marketing money is spent.</p>
             <ol class="ms" aria-label="Phase 1 milestones">
               <li><time>Sep 2025</time><span>First CHRO discussion with the promoters; JD and scored skill matrix created</span></li>
               <li><time datetime="2025-09-23">23 Sep 2025</time><span>SalesCode.ai assessed as a tool for retailer-facing sales teams</span></li>
               <li><time datetime="2025-10-14">14 Oct 2025</time><span>4 executive search firms introduced: Gilbert Tweed, Executive Access, Questa and EMA Partners</span></li>
               <li><time datetime="2025-10-31">31 Oct 2025</time><span>First Nagpur visit to the office and plant; 5-area agenda agreed</span></li>
-              <li><time datetime="2025-11-15">15 Nov 2025</time><span>EMA Partners appointed, on terms strengthened by STAIR</span></li>
+              <li class="win"><time datetime="2025-11-15">15 Nov 2025</time><span>EMA Partners appointed, on terms strengthened by STAIR</span></li>
               <li><time datetime="2025-11-20">20 Nov 2025</time><span>First SAP integrator meeting; ERP journey begins</span></li>
-              <li><time datetime="2025-12-05">5 Dec 2025</time><span>Marketing Spends Gold Standard: a ~₹15 Cr plan with a channel-by-channel split</span></li>
+              <li class="win"><time datetime="2025-12-05">5 Dec 2025</time><span>Marketing Spends Gold Standard: a <strong>~₹15 Cr</strong> plan with a channel-by-channel split</span></li>
               <li><time datetime="2025-12-15">15 Dec 2025</time><span>Second Nagpur visit: quality circles and IoT work begin; agency timeline set</span></li>
               <li><time>Dec 2025</time><span>6 marketing agencies pitch; Values Manual for incoming leaders drafted</span></li>
             </ol>
             <div class="decision"><span class="label">Key Decision</span><p>Marketing moves to performance-led digital (10 Dec), and the 2 CEO roles become Business Heads for Dairy and Ice Cream (15 Dec).</p></div>
-          </article>
-        </li>
-
-        <li class="phase" data-stop>
-          <span class="marker" aria-hidden="true"></span>
-          <article aria-labelledby="ph2">
+          
+    </div></div>
+  </article>
+  <article class="ph ph-2" aria-labelledby="ph2" data-stop>
+    <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1432 6 1430 108 1398 108C1367 108 1365 6 1357 6C1341 6 1338 97 1278 97C1217 97 1214 6 1198 6C1179 6 1175 61 1103 61C1031 61 1027 6 1008 6C998 6 996 62 956 62C916 62 914 6 904 6C893 6 891 39 850 39C810 39 808 6 797 6C782 6 779 87 720 87C661 87 658 6 643 6C632 6 630 89 589 89C548 89 546 6 535 6C519 6 516 80 456 80C397 80 394 6 378 6C366 6 364 45 318 45C272 45 270 6 258 6C248 6 246 58 206 58C167 58 165 6 155 6C140 6 136 70 78 70C19 70 16 6 0 6Z"/></svg>
+    <div class="wrap"><div class="ph-body">
+      <div class="ph-scoop"><svg viewBox="0 0 200 172" aria-hidden="true" focusable="false"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#FFAB00" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></svg></div>
             <p class="label">Phase 2 · Jan to Apr 2026</p>
-            <h3 id="ph2">Design</h3>
+            <h3 class="name" id="ph2">Design</h3>
             <p class="theme">Choosing the ERP, shaping the organisation and launching the season’s campaigns.</p>
             <ol class="ms" aria-label="Phase 2 milestones">
-              <li><time datetime="2026-03-04">4 Mar 2026</time><span>PR for the Dildaar campaign re-scoped, reducing the fee from ~₹30 lakh to ~₹7 lakh</span></li>
+              <li class="win"><time datetime="2026-03-04">4 Mar 2026</time><span>PR for the Dildaar campaign re-scoped, reducing the fee from <strong>~₹30 lakh</strong> to <strong>~₹7 lakh</strong></span></li>
               <li><time datetime="2026-03-13">13 Mar 2026</time><span>SAP Implementation Scope of Work and ERP Blueprint delivered</span></li>
               <li><time>Mar 2026</time><span>Nagpur reviews on hiring, factory, financials, forecasting, sales automation and SAP; factory AI vendors met</span></li>
               <li><time datetime="2026-04-11">11 Apr 2026</time><span>BEI Confluence onboarded as the marketing agency</span></li>
               <li><time datetime="2026-04-13">13 Apr 2026</time><span>ERP evaluation, organisation structure and Milky Mist case study presented</span></li>
-              <li><time datetime="2026-04-20">20 Apr 2026</time><span>Cold-room energy pilot approved, with a path to all 60 cold rooms at Butibori</span></li>
+              <li class="win"><time datetime="2026-04-20">20 Apr 2026</time><span>Cold-room energy pilot approved, with a path to <strong>all 60 cold rooms</strong> at Butibori</span></li>
               <li><time datetime="2026-04-28">28 Apr 2026</time><span>3x Chocolate Cone campaign and TVC released</span></li>
-              <li><time datetime="2026-04-30">30 Apr 2026</time><span>Nagpur visit: SAP S/4HANA Public Cloud with a clean-core design agreed</span></li>
+              <li class="win"><time datetime="2026-04-30">30 Apr 2026</time><span>Nagpur visit: SAP S/4HANA Public Cloud with a clean-core design agreed</span></li>
             </ol>
             <div class="decision"><span class="label">Key Decision</span><p>SAP chosen over QAD, and a 2-tier leadership model adopted with Business Heads under the promoters (13 Apr).</p></div>
-          </article>
-        </li>
-
-        <li class="phase" data-stop>
-          <span class="marker" aria-hidden="true"></span>
-          <article aria-labelledby="ph3">
+          
+    </div></div>
+  </article>
+  <article class="ph ph-3" aria-labelledby="ph3" data-stop>
+    <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1426 6 1424 83 1372 83C1320 83 1318 6 1304 6C1287 6 1283 68 1218 68C1152 68 1148 6 1131 6C1119 6 1117 67 1073 67C1029 67 1027 6 1015 6C1006 6 1004 99 969 99C934 99 932 6 923 6C908 6 905 65 846 65C787 65 784 6 769 6C761 6 759 33 727 33C695 33 693 6 685 6C675 6 673 79 634 79C596 79 594 6 584 6C567 6 563 83 497 83C431 83 427 6 410 6C400 6 398 94 359 94C320 94 318 6 308 6C291 6 287 70 222 70C157 70 153 6 136 6C122 6 120 81 68 81C16 81 14 6 0 6Z"/></svg>
+    <div class="wrap"><div class="ph-body">
+      <div class="ph-scoop"><svg viewBox="0 0 200 172" aria-hidden="true" focusable="false"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#DE251E" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></svg></div>
             <p class="label">Phase 3 · May to Jul 2026</p>
-            <h3 id="ph3">Build</h3>
-            <p class="theme">The first leaders sign on, quick commerce takes off and the SAP programme gets its partner.</p>
+            <h3 class="name" id="ph3">Build</h3>
+            <p class="theme">The first Business Head is signed, quick commerce crosses ₹1 Cr, and GFI emerges as the preferred SAP partner.</p>
             <ol class="ms" aria-label="Phase 3 milestones">
-              <li><time datetime="2026-05-07">7 May 2026</time><span>Cumulative quick commerce revenue crosses ₹1 Cr; SAP task force formed</span></li>
-              <li><time datetime="2026-05-19">19 May 2026</time><span>Business Head mandates for Ice Cream and Dairy signed</span></li>
+              <li class="win"><time datetime="2026-05-07">7 May 2026</time><span>Cumulative quick commerce revenue crosses <strong>₹1 Cr</strong>; SAP task force formed</span></li>
+              <li class="win"><time datetime="2026-05-19">19 May 2026</time><span>Business Head mandates for Ice Cream and Dairy signed</span></li>
               <li><time datetime="2026-06-02">2 Jun 2026</time><span>Low-cost AI vision on existing CCTV chosen over heavy IoT hardware</span></li>
               <li><time datetime="2026-06-22">22 Jun 2026</time><span>SAP gap analysis and solution design workshops</span></li>
               <li><time>1–4 Jul 2026</time><span>Nagpur Strategic Review: hiring, ERP, factory AI, Base and Aspiration Plans, peer benchmarking</span></li>
               <li><time datetime="2026-07-06">6 Jul 2026</time><span>Q1 FY 2026-27 progress report issued</span></li>
-              <li><time datetime="2026-07-09">9 Jul 2026</time><span>Business Head Dairy accepts the appointment</span></li>
-              <li><time datetime="2026-07-17">17 Jul 2026</time><span>Plant energy audit reviewed: ₹2.38 Cr a year of savings identified</span></li>
+              <li class="win"><time datetime="2026-07-09">9 Jul 2026</time><span>Business Head Dairy accepts the appointment</span></li>
+              <li class="win"><time datetime="2026-07-17">17 Jul 2026</time><span>Plant energy audit reviewed: <strong>₹2.38 Cr a year</strong> of savings identified</span></li>
               <li><time datetime="2026-07-28">28 Jul 2026</time><span>SAP governance pack submitted; Executive Access agreement closed</span></li>
             </ol>
             <div class="decision"><span class="label">Key Decision</span><p>GFI preferred as SAP partner: 7-month implementation plus 12 months of support, with AI added after ERP stabilises (4 Jul).</p></div>
-          </article>
-        </li>
-
-        <li class="phase" data-stop>
-          <span class="marker" aria-hidden="true"></span>
-          <article aria-labelledby="ph4">
+          
+    </div></div>
+  </article>
+  <article class="ph ph-4" aria-labelledby="ph4" data-stop>
+    <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1422 6 1418 49 1348 49C1277 49 1274 6 1255 6C1245 6 1243 111 1204 111C1164 111 1162 6 1152 6C1134 6 1131 42 1063 42C995 42 992 6 974 6C956 6 952 71 884 71C815 71 811 6 793 6C779 6 776 51 722 51C667 51 664 6 650 6C643 6 641 82 614 82C586 82 584 6 577 6C565 6 562 39 516 39C470 39 467 6 455 6C447 6 445 46 414 46C382 46 380 6 372 6C361 6 359 90 317 90C275 90 273 6 262 6C248 6 245 87 190 87C135 87 132 6 118 6C106 6 104 56 59 56C14 56 12 6 0 6Z"/></svg>
+    <div class="wrap"><div class="ph-body">
+      <div class="ph-scoop"><svg viewBox="0 0 200 172" aria-hidden="true" focusable="false"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#21A9D1" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></svg></div>
             <p class="label">Phase 4 · Aug to Sep 2026</p>
-            <h3 id="ph4">Scale</h3>
+            <h3 class="name" id="ph4">Scale</h3>
             <p class="theme">Focusing on one market, setting factory priorities and building the governance model.</p>
             <ol class="ms" aria-label="Phase 4 milestones">
               <li><time datetime="2026-08-01">1 Aug 2026</time><span>Pay philosophy agreed: at least 65% fixed, performance variable and 36-month retention</span></li>
               <li><time datetime="2026-08-12">12 Aug 2026</time><span>Brand Manager joins</span></li>
               <li><time>12–13 Aug 2026</time><span>Nagpur visit: Ice Cream and Dairy confirmed as the 2 lead verticals; 4 factory priorities set</span></li>
               <li><time datetime="2026-08-21">21 Aug 2026</time><span>Project Pune named the quick commerce priority; RFID discovery with ID Tech</span></li>
-              <li><time datetime="2026-08-28">28 Aug 2026</time><span>Business Head Ice Cream signs</span></li>
+              <li class="win"><time datetime="2026-08-28">28 Aug 2026</time><span>Business Head Ice Cream signs</span></li>
               <li><time datetime="2026-08-31">31 Aug 2026</time><span>HRMS demos by ZingHR and BlueTree in Nagpur</span></li>
-              <li><time datetime="2026-09-05">5 Sep 2026</time><span>Dairy quick commerce campaign goes live (Ghee, Paneer, Curd, Milk)</span></li>
+              <li class="win"><time datetime="2026-09-05">5 Sep 2026</time><span>Dairy quick commerce campaign goes live (Ghee, Paneer, Curd, Milk)</span></li>
               <li><time>Sep 2026</time><span>Spain and Malta shelf research; Promoter-Professional Engagement Framework and Board Structure note</span></li>
-              <li><time datetime="2026-09-21">21 Sep 2026</time><span>PMG Engineers order received for a 3-year plant upgrade; skyr chosen as the R&amp;D focus</span></li>
+              <li class="win"><time datetime="2026-09-21">21 Sep 2026</time><span>PMG Engineers order received for a <strong>3-year plant upgrade</strong>; skyr chosen as the R&amp;D focus</span></li>
             </ol>
             <div class="decision"><span class="label">Key Decision</span><p>Win Pune first: platform advertising over discounting, with new cities opened only once Pune performs (21 Aug).</p></div>
-          </article>
-        </li>
-
-        <li class="phase" data-stop>
-          <span class="marker" aria-hidden="true"></span>
-          <article aria-labelledby="ph5">
-            <p class="label">Phase 5 · October 2026</p>
-            <h3 id="ph5">Now</h3>
+          
+    </div></div>
+  </article>
+  <article class="ph ph-5" aria-labelledby="ph5" data-stop>
+    <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1421 6 1417 67 1346 67C1275 67 1271 6 1252 6C1234 6 1230 40 1160 40C1090 40 1086 6 1068 6C1061 6 1059 105 1032 105C1005 105 1003 6 996 6C985 6 983 84 942 84C900 84 898 6 887 6C875 6 873 97 828 97C783 97 781 6 769 6C758 6 755 46 712 46C668 46 666 6 654 6C638 6 635 54 573 54C511 54 508 6 492 6C482 6 480 86 440 86C400 86 398 6 388 6C381 6 379 58 352 58C326 58 324 6 317 6C302 6 299 88 242 88C186 88 183 6 168 6C151 6 148 33 84 33C20 33 17 6 0 6Z"/></svg>
+    <div class="wrap"><div class="ph-body">
+      <div class="ph-scoop"><svg viewBox="0 0 200 172" aria-hidden="true" focusable="false"><path d="M14 116C14 52 52 8 100 8C148 8 186 52 186 116C186 130 176 138 168 131C159 124 154 146 142 146C131 146 129 130 118 133C107 136 108 164 95 164C82 164 84 134 71 133C60 132 59 148 46 146C36 144 37 130 28 134C20 138 14 128 14 116Z" fill="#4B2A6F" stroke="#FFFFFF" stroke-width="5"/><path d="M42 72C50 48 68 32 88 26" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/></svg></div>
+            <p class="label">Phase 5 · October to November 2026</p>
+            <h3 class="name" id="ph5">Now</h3>
             <p class="theme">New products, a reset with Instamart, and the leadership team close to complete.</p>
             <ol class="ms" aria-label="Phase 5 milestones">
-              <li><time>30 Sep–1 Oct 2026</time><span>Nagpur review: 32 action items; Base Plan signed off; separate P&amp;Ls by vertical; store design chosen</span></li>
+              <li class="win"><time>30 Sep–1 Oct 2026</time><span>Nagpur review: 32 action items; Base Plan signed off; separate P&amp;Ls by vertical; store design chosen</span></li>
               <li><time datetime="2026-10-01">1 Oct 2026</time><span>New product note delivered: skyr and an unflavoured probiotic dahi</span></li>
               <li><time datetime="2026-10-03">3 Oct 2026</time><span>Meeting with Ms Nandita Sinha, CEO of Instamart</span></li>
-              <li><time datetime="2026-10-05">5 Oct 2026</time><span>Sales Head Namkeen &amp; Bakery finalised</span></li>
+              <li class="win"><time datetime="2026-10-05">5 Oct 2026</time><span>Sales Head Namkeen &amp; Bakery finalised</span></li>
               <li><time datetime="2026-10-08">8 Oct 2026</time><span>CHRO final offer issued; Head IT interviews begin</span></li>
-              <li><time datetime="2026-10-09">9 Oct 2026</time><span>Q2 progress report issued; HRMS pilot secured from both vendors at no cost</span></li>
+              <li class="win"><time datetime="2026-10-09">9 Oct 2026</time><span>Q2 progress report issued; HRMS pilot secured from both vendors <strong>at no cost</strong></span></li>
+              <li><time datetime="2026-10-12">12 Oct 2026</time><span>Tetra Pak sessions in Sweden, followed by Diplom-Is in Norway and an Oslo shelf walk, to validate the yoghurt plant</span></li>
+              <li><time>Oct 2026</time><span>Leadership onboarding and joining policy documents prepared for the incoming Business Heads</span></li>
+              <li class="win"><time datetime="2026-10-28">28 Oct 2026</time><span>Working session with Swiggy Instamart in Bangalore: alignment on ice cream listings, freezers, dairy supply and joint new products</span></li>
+              <li class="win"><time>Oct 2026</time><span>Pune on Blinkit has its strongest month since June, closing at <strong>₹20.87 lakh</strong></span></li>
+              <li class="win"><time datetime="2026-11-03">3 Nov 2026</time><span>CHRO offer letter signed</span></li>
             </ol>
             <div class="decision"><span class="label">Key Decision</span><p>Skyr over Greek yogurt: high protein, low fat, no added sugar, sold through quick commerce and corporate channels (30 Sep).</p></div>
-          </article>
-        </li>
-        </ol>
-      </div>
-    </div>
-  </div>
+          
+    </div></div>
+  </article>
+</div>
 </section>
 
 <!-- ===================== 03 RESULTS ===================== -->
 <section class="section tint" id="results" data-section aria-labelledby="h-results">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1433 6 1431 90 1404 90C1378 90 1376 6 1369 6C1361 6 1359 80 1327 80C1295 80 1293 6 1285 6C1276 6 1274 35 1241 35C1208 35 1206 6 1197 6C1188 6 1187 44 1154 44C1120 44 1119 6 1110 6C1096 6 1093 59 1041 59C989 59 986 6 972 6C956 6 953 47 892 47C830 47 827 6 811 6C802 6 800 34 767 34C734 34 732 6 723 6C708 6 705 37 646 37C587 37 584 6 569 6C560 6 559 59 526 59C492 59 491 6 482 6C468 6 465 87 413 87C361 87 358 6 344 6C330 6 328 82 276 82C223 82 221 6 207 6C197 6 195 105 159 105C123 105 121 6 111 6C103 6 101 45 70 45C40 45 38 6 30 6C27 6 26 81 15 81C4 81 3 6 0 6Z"/></svg>
   <div class="wrap grid">
     <div class="sec-label"><span class="label">03 · Results So Far</span></div>
     <div class="sec-body">
       <h2 class="sec-title" id="h-results" data-reveal>Focused Bets Are Already Paying Back</h2>
-      <p class="intro" data-reveal>Figures as reported in the weekly quick commerce reviews and the Nagpur meetings.</p>
+      <p class="intro" data-reveal>Figures as reported in the weekly quick commerce reviews, the marketing summaries and the Nagpur meetings.</p>
 
       <div class="results">
         <article class="result" data-reveal>
@@ -668,7 +634,6 @@
           <p>Blinkit sales, April to September 2026, against ~₹60 lakh in the same months last year.</p>
           <div class="chart" data-chart="blinkit">
             <span class="cap" id="cap-blinkit">Blinkit sales, Apr to Sep</span>
-            <div class="canvas-box"><canvas role="img" aria-labelledby="cap-blinkit" aria-describedby="desc-blinkit"></canvas></div>
             <ul class="fallback" id="desc-blinkit">
               <li><span class="k">2025</span><span class="b"><i class="prev" style="--w:9%"></i>₹0.6 Cr</span></li>
               <li><span class="k">2026</span><span class="b"><i style="--w:72%"></i>₹5 Cr</span></li>
@@ -684,23 +649,22 @@
         </article>
 
         <article class="result" data-reveal>
-          <p class="fig num">~3x</p>
-          <p>Pune Blinkit ice cream sales, from ~₹4 lakh to ₹11–12 lakh a month on ~₹2.5 lakh of search spend.</p>
+          <p class="fig num">~5x</p>
+          <p>Pune sales on Blinkit, from ~₹4 lakh a month to ₹20.87 lakh in October, with ₹11.69 lakh of advertising to 28 October.</p>
           <div class="chart" data-chart="pune">
-            <span class="cap" id="cap-pune">Pune ice cream, a month</span>
-            <div class="canvas-box"><canvas role="img" aria-labelledby="cap-pune" aria-describedby="desc-pune"></canvas></div>
+            <span class="cap" id="cap-pune">Pune on Blinkit, a month</span>
             <ul class="fallback" id="desc-pune">
-              <li><span class="k">Before</span><span class="b"><i class="prev" style="--w:24%"></i>₹4 lakh</span></li>
-              <li><span class="k">After</span><span class="b"><i style="--w:68%"></i>₹11–12 lakh</span></li>
+              <li><span class="k">Before</span><span class="b"><i class="prev" style="--w:12%"></i>₹4 lakh</span></li>
+              <li><span class="k">After</span><span class="b"><i style="--w:60%"></i>₹20.87 lakh</span></li>
             </ul>
           </div>
-          <p class="src">Source: Weekly review, 8 Sep 2026</p>
+          <p class="src">Source: Weekly review, 8 Sep; Pune update, 3 Nov 2026</p>
         </article>
 
         <article class="result" data-reveal>
-          <p class="fig num">~₹1 Cr</p>
-          <p>Monthly quick commerce run-rate across ice cream and dairy by September.</p>
-          <p class="src">Source: Promoter review, 21 Sep 2026</p>
+          <p class="fig num">₹1.61 Cr</p>
+          <p>Quick commerce sales across ice cream and dairy in October, to 30 October, against ₹1.47 Cr in September.</p>
+          <p class="src">Source: Marketing summary, Oct 2026</p>
         </article>
 
         <article class="result" data-reveal>
@@ -721,20 +685,21 @@
 
 <!-- ===================== 04 LEADERSHIP ===================== -->
 <section class="section" id="leadership" data-section aria-labelledby="h-lead">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1424 6 1421 107 1362 107C1302 107 1299 6 1283 6C1275 6 1273 109 1242 109C1212 109 1210 6 1202 6C1186 6 1183 111 1124 111C1066 111 1062 6 1047 6C1034 6 1031 34 980 34C928 34 926 6 912 6C897 6 894 77 837 77C780 77 777 6 762 6C749 6 747 97 699 97C651 97 649 6 636 6C619 6 615 43 550 43C486 43 482 6 465 6C449 6 446 88 386 88C327 88 324 6 308 6C293 6 290 66 235 66C180 66 177 6 162 6C146 6 143 78 81 78C19 78 16 6 0 6Z"/></svg>
   <div class="wrap grid">
     <div class="sec-label"><span class="label">04 · Leadership Team</span></div>
     <div class="sec-body">
       <h2 class="sec-title" id="h-lead" data-reveal>From Family-Run to Professionally Led</h2>
-      <p class="intro" data-reveal>7 senior roles were designed from scratch, each with a JD and a scored skill matrix. 3 are secured and the CHRO has a final offer.</p>
+      <p class="intro" data-reveal>7 senior roles were designed from scratch, each with a JD and a scored skill matrix. 4 are secured, including the CHRO, and the remaining 3 searches are active.</p>
 
       <div class="roles">
-        <article class="role" data-reveal><h3>Business Head, Dairy</h3><span class="pill done">Signed</span><p class="who">Mr Venkataramani Santhanam</p><p class="when">Joining ~26 October 2026</p></article>
+        <article class="role" data-reveal><h3>Business Head, Dairy</h3><span class="pill done">Signed</span><p class="who">Mr Venkataramani Santhanam</p><p class="when">Joining 16 November 2026</p></article>
         <article class="role" data-reveal><h3>Business Head, Ice Cream</h3><span class="pill done">Signed</span><p class="who">Mr Aditya Mittal</p><p class="when">Joining 4 January 2027</p></article>
-        <article class="role" data-reveal><h3>Sales Head, Namkeen &amp; Bakery</h3><span class="pill done">Finalised</span><p class="who">Mr Pravesh Kumar Mittal</p><p class="when">Confirmed 5 October 2026</p></article>
-        <article class="role" data-reveal><h3>CHRO</h3><span class="pill prog">Offer Issued</span><p class="who note">Final offer sent 8 October 2026</p><p class="when">Acceptance awaited</p></article>
-        <article class="role" data-reveal><h3>CFO</h3><span class="pill prog">Interviewing</span><p class="who note">Lead candidate met 9 October 2026</p><p class="when">2 backup candidates in hand</p></article>
-        <article class="role" data-reveal><h3>Head IT</h3><span class="pill prog">Interviewing</span><p class="who note">Systems role for SAP, plant IT and data</p><p class="when">Interviews from 8 October 2026</p></article>
-        <article class="role" data-reveal><h3>Channel Commercial Head</h3><span class="pill open">Search Active</span><p class="who note">Quick commerce and modern trade</p><p class="when">Brief sharpened 6 October 2026</p></article>
+        <article class="role" data-reveal><h3>Sales Head, Namkeen &amp; Bakery</h3><span class="pill done">Finalised</span><p class="who">Mr Pravesh Kumar Mittal</p><p class="when">Joining 12 November 2026</p></article>
+        <article class="role" data-reveal><h3>CHRO</h3><span class="pill done">Signed</span><p class="who">Mr Saurabh Pandey</p><p class="when">Offer signed; joining expected mid-January 2027</p></article>
+        <article class="role" data-reveal><h3>CFO</h3><span class="pill prog">Offer Stage</span><p class="who note">Preferred candidate cleared the promoter round</p><p class="when">Offer being prepared, November 2026</p></article>
+        <article class="role" data-reveal><h3>Head IT</h3><span class="pill prog">Interviewing</span><p class="who note">Systems role for SAP, plant IT and data</p><p class="when">In management round, November 2026</p></article>
+        <article class="role" data-reveal><h3>Channel Commercial Head</h3><span class="pill open">Search Active</span><p class="who note">Quick commerce and modern trade</p><p class="when">Brief narrowed 9 October 2026; interviews under way</p></article>
       </div>
 
       <div class="block" data-stop>
@@ -754,6 +719,7 @@
 
 <!-- ===================== 05 DECISIONS ===================== -->
 <section class="section tint" id="decisions" data-section aria-labelledby="h-dec">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1428 6 1426 72 1381 72C1336 72 1334 6 1322 6C1312 6 1310 51 1272 51C1235 51 1233 6 1223 6C1204 6 1201 79 1130 79C1060 79 1056 6 1038 6C1024 6 1021 66 966 66C912 66 909 6 895 6C881 6 878 65 825 65C772 65 769 6 755 6C743 6 741 103 696 103C650 103 648 6 636 6C629 6 627 61 600 61C574 61 572 6 565 6C550 6 547 32 488 32C429 32 426 6 411 6C398 6 396 49 348 49C300 49 298 6 285 6C276 6 274 70 240 70C207 70 205 6 196 6C187 6 185 62 150 62C116 62 114 6 105 6C94 6 92 109 52 109C13 109 10 6 0 6Z"/></svg>
   <div class="wrap grid">
     <div class="sec-label"><span class="label">05 · Decisions Register</span></div>
     <div class="sec-body filterable" data-filterable="decisions">
@@ -761,15 +727,15 @@
       <p class="intro" data-reveal>Major decisions taken by the promoters with STAIR’s input.</p>
 
       <div class="filters" role="group" aria-label="Filter decisions by workstream" data-reveal>
-        <button type="button" data-filter="all" aria-pressed="true">All <span class="c">32</span></button>
-        <button type="button" data-filter="Leadership" aria-pressed="false">Leadership <span class="c">5</span></button>
-        <button type="button" data-filter="Marketing" aria-pressed="false">Marketing <span class="c">4</span></button>
-        <button type="button" data-filter="Digital" aria-pressed="false">Digital <span class="c">6</span></button>
+        <button type="button" data-filter="all" aria-pressed="true">All <span class="c">36</span></button>
+        <button type="button" data-filter="Leadership" aria-pressed="false">Leadership <span class="c">6</span></button>
+        <button type="button" data-filter="Marketing" aria-pressed="false">Marketing <span class="c">5</span></button>
+        <button type="button" data-filter="Digital" aria-pressed="false">Digital <span class="c">7</span></button>
         <button type="button" data-filter="Factory" aria-pressed="false">Factory <span class="c">6</span></button>
         <button type="button" data-filter="Strategy &amp; New Products" aria-pressed="false">Strategy &amp; New Products <span class="c">7</span></button>
-        <button type="button" data-filter="Governance" aria-pressed="false">Governance <span class="c">4</span></button>
+        <button type="button" data-filter="Governance" aria-pressed="false">Governance <span class="c">5</span></button>
       </div>
-      <p class="status-line" aria-live="polite" data-status data-noun="decisions">Showing all 32 decisions</p>
+      <p class="status-line" aria-live="polite" data-status data-noun="decisions">Showing all 36 decisions</p>
 
       <div class="register" data-reveal style="margin-top:14px">
         <table class="rows">
@@ -807,7 +773,11 @@
             <tr data-cat="Governance"><td class="d">1 Oct 2026</td><td class="what">Separate P&amp;L, balance sheet and cash flow for each vertical<span class="by">Promoters</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
             <tr data-cat="Marketing"><td class="d">1 Oct 2026</td><td class="what">Pune target reset to a top-3 position with ~20% share<span class="by">Promoters</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
             <tr data-cat="Strategy &amp; New Products"><td class="d">1 Oct 2026</td><td class="what">Own stores are company-owned and company-operated; design Proposal 1 chosen<span class="by">Promoters</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Governance"><td class="d">3 Oct 2026</td><td class="what">1 person each as Chairman, Managing Director and Executive Director; 2 board committees in place of 3<span class="by">Promoters</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
+            <tr data-cat="Leadership"><td class="d">9 Oct 2026</td><td class="what">Channel Commercial mandate narrowed to quick commerce and modern trade<span class="by">Promoters with STAIR</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
             <tr data-cat="Digital"><td class="d">9 Oct 2026</td><td class="what">HRMS pilots run one after the other on 2 months of real data<span class="by">Mr Zervin Rana</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Digital"><td class="d">13 Oct 2026</td><td class="what">CPD Division removed from the SAP structure; its sales move to the existing divisions<span class="by">Dinshaw’s</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Marketing"><td class="d">28 Oct 2026</td><td class="what">Separate on-platform budget of ₹5 Cr+ for Instamart, starting with ice cream where GT presence is strong<span class="by">Bangalore meeting</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -817,6 +787,7 @@
 
 <!-- ===================== 06 VALUE SECURED ===================== -->
 <section class="section" id="value" data-section aria-labelledby="h-val">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1433 6 1431 66 1403 66C1375 66 1373 6 1366 6C1350 6 1347 48 1286 48C1226 48 1223 6 1207 6C1194 6 1192 77 1142 77C1093 77 1091 6 1078 6C1062 6 1059 42 1000 42C942 42 938 6 923 6C910 6 908 106 859 106C810 106 808 6 795 6C782 6 779 107 728 107C678 107 675 6 662 6C655 6 653 95 626 95C599 95 597 6 590 6C578 6 575 103 528 103C480 103 478 6 465 6C453 6 451 109 406 109C362 109 360 6 348 6C330 6 327 100 258 100C190 100 187 6 169 6C152 6 149 85 84 85C20 85 17 6 0 6Z"/></svg>
   <div class="wrap grid">
     <div class="sec-label"><span class="label">06 · Value Secured</span></div>
     <div class="sec-body">
@@ -841,6 +812,7 @@
 
 <!-- ===================== 07 RESEARCH ===================== -->
 <section class="section tint" id="research" data-section aria-labelledby="h-res">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1428 6 1426 38 1382 38C1339 38 1336 6 1325 6C1312 6 1310 100 1262 100C1215 100 1212 6 1200 6C1187 6 1185 103 1136 103C1087 103 1085 6 1072 6C1061 6 1058 62 1016 62C973 62 970 6 959 6C946 6 943 79 892 79C840 79 838 6 824 6C812 6 810 108 764 108C718 108 716 6 704 6C696 6 695 83 666 83C638 83 636 6 629 6C614 6 611 33 552 33C493 33 490 6 475 6C467 6 465 30 434 30C402 30 400 6 392 6C382 6 380 91 340 91C301 91 299 6 289 6C273 6 270 99 208 99C146 99 143 6 127 6C120 6 118 70 92 70C65 70 63 6 56 6C50 6 49 84 28 84C7 84 6 6 0 6Z"/></svg>
   <div class="wrap grid">
     <div class="sec-label"><span class="label">07 · Research and Documents</span></div>
     <div class="sec-body">
@@ -875,20 +847,23 @@
         <article class="rcard" data-reveal><p class="label">Growth · Sep 2026</p><h3>Africa Opportunity</h3><p>Using opposite-hemisphere summers to fill India’s lean-season factory capacity.</p></article>
         <article class="rcard" data-reveal><p class="label">Retail · Oct 2026</p><h3>Own Store Formats</h3><p>Ice cream studio, company store and kiosk, designed with Incubis.</p></article>
         <article class="rcard" data-reveal><p class="label">Risk · May 2026</p><h3>Weather &amp; Cold Chain</h3><p>Seasonal forecast for Mumbai and its effect on cold-chain logistics.</p></article>
+        <article class="rcard" data-reveal><p class="label">Field research · Oct 2026</p><h3>Sweden &amp; Norway Visit</h3><p>Tetra Pak sessions, the Diplom-Is factory and an Oslo shelf walk, to test the yoghurt plant thesis.</p></article>
+        <article class="rcard" data-reveal><p class="label">Yoghurt plant · Oct 2026</p><h3>Plant Question Bank</h3><p>About 270 questions prepared before the trip, 49 framed on Mr Jimmy Rana’s brief.</p></article>
+        <article class="rcard" data-reveal><p class="label">Governance · Oct 2026</p><h3>Board &amp; Engagement Frameworks</h3><p>How the board governs, and how the incoming professionals write and are held to their own plans.</p></article>
       </div>
 
       <div class="library filterable" data-filterable="docs" data-stop>
         <div class="sub-head" data-reveal><h3>Document Library</h3></div>
         <div class="filters" role="group" aria-label="Filter documents by category" data-reveal style="margin-top:0">
-          <button type="button" data-filter="all" aria-pressed="true">All <span class="c">48</span></button>
-          <button type="button" data-filter="Hiring" aria-pressed="false">Hiring <span class="c">13</span></button>
-          <button type="button" data-filter="Research" aria-pressed="false">Research <span class="c">9</span></button>
+          <button type="button" data-filter="all" aria-pressed="true">All <span class="c">55</span></button>
+          <button type="button" data-filter="Hiring" aria-pressed="false">Hiring <span class="c">18</span></button>
+          <button type="button" data-filter="Research" aria-pressed="false">Research <span class="c">10</span></button>
           <button type="button" data-filter="Digital" aria-pressed="false">Digital <span class="c">8</span></button>
           <button type="button" data-filter="Factory" aria-pressed="false">Factory <span class="c">5</span></button>
           <button type="button" data-filter="Strategy" aria-pressed="false">Strategy <span class="c">4</span></button>
-          <button type="button" data-filter="Governance" aria-pressed="false">Governance <span class="c">9</span></button>
+          <button type="button" data-filter="Governance" aria-pressed="false">Governance <span class="c">10</span></button>
         </div>
-        <p class="status-line" aria-live="polite" data-status data-noun="docs">48 key documents shown, from 110+ logged</p>
+        <p class="status-line" aria-live="polite" data-status data-noun="docs">55 key documents shown, from 120+ logged</p>
         <div class="lib-box" data-reveal style="margin-top:14px">
           <ol class="lib">
             <li data-cat="Hiring"><time>Sep 2025</time><span class="nm">CHRO job description and skill matrix<span class="cat">Hiring</span></span></li>
@@ -939,6 +914,13 @@
             <li data-cat="Digital"><time>Oct 2026</time><span class="nm">Logistics costing in SAP note<span class="cat">Digital</span></span></li>
             <li data-cat="Governance"><time>Oct 2026</time><span class="nm">Nagpur review notes and 32-item action plan<span class="cat">Governance</span></span></li>
             <li data-cat="Governance"><time>Oct 2026</time><span class="nm">Q2 FY 2026-27 Progress Report<span class="cat">Governance</span></span></li>
+            <li data-cat="Governance"><time>Oct 2026</time><span class="nm">Nagpur visit minutes, 30 September and 1 October<span class="cat">Governance</span></span></li>
+            <li data-cat="Research"><time>Oct 2026</time><span class="nm">Yoghurt plant question bank for Tetra Pak<span class="cat">Research</span></span></li>
+            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Head, Quick Commerce &amp; Modern Trade JD<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Leadership onboarding and meet-and-greet process<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Joining policy for incoming Business Heads<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Draft PLI and LTIP letter<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Nov 2026</time><span class="nm">Cultural onboarding document<span class="cat">Hiring</span></span></li>
           </ol>
         </div>
       </div>
@@ -948,6 +930,7 @@
 
 <!-- ===================== 08 WHAT'S NEXT ===================== -->
 <section class="section" id="next" data-section aria-labelledby="h-next">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1425 6 1422 57 1366 57C1310 57 1307 6 1292 6C1279 6 1277 94 1228 94C1179 94 1177 6 1164 6C1148 6 1145 91 1084 91C1022 91 1019 6 1003 6C984 6 980 96 908 96C837 96 833 6 814 6C802 6 800 88 756 88C712 88 710 6 698 6C682 6 678 33 616 33C555 33 551 6 535 6C517 6 514 34 446 34C377 34 374 6 356 6C337 6 334 51 263 51C192 51 189 6 170 6C159 6 156 46 113 46C70 46 67 6 56 6C50 6 49 37 28 37C7 37 6 6 0 6Z"/></svg>
   <div class="wrap grid">
     <div class="sec-label"><span class="label">08 · What’s Next</span></div>
     <div class="sec-body">
@@ -956,13 +939,13 @@
     </div>
     <div class="sec-full">
       <ol class="next" aria-label="Scheduled next steps">
-        <li data-reveal><time>10–20 Oct 2026</time><h3>Europe benchmarking</h3><p>Tetra Pak yogurt and ice cream facilities in Sweden and Denmark.</p></li>
-        <li data-reveal><time>~26 Oct 2026</time><h3>Business Head Dairy joins</h3><p>First professional business head in place.</p></li>
-        <li data-reveal><time>27–29 Oct 2026</time><h3>Instamart, Bangalore</h3><p>Working session with the Instamart team and Mr Zervin Rana.</p></li>
-        <li data-reveal><time>Late Oct 2026</time><h3>HRMS pilots</h3><p>ZingHR and BlueTree tested on 2 months of plant data.</p></li>
-        <li data-reveal><time>Nov 2026</time><h3>Leadership team complete</h3><p>Target to close CHRO, CFO, Head IT and Channel Commercial Head.</p></li>
+        <li data-reveal><time>12 Nov 2026</time><h3>Sales Head, Namkeen &amp; Bakery joins</h3><p>Building the sales and distribution engine for the new vertical.</p></li>
+        <li data-reveal><time>16 Nov 2026</time><h3>Business Head Dairy joins</h3><p>First professional business head in place.</p></li>
+        <li data-reveal><time>19–20 Nov 2026</time><h3>Leadership sessions, Nagpur</h3><p>Mr Shubham Saraff and Mr Shailesh Haribhakti meet the incoming Business Heads.</p></li>
+        <li data-reveal><time>Nov 2026</time><h3>HRMS pilots</h3><p>ZingHR and BlueTree tested on 2 months of plant data.</p></li>
         <li data-reveal><time>Dec 2026</time><h3>Quick commerce intelligence</h3><p>Tracking competitors across 23 platforms goes live.</p></li>
         <li data-reveal><time>4 Jan 2027</time><h3>Business Head Ice Cream joins</h3><p>Ahead of the summer season.</p></li>
+        <li data-reveal><time>Jan 2027</time><h3>CHRO joins; CFO targeted</h3><p>CHRO expected mid-January, with the CFO appointment targeted by January.</p></li>
         <li data-reveal><time>Jan–Feb 2027</time><h3>SAP S/4HANA go-live</h3><p>With product-wise costing and volume-based logistics allocation built in.</p></li>
       </ol>
     </div>
@@ -973,8 +956,8 @@
 
 <footer class="site-footer">
   <div class="wrap grid">
-    <p class="l"><b>STAIR Digital</b> · Prepared for the Board of Dinshaw’s · Updated 9 October 2026</p>
-    <p class="r">Source: STAIR engagement journal, September 2025 to October 2026 · 42 Free Press House, Nariman Point, Mumbai</p>
+    <p class="l"><b>STAIR Digital</b> · Prepared for the Board of Dinshaw’s · Updated 9 November 2026<br><button class="intro-replay" type="button" onclick="window.scrollTo(0,0)">Replay the Diwali greeting</button></p>
+    <p class="r">Source: STAIR engagement journal, September 2025 to November 2026 · 42 Free Press House, Nariman Point, Mumbai</p>
   </div>
 </footer>
 
@@ -983,8 +966,6 @@
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
@@ -992,248 +973,458 @@ document.addEventListener('DOMContentLoaded', function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hasGsap = !!(window.gsap && window.ScrollTrigger);
   var animate = hasGsap && !reduce && root.classList.contains('motion');
-  if (animate) clearTimeout(window.__motionFallback);
-  else root.classList.remove('motion');
+  if (animate) clearTimeout(window.__motionFallback); else root.classList.remove('motion');
 
-  /* ---------- Icons ---------- */
-  try { if (window.lucide) window.lucide.createIcons({ attrs: { 'stroke-width': 1.5, width: 16, height: 16 } }); } catch (e) {}
-
-  /* ---------- Smooth scrolling ---------- */
   var lenis = null;
   if (!reduce && window.Lenis) {
     try {
       lenis = new window.Lenis({ duration: 1.05, smoothWheel: true });
-      if (hasGsap) {
-        lenis.on('scroll', window.ScrollTrigger.update);
-        window.gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
-        window.gsap.ticker.lagSmoothing(0);
-      } else {
-        (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })(0);
-      }
+      if (hasGsap) { lenis.on('scroll', window.ScrollTrigger.update); window.gsap.ticker.add(function (t) { lenis.raf(t * 1000); }); window.gsap.ticker.lagSmoothing(0); }
+      else (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })(0);
+      if (window.__introOpen) { lenis.stop(); window.addEventListener('intro:end', function () { lenis.start(); }, { once: true }); }
     } catch (e) { lenis = null; }
   }
 
   var nav = document.querySelector('.site-nav');
   function navH() { return nav ? nav.offsetHeight : 0; }
   function yOf(el) { return el.getBoundingClientRect().top + window.pageYOffset; }
-  function scrollToY(y) {
-    y = Math.max(0, Math.round(y));
-    if (lenis) lenis.scrollTo(y, { duration: 1.0 });
-    else window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
-  }
-  function scrollToEl(el) { scrollToY(el.id === 'top' ? 0 : yOf(el) - navH()); }
-
+  function scrollToY(y) { y = Math.max(0, Math.round(y)); if (lenis) lenis.scrollTo(y, { duration: 1 }); else window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' }); }
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener('click', function (ev) {
-      var id = a.getAttribute('href').slice(1);
-      var el = id && document.getElementById(id);
+      var id = a.getAttribute('href').slice(1), el = id && document.getElementById(id);
       if (!el) return;
-      ev.preventDefault();
-      scrollToEl(el);
-      if (id !== 'top' && el.id !== 'main') { el.setAttribute('tabindex', '-1'); el.focus({ preventScroll: true }); }
+      ev.preventDefault(); scrollToY(id === 'top' ? 0 : yOf(el) - navH());
     });
   });
 
-  /* ---------- Current section, nav state, counter, progress ---------- */
-  var sections = Array.prototype.slice.call(document.querySelectorAll('[data-section]'));
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
-  var bar = document.getElementById('progressBar');
-  var ctrCur = document.getElementById('ctrCur');
+  var sections = [].slice.call(document.querySelectorAll('[data-section]'));
+  var links = [].slice.call(document.querySelectorAll('.nav-links a'));
+  var linkBar = document.querySelector('.nav-links');
+  var bar = document.getElementById('progressBar'), cur = document.getElementById('ctrCur');
   document.getElementById('ctrTot').textContent = sections.length;
   var current = -1;
-
-  function currentIndex() {
-    var line = window.pageYOffset + navH() + window.innerHeight * 0.3;
-    var idx = 0;
-    for (var i = 0; i < sections.length; i++) if (yOf(sections[i]) <= line) idx = i;
-    if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4) idx = sections.length - 1;
-    return idx;
-  }
   function onScroll() {
     var max = document.documentElement.scrollHeight - window.innerHeight;
     bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.pageYOffset / max) : 0) + ')';
-    var idx = currentIndex();
+    var line = window.pageYOffset + navH() + window.innerHeight * .3, idx = 0;
+    sections.forEach(function (s, i) { if (yOf(s) <= line) idx = i; });
+    if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4) idx = sections.length - 1;
     if (idx === current) return;
-    current = idx;
-    ctrCur.textContent = idx + 1;
+    current = idx; cur.textContent = idx + 1;
     var id = sections[idx].id;
-    navLinks.forEach(function (a) {
-      if (a.getAttribute('data-nav') === id) a.setAttribute('aria-current', 'true');
-      else a.removeAttribute('aria-current');
-    });
+    links.forEach(function (a) { if (a.getAttribute('data-nav') === id) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
     var active = document.querySelector('.nav-links a[aria-current]');
-    var links = document.querySelector('.nav-links');
-    if (active && links.scrollWidth > links.clientWidth) {
-      links.scrollTo({ left: active.offsetLeft - 16, behavior: reduce ? 'auto' : 'smooth' });
-    }
+    if (active && linkBar.scrollWidth > linkBar.clientWidth) linkBar.scrollTo({ left: active.offsetLeft - 16, behavior: reduce ? 'auto' : 'smooth' });
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
-  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true }); window.addEventListener('resize', onScroll); onScroll();
 
-  /* ---------- Presenter mode ---------- */
   function stops() {
-    return Array.prototype.slice.call(document.querySelectorAll('[data-section], [data-stop]'))
-      .filter(function (el) { return el.offsetParent !== null || el.id === 'top'; })
-      .map(function (el) { return el.id === 'top' ? 0 : Math.round(yOf(el) - navH()); })
-      .sort(function (a, b) { return a - b; });
+    return [].slice.call(document.querySelectorAll('[data-section], [data-stop]')).map(function (el) { return el.id === 'top' ? 0 : Math.round(yOf(el) - navH()); }).sort(function (a, b) { return a - b; });
   }
   function step(dir) {
-    var y = lenis ? lenis.targetScroll : window.pageYOffset;
-    var vh = window.innerHeight - navH();
-    var maxY = document.documentElement.scrollHeight - window.innerHeight;
-    var list = stops(), target = null, i;
-    if (dir > 0) {
-      for (i = 0; i < list.length; i++) if (list[i] > y + 8) { target = list[i]; break; }
-      if (target === null) target = maxY;
-      if (target - y > vh * 1.05) target = y + vh * 0.85;  // long section: page through it
-    } else {
-      for (i = list.length - 1; i >= 0; i--) if (list[i] < y - 8) { target = list[i]; break; }
-      if (target === null) target = 0;
-      if (y - target > vh * 1.05) target = y - vh * 0.85;
-    }
+    var y = lenis ? lenis.targetScroll : window.pageYOffset, vh = window.innerHeight - navH(), maxY = document.documentElement.scrollHeight - window.innerHeight, list = stops(), target = null, i;
+    if (dir > 0) { for (i = 0; i < list.length; i++) if (list[i] > y + 8) { target = list[i]; break; } if (target === null) target = maxY; if (target - y > vh * 1.05) target = y + vh * .85; }
+    else { for (i = list.length - 1; i >= 0; i--) if (list[i] < y - 8) { target = list[i]; break; } if (target === null) target = 0; if (y - target > vh * 1.05) target = y - vh * .85; }
     scrollToY(Math.min(maxY, Math.max(0, target)));
   }
-  function toggleFull() {
-    if (!document.fullscreenElement) { if (root.requestFullscreen) root.requestFullscreen().catch(function () {}); }
-    else if (document.exitFullscreen) document.exitFullscreen();
-  }
+  function toggleFull() { if (!document.fullscreenElement) { if (root.requestFullscreen) root.requestFullscreen().catch(function () {}); } else if (document.exitFullscreen) document.exitFullscreen(); }
   document.addEventListener('keydown', function (ev) {
     if (ev.altKey || ev.ctrlKey || ev.metaKey) return;
-    var t = ev.target, tag = t && t.tagName;
-    var typing = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || (t && t.isContentEditable);
-    if (typing) return;
-    var onControl = tag === 'BUTTON' || tag === 'A';
-    var k = ev.key;
-    if (k === 'ArrowRight' || k === 'ArrowDown' || k === 'PageDown' || (k === ' ' && !onControl && !ev.shiftKey)) { ev.preventDefault(); step(1); }
-    else if (k === 'ArrowLeft' || k === 'ArrowUp' || k === 'PageUp' || (k === ' ' && !onControl && ev.shiftKey)) { ev.preventDefault(); step(-1); }
-    else if ((k === 'f' || k === 'F') && !ev.shiftKey) { ev.preventDefault(); toggleFull(); }
+    var tag = ev.target && ev.target.tagName, control = tag === 'BUTTON' || tag === 'A', k = ev.key;
+    if (k === 'ArrowRight' || k === 'ArrowDown' || k === 'PageDown' || (k === ' ' && !control && !ev.shiftKey)) { ev.preventDefault(); step(1); }
+    else if (k === 'ArrowLeft' || k === 'ArrowUp' || k === 'PageUp' || (k === ' ' && !control && ev.shiftKey)) { ev.preventDefault(); step(-1); }
+    else if (k === 'f' || k === 'F') { ev.preventDefault(); toggleFull(); }
   });
   var bf = document.getElementById('btnFull'); if (bf) bf.addEventListener('click', toggleFull);
   var bp = document.getElementById('btnPrint'); if (bp) bp.addEventListener('click', function () { window.print(); });
 
-  /* ---------- Filters ---------- */
   document.querySelectorAll('[data-filterable]').forEach(function (scope) {
-    var buttons = Array.prototype.slice.call(scope.querySelectorAll('[data-filter]'));
-    var items = Array.prototype.slice.call(scope.querySelectorAll('[data-cat]'));
-    var status = scope.querySelector('[data-status]');
-    var noun = status.getAttribute('data-noun');
+    var buttons = [].slice.call(scope.querySelectorAll('[data-filter]')), items = [].slice.call(scope.querySelectorAll('[data-cat]')), status = scope.querySelector('[data-status]'), noun = status.getAttribute('data-noun');
     buttons.forEach(function (b) {
       var f = b.getAttribute('data-filter');
-      var n = f === 'all' ? items.length : items.filter(function (it) { return it.getAttribute('data-cat') === f; }).length;
-      b.querySelector('.c').textContent = n;
+      b.querySelector('.c').textContent = f === 'all' ? items.length : items.filter(function (it) { return it.getAttribute('data-cat') === f; }).length;
       b.addEventListener('click', function () {
         buttons.forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
         var shown = 0;
-        items.forEach(function (it) {
-          var on = f === 'all' || it.getAttribute('data-cat') === f;
-          it.hidden = !on; if (on) shown++;
-        });
-        if (noun === 'docs') status.textContent = (f === 'all' ? '' : shown + ' of ') + items.length + ' key documents shown, from 110+ logged';
-        else status.textContent = f === 'all' ? 'Showing all ' + items.length + ' decisions' : 'Showing ' + shown + ' of ' + items.length + ' decisions · ' + f;
+        items.forEach(function (it) { var on = f === 'all' || it.getAttribute('data-cat') === f; it.hidden = !on; if (on) shown++; });
+        status.textContent = noun === 'docs' ? (f === 'all' ? '' : shown + ' of ') + items.length + ' key documents shown, from 120+ logged' : (f === 'all' ? 'Showing all ' + items.length + ' decisions' : 'Showing ' + shown + ' of ' + items.length + ' decisions · ' + f);
         if (hasGsap) window.ScrollTrigger.refresh();
       });
     });
   });
 
-  /* ---------- Charts (HTML bars stay as the fallback) ---------- */
-  function drawCharts() {
-    if (!window.Chart) return;
-    var Chart = window.Chart;
-    var valueLabels = {
-      id: 'valueLabels',
-      afterDatasetsDraw: function (chart, args, opts) {
-        var ctx = chart.ctx, meta = chart.getDatasetMeta(0);
-        ctx.save();
-        ctx.font = '500 12px "IBM Plex Mono", Consolas, monospace';
-        ctx.fillStyle = '#0B1F33';
-        ctx.textBaseline = 'middle';
-        meta.data.forEach(function (bar, i) { ctx.fillText(opts.text[i], bar.x + 8, bar.y); });
-        ctx.restore();
-      }
-    };
-    var defs = {
-      blinkit: { labels: ['2025', '2026'], data: [0.6, 5], text: ['₹0.6 Cr', '₹5 Cr'] },
-      pune: { labels: ['Before', 'After'], data: [4, 11.5], text: ['₹4 lakh', '₹11–12 lakh'] }
-    };
-    document.querySelectorAll('[data-chart]').forEach(function (box) {
-      var d = defs[box.getAttribute('data-chart')];
-      if (!d) return;
-      try {
-        box.classList.add('has-chart');
-        new Chart(box.querySelector('canvas'), {
-          type: 'bar',
-          data: { labels: d.labels, datasets: [{ data: d.data, backgroundColor: ['#D9DEE3', '#0B1F33'], barThickness: 16, borderRadius: 0, borderSkipped: false }] },
-          options: {
-            indexAxis: 'y', responsive: true, maintainAspectRatio: false, animation: false,
-            events: [],
-            layout: { padding: { right: 96 } },
-            plugins: { legend: { display: false }, tooltip: { enabled: false }, valueLabels: { text: d.text } },
-            scales: {
-              x: { display: false, beginAtZero: true, max: Math.max.apply(null, d.data) },
-              y: { grid: { display: false }, border: { display: false }, ticks: { color: '#5B6670', padding: 6, font: { family: '"IBM Plex Mono", Consolas, monospace', size: 11 } } }
-            }
-          },
-          plugins: [valueLabels]
-        });
-      } catch (e) { box.classList.remove('has-chart'); }
-    });
-  }
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawCharts, drawCharts); else drawCharts();
-
-  /* ---------- Motion ---------- */
   if (!animate) return;
   var gsap = window.gsap, ST = window.ScrollTrigger;
   gsap.registerPlugin(ST);
 
-  // Opening: label, title, subtitle and numbers in sequence (~1.2s), staircase drawing alongside.
-  var heroText = gsap.utils.toArray('.hero > .wrap > [data-hero]');
-  var stairLabels = gsap.utils.toArray('.stair li');
-  var keyItems = gsap.utils.toArray('.keys li');
-  gsap.set(heroText.concat(stairLabels, keyItems), { opacity: 0, y: 12 });
-  var clip = document.getElementById('stairClipRect');
-  gsap.set(clip, { attr: { width: 0 } });
-  var tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
-  tl.to(heroText, { opacity: 1, y: 0, duration: 0.5, stagger: 0.15 }, 0.05)
-    .to(clip, { attr: { width: 1020 }, duration: 1.6, ease: 'power1.inOut' }, 0.35)
-    .to(stairLabels, { opacity: 1, y: 0, duration: 0.45, stagger: 0.28 }, 0.5)
-    .to(keyItems, { opacity: 1, y: 0, duration: 0.45, stagger: 0.06 }, 0.75);
+  function playOpening() {
+    var lines = gsap.utils.toArray('.hero [data-hero]:not(.keys li)'), scoops = gsap.utils.toArray('.keys li');
+    gsap.set(lines, { opacity: 0, y: 34 });
+    gsap.set(scoops, { opacity: 1, y: -window.innerHeight * 1.1 });
+    gsap.to(lines, { opacity: 1, y: 0, duration: .75, ease: 'power3.out', stagger: .11 });
+    gsap.to(scoops, { y: 0, duration: 1.05, ease: 'bounce.out', stagger: .13, delay: .25 });
+    document.querySelectorAll('[data-count]').forEach(function (el, i) {
+      var end = +el.getAttribute('data-count'), suf = el.getAttribute('data-suffix') || '', o = { v: 0 };
+      el.textContent = '0' + suf;
+      gsap.to(o, { v: end, duration: 1.1, delay: .7 + i * .13, ease: 'power2.out', onUpdate: function () { el.textContent = Math.round(o.v) + suf; } });
+    });
+    ST.refresh();
+  }
+  ST.create({ trigger: '.hero', start: 'top 72%', once: true, onEnter: playOpening });
 
-  // Key numbers count up once, when first in view.
-  var counted = false;
-  ST.create({
-    trigger: '.keys', start: 'top 92%', once: true,
-    onEnter: function () {
-      if (counted) return; counted = true;
-      document.querySelectorAll('[data-count]').forEach(function (el) {
-        var end = +el.getAttribute('data-count'), suf = el.getAttribute('data-suffix') || '';
-        var o = { v: 0 };
-        el.textContent = '0' + suf;
-        gsap.to(o, { v: end, duration: 1.2, delay: 0.8, ease: 'power2.out', onUpdate: function () { el.textContent = Math.round(o.v) + suf; } });
-      });
-    }
+  /* one scoop lands on the cone for each phase reached */
+  var drop = function () { return -window.innerHeight * 1.2; };
+  gsap.utils.toArray('.ph').forEach(function (ph, i) {
+    var sc = document.querySelector('.cone [data-scoop="' + i + '"]');
+    if (!sc) return;
+    gsap.set(sc, { y: drop(), opacity: 0 });
+    ST.create({
+      trigger: ph, start: 'top 62%',
+      onEnter: function () { gsap.killTweensOf(sc); gsap.set(sc, { opacity: 1 }); gsap.to(sc, { y: 0, duration: .95, ease: 'bounce.out' }); },
+      onLeaveBack: function () { gsap.killTweensOf(sc); gsap.to(sc, { y: drop(), opacity: 0, duration: .4, ease: 'power2.in' }); }
+    });
   });
 
-  // Journey: progress line fills as the reader moves through the phases; markers fill when reached.
-  gsap.fromTo('#trackFill', { scaleY: 0 }, {
-    scaleY: 1, ease: 'none',
-    scrollTrigger: { trigger: '#phases', start: 'top 60%', end: 'bottom 60%', scrub: true }
-  });
-  gsap.utils.toArray('.phase').forEach(function (ph) {
-    ST.create({ trigger: ph, start: 'top 60%', onEnter: function () { ph.classList.add('is-reached'); }, onLeaveBack: function () { ph.classList.remove('is-reached'); } });
+  /* each flavour melts into the next as it passes */
+  gsap.utils.toArray('.drip').forEach(function (d) {
+    gsap.fromTo(d, { scaleY: .3 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: d, start: 'top 100%', end: 'top 35%', scrub: true } });
   });
 
-  // Content blocks fade up 12px, once, staggered by 60ms.
   var reveals = gsap.utils.toArray('[data-reveal]');
-  gsap.set(reveals, { opacity: 0, y: 12 });
-  ST.batch(reveals, {
-    start: 'top 90%', once: true,
-    onEnter: function (batch) { gsap.to(batch, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', stagger: 0.06, overwrite: true }); }
-  });
-
+  gsap.set(reveals, { opacity: 0, y: 26 });
+  ST.batch(reveals, { start: 'top 90%', once: true, onEnter: function (b) { gsap.to(b, { opacity: 1, y: 0, duration: .7, ease: 'power3.out', stagger: .07, overwrite: true }); } });
   window.addEventListener('load', function () { ST.refresh(); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { ST.refresh(); });
 });
+</script>
+<script>
+/* The Diwali sky. Scrolling sends up rockets of different kinds; each one rises and blasts
+   in its own way. Three last rockets blast into the words of the greeting. */
+(function () {
+  'use strict';
+  var sec = document.getElementById('diwali'), canvas = document.getElementById('skyCanvas');
+  if (!sec || !canvas) return;
+  var ctx = canvas.getContext('2d');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var greet = document.getElementById('skyGreet'), hint = document.getElementById('skyHint'), deva = document.getElementById('skyDeva'), bridge = document.getElementById('skyBridge');
+  var NEON = ['#FF2E93', '#00E5FF', '#B6FF00', '#FFD000', '#FF6A00', '#B26BFF', '#FF1E3C', '#FFFFFF', '#2BFFB0', '#FF7AD9'];
+  var LETTERS = ['#FFD000', '#FF2E93', '#00E5FF', '#B6FF00', '#FF6A00', '#FF7AD9', '#2BFFB0', '#FFD000', '#00E5FF', '#FF2E93', '#B6FF00', '#FF6A00'];
+  var SKIES = [[0, '#04021A', '#14063C'], [.22, '#16043F', '#5A0B78'], [.45, '#03143A', '#0A5A86'], [.68, '#2A0033', '#8A0B52'], [.88, '#0A0326', '#2C0A5C'], [1, '#DE251E', '#DE251E']];
+  var W, H, DPR, phone, stars = [], rockets = [], bursts = [], embers = [], plan = [], toran, toranH = 0, diyas = [], words = null, queue = [], lastLaunch = 0, lastIdle = 0, p = 0, last = 0;
+  var TITLE_AT = .46;
+
+  function rand(a, b) { return a + Math.random() * (b - a); }
+  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function clamp01(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+  function ramp(v, a, b) { return clamp01((v - a) / (b - a)); }
+  function smooth(v) { return v * v * (3 - 2 * v); }
+  function hex(c) { return [parseInt(c.slice(1, 3), 16), parseInt(c.slice(3, 5), 16), parseInt(c.slice(5, 7), 16)]; }
+  function mix(a, b, v) { var x = hex(a), y = hex(b); return 'rgb(' + Math.round(x[0] + (y[0] - x[0]) * v) + ',' + Math.round(x[1] + (y[1] - x[1]) * v) + ',' + Math.round(x[2] + (y[2] - x[2]) * v) + ')'; }
+
+  /* ---- what each scroll position launches ---- */
+  var TYPES = ['classic', 'whistler', 'shell', 'bottle', 'zigzag', 'chakra'];
+  var BLASTS = ['peony', 'chrysanthemum', 'ring', 'willow', 'palm', 'crossette', 'strobe', 'star', 'doublering', 'heart'];
+  function buildPlan() {
+    plan = []; var n = 34;
+    for (var i = 0; i < n; i++) plan.push({ at: .015 + i / n * (TITLE_AT - .03), type: TYPES[i % TYPES.length], blast: BLASTS[i % BLASTS.length], x: phone ? rand(.12, .88) : ((i * .381966) % 1) * .84 + .08, fired: false });
+    var after = 16;
+    for (var j = 0; j < after; j++) plan.push({ at: TITLE_AT + .2 + j / after * .2, type: TYPES[(j + 2) % TYPES.length], blast: BLASTS[(j * 3) % BLASTS.length], x: j % 2 ? rand(.03, .24) : rand(.76, .97), high: true, fired: false });
+  }
+
+  function launch(spec) {
+    var R = reach(), lo = Math.min(R * .92, W / 2), hi = Math.max(W - R * .92, W / 2), cx = Math.max(lo, Math.min(hi, spec.x * W + rand(-70, 70)));
+    var dur = rand(1.15, 1.6), x0 = cx + rand(-40, 40), x1 = cx, top = Math.min(R * .8 + 10, H * .42);
+    rockets.push({ t: last, dur: dur, x0: x0, x1: x1, y0: H + 30, y1: spec.y !== undefined ? spec.y : Math.max(top, (spec.high ? rand(.1, .34) : rand(.12, .5)) * H), type: spec.type, blast: spec.blast, c: pick(NEON), c2: pick(NEON), phase: Math.random() * 6.28, onBlast: spec.onBlast });
+  }
+  function rocketPos(r, u) {
+    var e = 1 - (1 - u) * (1 - u), x = r.x0 + (r.x1 - r.x0) * e, y = r.y0 + (r.y1 - r.y0) * e, s = phone ? .6 : 1;
+    if (r.type === 'whistler') x += Math.sin(u * 15 + r.phase) * 34 * s * (1 - u * .4);
+    if (r.type === 'zigzag') x += (Math.abs(((u * 5 + r.phase) % 2) - 1) - .5) * 92 * s;
+    if (r.type === 'chakra') x += Math.sin(u * 7 + r.phase) * 20 * s;
+    return { x: x, y: y };
+  }
+
+  /* ---- blasts ---- */
+  function blast(x, y, kind, c, c2) {
+    var S = scale(), T = 6.2832, n, i, a, v, list = [];
+    var b = { t: last, x: x, y: y, kind: kind, c: c, c2: c2, k: 1.75, g: 88, L: 2.3, tl: .1, w: 2, dots: false, pts: list };
+    function add(vx, vy, second) { list.push({ vx: vx * S, vy: vy * S, s: second ? 1 : 0, h: Math.random() }); }
+    if (kind === 'peony') { n = 150; b.L = 1.9; b.tl = .05; for (i = 0; i < n; i++) { a = Math.random() * T; v = Math.sqrt(Math.random()) * 400; add(Math.cos(a) * v, Math.sin(a) * v, i % 3 === 0); } }
+    else if (kind === 'chrysanthemum') { n = 120; b.tl = .38; b.w = 1.4; b.L = 2.4; for (i = 0; i < n; i++) { a = i / n * T; v = rand(300, 430); add(Math.cos(a) * v, Math.sin(a) * v, i % 2); } }
+    else if (kind === 'ring') { n = 90; b.tl = .06; b.L = 1.9; var tilt = rand(-.8, .8), sq = rand(.35, .7); for (i = 0; i < n; i++) { a = i / n * T; var rx = Math.cos(a) * 350, ry = Math.sin(a) * 350 * sq; add(rx * Math.cos(tilt) - ry * Math.sin(tilt), rx * Math.sin(tilt) + ry * Math.cos(tilt), false); } }
+    else if (kind === 'doublering') { n = 110; b.tl = .05; b.L = 1.9; for (i = 0; i < n; i++) { a = i / n * T; v = i % 2 ? 400 : 215; add(Math.cos(a) * v, Math.sin(a) * v, i % 2); } }
+    else if (kind === 'willow') { n = 100; b.c = '#FFC83D'; b.c2 = '#FFE9A8'; b.k = 1.05; b.g = 118; b.L = 3.3; b.tl = .85; b.w = 1.2; for (i = 0; i < n; i++) { a = Math.random() * T; v = rand(90, 320); add(Math.cos(a) * v, Math.sin(a) * v, i % 4 === 0); } }
+    else if (kind === 'palm') { n = 13; b.k = 1.4; b.g = 130; b.L = 2.6; b.tl = .55; b.w = 3.4; for (i = 0; i < n; i++) { a = i / n * T + rand(-.08, .08); v = rand(330, 420); add(Math.cos(a) * v, Math.sin(a) * v, i % 2); } }
+    else if (kind === 'crossette') { n = 18; b.L = 2.4; b.tl = .12; b.w = 2.4; b.split = .62; for (i = 0; i < n; i++) { a = i / n * T; v = rand(290, 350); add(Math.cos(a) * v, Math.sin(a) * v, i % 2); } }
+    else if (kind === 'strobe') { n = 170; b.L = 2.9; b.k = 2.2; b.g = 48; b.dots = true; b.strobe = true; for (i = 0; i < n; i++) { a = Math.random() * T; v = Math.sqrt(Math.random()) * 470; add(Math.cos(a) * v, Math.sin(a) * v, i % 2); } }
+    else if (kind === 'star') { n = 150; b.tl = .05; b.L = 2; for (i = 0; i < n; i++) { a = i / n * T; var r5 = 240 + 190 * Math.pow(Math.abs(Math.cos(a * 2.5 + .314)), 2.2); add(Math.cos(a) * r5, Math.sin(a) * r5, false); } }
+    else { n = 130; b.tl = .05; b.L = 2; b.c = '#FF2E93'; b.c2 = '#FF7AD9'; for (i = 0; i < n; i++) { a = i / n * T; add(21 * Math.pow(Math.sin(a), 3) * 17.5, -(13 * Math.cos(a) - 5 * Math.cos(2 * a) - 2 * Math.cos(3 * a) - Math.cos(4 * a)) * 17.5, false); } }
+    bursts.push(b);
+  }
+  function scale() { return Math.min(W, H * 1.25) / 1150; }
+  function reach() { return 300 * scale(); }
+  function at(b, q, a) { var f = (1 - Math.exp(-b.k * a)) / b.k; return { x: b.x + q.vx * f, y: b.y + q.vy * f + b.g * (a - f) / b.k }; }
+  function drawBursts(now, dim) {
+    ctx.globalCompositeOperation = 'lighter'; ctx.lineCap = 'round';
+    for (var bi = bursts.length - 1; bi >= 0; bi--) {
+      var b = bursts[bi], age = now - b.t;
+      if (age > b.L) { bursts.splice(bi, 1); continue; }
+      if (age < .22) { var fl = 1 - age / .22, r = 150 * (.4 + age * 3) * (phone ? .6 : 1), g = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, r); g.addColorStop(0, 'rgba(255,255,255,' + .9 * fl * dim + ')'); g.addColorStop(1, 'rgba(255,255,255,0)'); ctx.fillStyle = g; ctx.fillRect(b.x - r, b.y - r, r * 2, r * 2); }
+      var life = 1 - age / b.L, alpha = Math.min(1, life * 2.1) * dim;
+      for (var pass = 0; pass < 2; pass++) {
+        ctx.beginPath(); ctx.strokeStyle = ctx.fillStyle = pass ? b.c2 : b.c; ctx.lineWidth = b.w; ctx.globalAlpha = alpha;
+        for (var i = 0; i < b.pts.length; i++) {
+          var q = b.pts[i]; if (q.s !== pass) continue;
+          if (b.strobe && age > .55 && Math.sin(age * 26 + q.h * 40) < .15) continue;
+          if (b.split && age > b.split) continue;
+          var a1 = at(b, q, age);
+          if (b.dots) { ctx.rect(a1.x, a1.y, 2.6, 2.6); continue; }
+          var a0 = at(b, q, Math.max(0, age - b.tl - q.h * b.tl * .3)); ctx.moveTo(a0.x, a0.y); ctx.lineTo(a1.x, a1.y);
+        }
+        if (b.dots) ctx.fill(); else ctx.stroke();
+      }
+      if (b.split && age > b.split) {
+        var sa = age - b.split, sp = 150 * (phone ? .62 : 1), sf = (1 - Math.exp(-2.1 * sa)) / 2.1;
+        ctx.beginPath(); ctx.strokeStyle = b.c2; ctx.lineWidth = 1.8; ctx.globalAlpha = alpha;
+        for (var c = 0; c < b.pts.length; c++) {
+          var o = at(b, b.pts[c], b.split), d = sp * sf, d0 = sp * Math.max(0, sf - .07), dy = 50 * sa * sa;
+          for (var m = 0; m < 4; m++) { var ang = m * 1.5708 + .785; ctx.moveTo(o.x + Math.cos(ang) * d0, o.y + Math.sin(ang) * d0 + dy); ctx.lineTo(o.x + Math.cos(ang) * d, o.y + Math.sin(ang) * d + dy); }
+        }
+        ctx.stroke();
+      }
+    }
+    ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+  }
+
+  /* ---- rockets of different kinds ---- */
+  function drawRocketBody(r, pos, angle, now) {
+    var s = phone ? 8.5 : Math.max(11, Math.min(W * .0125, 18));
+    ctx.save(); ctx.translate(pos.x, pos.y);
+    if (r.type === 'chakra') {
+      ctx.rotate(now * 22);
+      ctx.fillStyle = r.c; ctx.beginPath(); ctx.arc(0, 0, s * .9, 0, 6.29); ctx.fill();
+      ctx.strokeStyle = '#fff'; ctx.lineWidth = 2; ctx.beginPath();
+      for (var i = 0; i < 6; i++) { var a = i * 1.047; ctx.moveTo(0, 0); ctx.lineTo(Math.cos(a) * s * 1.8, Math.sin(a) * s * 1.8); }
+      ctx.stroke(); ctx.fillStyle = r.c2; ctx.beginPath(); ctx.arc(0, 0, s * .36, 0, 6.29); ctx.fill();
+      ctx.restore(); return;
+    }
+    ctx.rotate(angle);
+    if (r.type === 'shell') { var g = ctx.createRadialGradient(0, 0, 0, 0, 0, s * 2.4); g.addColorStop(0, '#fff'); g.addColorStop(.3, r.c); g.addColorStop(1, 'rgba(0,0,0,0)'); ctx.globalCompositeOperation = 'lighter'; ctx.fillStyle = g; ctx.fillRect(-s * 2.4, -s * 2.4, s * 4.8, s * 4.8); ctx.globalCompositeOperation = 'source-over'; ctx.restore(); return; }
+    if (r.type === 'bottle') {
+      ctx.strokeStyle = '#E9D2A8'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(0, -s * .2); ctx.lineTo(0, s * 5); ctx.stroke();
+      ctx.fillStyle = r.c; ctx.fillRect(-s * .42, -s * 1.5, s * .84, s * 1.9);
+      ctx.fillStyle = '#fff'; ctx.fillRect(-s * .42, -s * .9, s * .84, s * .3);
+      ctx.fillStyle = r.c2; ctx.beginPath(); ctx.moveTo(-s * .42, -s * 1.5); ctx.lineTo(0, -s * 2.3); ctx.lineTo(s * .42, -s * 1.5); ctx.fill();
+      ctx.restore(); return;
+    }
+    if (r.type === 'zigzag') {
+      ctx.fillStyle = r.c; ctx.fillRect(-s * .6, -s * .9, s * 1.2, s * 2.1);
+      ctx.fillStyle = '#fff'; for (var k = 0; k < 3; k++) ctx.fillRect(-s * .6, -s * .7 + k * s * .7, s * 1.2, s * .2);
+      ctx.fillStyle = r.c2; ctx.beginPath(); ctx.arc(0, -s * .9, s * .6, 3.14, 0); ctx.fill();
+      ctx.restore(); return;
+    }
+    if (r.type === 'whistler') {
+      ctx.fillStyle = r.c2; ctx.beginPath(); ctx.moveTo(-s * .5, s * 1.1); ctx.lineTo(-s * .95, s * 2); ctx.lineTo(s * .95, s * 2); ctx.lineTo(s * .5, s * 1.1); ctx.fill();
+      ctx.fillStyle = r.c; ctx.fillRect(-s * .5, -s, s, s * 2.2);
+      ctx.fillStyle = '#FFD000'; ctx.beginPath(); ctx.moveTo(-s * .5, -s); ctx.quadraticCurveTo(0, -s * 2.6, s * .5, -s); ctx.fill();
+      ctx.restore(); return;
+    }
+    /* classic: striped body, nose cone, fins */
+    ctx.fillStyle = r.c2; ctx.beginPath(); ctx.moveTo(-s * .7, s * .4); ctx.lineTo(-s * 1.5, s * 1.9); ctx.lineTo(-s * .7, s * 1.5); ctx.moveTo(s * .7, s * .4); ctx.lineTo(s * 1.5, s * 1.9); ctx.lineTo(s * .7, s * 1.5); ctx.fill();
+    ctx.fillStyle = '#FFFFFF'; ctx.fillRect(-s * .7, -s * 1.1, s * 1.4, s * 2.7);
+    ctx.fillStyle = r.c; ctx.fillRect(-s * .7, -s * .5, s * 1.4, s * .55); ctx.fillRect(-s * .7, s * .55, s * 1.4, s * .55);
+    ctx.fillStyle = r.c2; ctx.beginPath(); ctx.moveTo(-s * .7, -s * 1.1); ctx.quadraticCurveTo(0, -s * 3, s * .7, -s * 1.1); ctx.fill();
+    ctx.restore();
+  }
+  function drawRockets(now, dim) {
+    for (var i = rockets.length - 1; i >= 0; i--) {
+      var r = rockets[i], u = (now - r.t) / r.dur;
+      if (u >= 1) {
+        var end = rocketPos(r, 1);
+        if (r.onBlast) r.onBlast(end.x, end.y, now); else blast(end.x, end.y, r.blast, r.c, r.c2);
+        rockets.splice(i, 1); continue;
+      }
+      var pos = rocketPos(r, u), prev = rocketPos(r, Math.max(0, u - .02)), angle = Math.atan2(pos.y - prev.y, pos.x - prev.x) + 1.5708;
+      ctx.globalCompositeOperation = 'lighter'; ctx.lineCap = 'round';
+      var steps = 16, span = r.type === 'shell' ? .28 : .2;
+      for (var k = 0; k < steps; k++) {
+        var a = rocketPos(r, Math.max(0, u - span * (k + 1) / steps)), b = rocketPos(r, Math.max(0, u - span * k / steps)), f = 1 - k / steps;
+        ctx.globalAlpha = f * .85 * dim; ctx.strokeStyle = k < 5 ? '#FFF2C4' : (r.type === 'whistler' ? r.c : '#FF9A2E'); ctx.lineWidth = (r.type === 'shell' ? 5 : 3.2) * f + .6;
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+      }
+      ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+      if (embers.length < 500) for (var e = 0; e < 3; e++) embers.push({ x: pos.x + rand(-4, 4), y: pos.y + rand(6, 22), vx: rand(-34, 34), vy: rand(30, 120), t: now, L: rand(.3, .75), c: r.type === 'chakra' ? r.c : '#FFC83D' });
+      ctx.globalAlpha = dim; drawRocketBody(r, pos, angle, now); ctx.globalAlpha = 1;
+    }
+    ctx.globalCompositeOperation = 'lighter';
+    for (var j = embers.length - 1; j >= 0; j--) { var m = embers[j], ag = now - m.t; if (ag > m.L) { embers.splice(j, 1); continue; } ctx.globalAlpha = (1 - ag / m.L) * dim; ctx.fillStyle = m.c; ctx.fillRect(m.x + m.vx * ag, m.y + m.vy * ag + 60 * ag * ag, 2, 2); }
+    ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+  }
+
+  /* ---- the greeting, built from a blast ---- */
+  function buildWords() {
+    var lines = phone ? ['HAPPY', 'DIWALI'] : ['HAPPY DIWALI'];
+    var fs = phone ? Math.min(W * .34, H * .17) : Math.min(W * .178, H * .31);
+    var lh = fs * .9, top = phone ? H * .12 : H * .11, bottom = top + lines.length * lh;
+    var font = '900 ' + fs + 'px "Barlow Condensed", Impact, sans-serif';
+    var pad = Math.ceil(fs * .3), w = Math.ceil(W), h = Math.ceil(bottom + pad);
+    var crisp = document.createElement('canvas'); crisp.width = w * DPR; crisp.height = h * DPR;
+    var c = crisp.getContext('2d'); c.setTransform(DPR, 0, 0, DPR, 0, 0); c.font = font; c.textBaseline = 'alphabetic';
+    var a = document.createElement('canvas'); a.width = w; a.height = h;
+    var ac = a.getContext('2d', { willReadFrequently: true }); ac.font = font; ac.textBaseline = 'alphabetic';
+    var groups = [], letter = 0;
+    lines.forEach(function (ln, li) {
+      var tw = ac.measureText(ln).width, x0 = (W - tw) / 2, y = top + lh * (li + 1) - fs * .08;
+      for (var i = 0; i < ln.length; i++) {
+        var ch = ln[i], x = x0 + ac.measureText(ln.slice(0, i)).width;
+        if (ch === ' ') continue;
+        var col = LETTERS[letter % LETTERS.length]; letter++;
+        c.shadowColor = col; c.shadowBlur = fs * .13; c.fillStyle = col; c.fillText(ch, x, y);
+        ac.clearRect(0, 0, w, h); ac.fillStyle = '#000'; ac.fillText(ch, x, y);
+        var d = ac.getImageData(0, 0, w, h).data, step = phone ? 3 : 4, pts = [];
+        for (var py = 0; py < h; py += step) for (var px = 0; px < w; px += step) if (d[(py * w + px) * 4 + 3] > 110) pts.push({ x: px, y: py, h: Math.random(), a: Math.random() * 6.283, v: rand(150, 620) });
+        groups.push({ c: col, pts: pts });
+      }
+    });
+    words = { crisp: crisp, w: w, h: h, groups: groups, bottom: bottom, fs: fs, t: 0, on: false, origins: null, launched: false };
+    greet.style.setProperty('--top', Math.round(bottom + (phone ? 12 : H * .025)) + 'px');
+  }
+  function fireTitle() {
+    words.launched = true; words.origins = [];
+    var ys = H * (phone ? .22 : .3), xs = phone ? [.25, .5, .75] : [.2, .5, .8], pending = 3;
+    xs.forEach(function (fx, i) {
+      rockets.push({ t: last + i * .14, dur: 1.25, x0: fx * W + rand(-30, 30), x1: fx * W, y0: H + 30, y1: ys, type: ['classic', 'shell', 'classic'][i], c: ['#FF2E93', '#FFD000', '#00E5FF'][i], c2: '#FFFFFF', phase: 0,
+        onBlast: function (x, y, now) { words.origins.push({ x: x, y: y }); if (--pending === 0) { words.t = now; words.on = true; } blast(x, y, 'peony', '#FFFFFF', '#FFD000'); } });
+    });
+  }
+  function resetTitle() { if (!words) return; words.on = false; words.launched = false; words.origins = null; rockets = rockets.filter(function (r) { return !r.onBlast; }); }
+  function drawWords(now, dim) {
+    if (!words || !words.on || dim <= 0) return;
+    var age = now - words.t, settle = smooth(ramp(age, 1.9, 2.5));
+    if (settle < 1) {
+      ctx.globalCompositeOperation = 'lighter';
+      for (var g = 0; g < words.groups.length; g++) {
+        var gr = words.groups[g], o = words.origins[g % words.origins.length]; ctx.fillStyle = gr.c; ctx.globalAlpha = dim * (1 - settle * .65); ctx.beginPath();
+        for (var i = 0; i < gr.pts.length; i++) {
+          var q = gr.pts[i], out = 1 - Math.exp(-3.4 * Math.min(age, .55)), bx = o.x + Math.cos(q.a) * q.v * .42 * out, by = o.y + Math.sin(q.a) * q.v * .42 * out + 34 * Math.min(age, .55) * Math.min(age, .55);
+          var v = smooth(ramp(age, .4 + q.h * .5, 1.5 + q.h * .5)), x = bx + (q.x - bx) * v, y = by + (q.y - by) * v;
+          ctx.rect(x, y, phone ? 2.4 : 3, phone ? 2.4 : 3);
+        }
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+    }
+    if (settle > 0) { ctx.globalAlpha = settle * dim; ctx.drawImage(words.crisp, 0, 0, words.w, words.h); ctx.globalAlpha = 1; }
+  }
+
+  /* ---- marigold toran and diyas ---- */
+  function marigold(c, x, y, r) {
+    c.fillStyle = '#D9620A'; c.beginPath(); c.arc(x, y, r, 0, 6.29); c.fill();
+    for (var i = 0; i < 11; i++) { var a = i / 11 * 6.29; c.fillStyle = i % 2 ? '#FFB21A' : '#FF9110'; c.beginPath(); c.arc(x + Math.cos(a) * r * .72, y + Math.sin(a) * r * .72, r * .36, 0, 6.29); c.fill(); }
+    for (var j = 0; j < 6; j++) { var b = j / 6 * 6.29; c.fillStyle = '#FFD24A'; c.beginPath(); c.arc(x + Math.cos(b) * r * .32, y + Math.sin(b) * r * .32, r * .24, 0, 6.29); c.fill(); }
+  }
+  function leaf(c, x, y, r, a) { c.save(); c.translate(x, y); c.rotate(a); c.fillStyle = '#3F8F3C'; c.beginPath(); c.moveTo(0, 0); c.quadraticCurveTo(r * .55, r, 0, r * 2); c.quadraticCurveTo(-r * .55, r, 0, 0); c.fill(); c.restore(); }
+  function buildToran() {
+    var sag = phone ? 22 : 36, r = phone ? 7 : 10, span = phone ? 130 : 230, n = Math.max(2, Math.round(W / span)), sw = W / n, drop = r * 7.4;
+    toranH = sag + drop + r * 2;
+    toran = document.createElement('canvas'); toran.width = Math.ceil(W * DPR); toran.height = Math.ceil(toranH * DPR);
+    var c = toran.getContext('2d'); c.setTransform(DPR, 0, 0, DPR, 0, 0);
+    for (var s = 0; s < n; s++) {
+      var count = Math.round(sw / (r * 1.62)), i, u;
+      for (i = 0; i <= count; i++) { u = i / count; if (i % 3 === 1) leaf(c, s * sw + u * sw, r + 3 + sag * 4 * u * (1 - u) + r * .4, r * .9, (u - .5) * .9); }
+      for (i = 0; i <= count; i++) { u = i / count; marigold(c, s * sw + u * sw, r + 3 + sag * 4 * u * (1 - u), r); }
+    }
+    for (var t = 0; t <= n; t++) { var x = t * sw; leaf(c, x - r * .9, r * 2.2, r, .5); leaf(c, x + r * .9, r * 2.2, r, -.5); for (var q = 1; q <= 3; q++) marigold(c, x, r + 3 + q * r * 1.75, r * (1.05 - q * .08)); c.fillStyle = '#FFD000'; c.beginPath(); c.arc(x, r * 7.4, r * .55, 0, 6.29); c.fill(); }
+  }
+  function flame(x, y, h, w, col) { ctx.fillStyle = col; ctx.beginPath(); ctx.moveTo(x, y); ctx.bezierCurveTo(x - w * 1.3, y - h * .25, x - w * .4, y - h * .7, x, y - h); ctx.bezierCurveTo(x + w * .4, y - h * .7, x + w * 1.3, y - h * .25, x, y); ctx.fill(); }
+  function drawDiya(d, now, lit, dim) {
+    var s = d.size, x = d.x, y = d.y; ctx.globalAlpha = dim;
+    if (lit > 0) { var g = ctx.createRadialGradient(x, y - s, 0, x, y - s, s * 7); g.addColorStop(0, 'rgba(255,170,60,' + .55 * lit + ')'); g.addColorStop(1, 'rgba(255,140,30,0)'); ctx.fillStyle = g; ctx.fillRect(x - s * 7, y - s * 8, s * 14, s * 14); }
+    ctx.fillStyle = lit > 0 ? '#E0632A' : '#4E3430';
+    ctx.beginPath(); ctx.moveTo(x - s * 1.05, y - s * .12); ctx.quadraticCurveTo(x - s * .55, y + s * .75, x, y + s * .65); ctx.quadraticCurveTo(x + s * .55, y + s * .75, x + s * 1.3, y - s * .34); ctx.quadraticCurveTo(x, y + s * .12, x - s * 1.05, y - s * .12); ctx.fill();
+    if (lit > 0) { var h = s * (1.8 + Math.sin(now * 9 + d.seed) * .12) * lit, fx = x + s * .72, fy = y - s * .26; flame(fx, fy, h, h * .34, '#FF8A1F'); flame(fx, fy, h * .68, h * .2, '#FFD860'); flame(fx, fy, h * .34, h * .1, '#FFF7E0'); }
+    ctx.globalAlpha = 1;
+  }
+
+  function layout() {
+    DPR = Math.min(window.devicePixelRatio || 1, 2); W = window.innerWidth; H = window.innerHeight; phone = W <= 760;
+    canvas.width = Math.round(W * DPR); canvas.height = Math.round(H * DPR); ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    stars = []; for (var s = 0; s < (phone ? 80 : 190); s++) stars.push({ x: Math.random() * W, y: Math.random() * H, r: rand(.4, 1.4), p: Math.random() * 6.28 });
+    var n = phone ? 5 : Math.min(13, Math.round(W / 120)), size = phone ? 11 : 18;
+    diyas = []; for (var d = 0; d < n; d++) diyas.push({ x: (d + .5) / n * W, y: H - size * 1.3, size: size, seed: d * 3.1, order: Math.abs(d - (n - 1) / 2) / ((n - 1) / 2) });
+    buildPlan(); buildToran(); buildWords();
+    rockets = []; bursts = []; embers = []; queue = [];
+  }
+
+  function progress() { var r = sec.getBoundingClientRect(); return clamp01(-r.top / (r.height - H)); }
+  function style(el, o, y) { el.style.opacity = o; el.style.transform = 'translate3d(0,' + y + 'px,0)'; el.style.visibility = o > .01 ? 'visible' : 'hidden'; }
+
+  function frame(ms) {
+    requestAnimationFrame(frame);
+    var now = ms / 1000; last = now;
+    var r = sec.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > H) return;
+    p = progress();
+
+    /* sky colour */
+    var i = 0; while (i < SKIES.length - 2 && p > SKIES[i + 1][0]) i++;
+    var v = smooth(ramp(p, SKIES[i][0], SKIES[i + 1][0])), g = ctx.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, mix(SKIES[i][1], SKIES[i + 1][1], v)); g.addColorStop(1, mix(SKIES[i][2], SKIES[i + 1][2], v));
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    var dim = 1 - smooth(ramp(p, .9, .985));
+
+    ctx.fillStyle = '#fff';
+    stars.forEach(function (s) { ctx.globalAlpha = (.55 + .35 * Math.sin(now * 1.4 + s.p)) * dim; ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.29); ctx.fill(); });
+    ctx.globalAlpha = 1;
+
+    /* scrolling down releases the rockets; scrolling back re-arms them */
+    plan.forEach(function (q) { if (!q.fired && p >= q.at) { q.fired = true; queue.push(q); } else if (q.fired && p < q.at - .025) q.fired = false; });
+    if (queue.length > 7) queue.splice(0, queue.length - 7);
+    if (queue.length && now - lastLaunch > .13) { launch(queue.shift()); lastLaunch = now; }
+    /* the sky keeps going while the reader pauses */
+    if (now - lastIdle > (p < .03 ? 1.3 : 2.2) && !queue.length && rockets.length < 3 && p < .9) { lastIdle = now; launch({ type: pick(TYPES), blast: pick(BLASTS), x: words && p > TITLE_AT ? pick([rand(.03, .22), rand(.78, .97)]) : rand(.1, .9), high: p > TITLE_AT }); }
+
+    if (words) {
+      if (!words.launched && p >= TITLE_AT) fireTitle();
+      else if (words.launched && p < TITLE_AT - .03) resetTitle();
+    }
+
+    drawBursts(now, dim * (p > TITLE_AT + .12 ? .62 : 1));
+    drawRockets(now, dim);
+    drawWords(now, 1 - smooth(ramp(p, .86, .91)));
+
+    diyas.forEach(function (d) { drawDiya(d, now, ramp(p, .02 + d.order * .1, .1 + d.order * .12), dim); });
+    var te = smooth(ramp(p, TITLE_AT + .02, TITLE_AT + .1));
+    if (te > 0 && dim > 0) { ctx.globalAlpha = dim; ctx.drawImage(toran, 0, -(1 - te) * (toranH + 8) - 4 + Math.sin(now * 1.1) * 1.5, W, toranH); ctx.globalAlpha = 1; }
+
+    style(hint, 1 - smooth(ramp(p, .015, .05)), 0);
+    style(deva, smooth(ramp(p, .05, .1)) * (1 - smooth(ramp(p, TITLE_AT - .08, TITLE_AT - .02))), (1 - smooth(ramp(p, .05, .12))) * 30);
+    var go = smooth(ramp(p, TITLE_AT + .12, TITLE_AT + .2)) * (1 - smooth(ramp(p, .86, .91)));
+    style(greet, go, (1 - smooth(ramp(p, TITLE_AT + .12, TITLE_AT + .22))) * 40);
+    style(bridge, smooth(ramp(p, .93, .975)), (1 - smooth(ramp(p, .93, .99))) * 40);
+  }
+
+  function still() {
+    /* reduced motion: the finished greeting, no rockets */
+    sec.classList.add('is-still');
+    layout();
+    var g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#16043F'); g.addColorStop(1, '#5A0B78'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    ctx.drawImage(words.crisp, 0, 0, words.w, words.h); ctx.drawImage(toran, 0, 0, W, toranH);
+    diyas.forEach(function (d) { drawDiya(d, 0, 1, 1); });
+    style(greet, 1, 0); style(hint, 0, 0); style(deva, 0, 0); style(bridge, 0, 0);
+  }
+
+  function start() {
+    try {
+      if (reduce) { still(); window.addEventListener('resize', still); return; }
+      layout();
+      var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(layout, 120); });
+      requestAnimationFrame(frame);
+    } catch (e) { sec.classList.add('is-still'); greet.style.opacity = 1; greet.style.visibility = 'visible'; }
+  }
+  var fonts = document.fonts && document.fonts.load ? Promise.race([document.fonts.load('900 100px "Barlow Condensed"'), new Promise(function (r) { setTimeout(r, 1500); })]) : Promise.resolve();
+  fonts.then(start, start);
+})();
 </script>
 </body>
 </html>
