@@ -304,7 +304,6 @@ tr[data-cat="Governance"] .tag { background: var(--choc); color: var(--vanilla);
   :root { --vanilla: #fff; --wafer: #fff; --choc: #000; --red: #000; --mango: #fff; --pista: #fff; --rose: #fff; --berry: #fff; --sky: #fff; }
   body { font-size: 11pt; background: #fff; color: #000; }
   .dw, .progress, .site-nav, .counter, .skip, .filters, .rail, .drip, .ph-scoop, .intro-replay { display: none !important; }
-  html.intro-on, html.intro-on body { overflow: visible; }
   [data-reveal], [data-hero] { opacity: 1 !important; transform: none !important; }
   .hero, .section, .ph, .site-footer { background: #fff !important; color: #000 !important; padding: 0 0 8mm; min-height: 0; }
   .hero *, .section *, .ph *, .site-footer * { color: #000 !important; }
@@ -365,80 +364,110 @@ h2, .sec-title, .ph h3.name, .sub-head h3, .panel h3, .rcard.wide h3 { text-tran
 .intro-replay { color: #fff; }
 #next { padding-bottom: clamp(130px, 13vw, 190px); }
 
-/* Diwali sky */
-.sky { position: relative; height: 760vh; background: #04021A; color: #fff; }
-.sky-stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
-.sky canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.sky [data-stop] { position: absolute; left: 0; width: 1px; height: 1px; }
-.sky-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-.sky-hint { position: absolute; left: 0; right: 0; bottom: 13vh; text-align: center; will-change: opacity; }
-.sky-hint b { display: inline-block; background: #FFD000; color: #04021A; border-radius: 99px; padding: 8px 26px; font-weight: 900; font-size: clamp(18px, 2.6vh, 23px); }
-.sky-deva { position: absolute; left: 0; right: 0; top: 34vh; margin: 0; text-align: center; font-family: "Rozha One", "Nirmala UI", serif; font-size: min(16vw, 24vh); line-height: 1.3; color: #FFD000; text-shadow: 0 0 40px rgba(255,120,0,.75); visibility: hidden; opacity: 0; will-change: transform, opacity; }
-.sky-greet { position: absolute; left: 20px; right: 20px; top: var(--top, 44vh); text-align: center; visibility: hidden; opacity: 0; will-change: transform, opacity; }
-.sky-greet .to { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; text-transform: uppercase; font-size: min(7.4vw, 8.6vh); line-height: 1; color: #00E5FF; text-shadow: 0 2px 22px rgba(0,0,0,.55); }
-.sky-greet .wish { margin: clamp(8px, 1.6vh, 16px) auto 0; max-width: 34em; font-size: clamp(19px, 2.9vh, 27px); line-height: 1.25; font-weight: 700; text-shadow: 0 2px 16px rgba(0,0,0,.7); }
-.sky-greet .sign { margin-top: clamp(10px, 2vh, 20px); font-size: clamp(18px, 2.5vh, 23px); line-height: 1.2; font-weight: 700; text-shadow: 0 2px 16px rgba(0,0,0,.7); }
-.sky-greet .sign b { display: block; font-family: "Barlow Condensed", Impact, sans-serif; text-transform: uppercase; font-size: min(6vw, 6.4vh); line-height: 1.02; color: #FFD000; }
-.sky-bridge { position: absolute; left: 20px; right: 20px; top: 50%; margin: -.5em 0 0; text-align: center; font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; text-transform: uppercase; font-size: min(15vw, 26vh); line-height: .9; visibility: hidden; opacity: 0; will-change: transform, opacity; }
-.sky.is-still { height: 100vh; height: 100svh; }
-html:not(.js) .sky { height: auto; }
-html:not(.js) .sky-stage { position: static; height: auto; padding: 60px 20px; }
-html:not(.js) .sky canvas, html:not(.js) .sky-hint, html:not(.js) .sky-bridge, html:not(.js) .sky-deva { display: none; }
-html:not(.js) .sky-title { position: static; width: auto; height: auto; clip: auto; display: block; text-align: center; font: 900 72px "Barlow Condensed", Impact, sans-serif; }
-html:not(.js) .sky-greet { position: static; visibility: visible; opacity: 1; }
 @media (max-width: 760px) {
-  .sky-greet .to { font-size: 10.6vw; }
-  .sky-greet .sign b { font-size: 9vw; }
-  .sky-greet .wish { font-size: 18px; }
-  .sky-deva { font-size: 19vw; }
-  .sky-bridge { font-size: 19vw; }
   .ph h3.name { font-size: 15.5vw; }
   .sec-title { font-size: 12.5vw; }
   .brand img { height: 26px; }
   .brand img.st, .brand i { display: none; }
   .brand { display: flex !important; }
 }
-@media print { .sky { display: none !important; } .brand { display: none; } }
+@media print { .brand { display: none; } }
+
+/* restructured order: insights first, detail after */
+#insights { --bg: var(--vanilla); --from: var(--red); }
+#abroad { --bg: var(--berry); --fg: #fff; --from: var(--vanilla); }
+#results { --bg: var(--vanilla); --from: var(--berry); }
+#research { --bg: var(--mango); --fg: var(--choc); --from: var(--vanilla); }
+#leadership { --bg: var(--sky); --from: var(--mango); }
+#decisions { --bg: var(--vanilla); --from: var(--sky); }
+#value { --bg: var(--red); --fg: #fff; --from: var(--vanilla); }
+#start { --bg: var(--vanilla); --from: var(--red); }
+#journey { padding-bottom: 0; }
+.ph-5 { padding-bottom: clamp(160px, 15vw, 220px); }
+#research .filters button { background: var(--vanilla); }
+#research .filters button:hover { background: #fff; }
+#research .filters button[aria-pressed="true"] { background: var(--choc); color: var(--vanilla); }
+.research .rcard:last-child { grid-column: auto; }
+
+.ins-block { margin-top: clamp(50px, 6vw, 84px); }
+.ins-note { margin: -6px 0 16px; max-width: 40em; font-size: 19px; line-height: 1.35; font-weight: 600; }
+.wins { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.win-card { border-radius: 30px; padding: clamp(22px, 2.4vw, 32px); background: var(--wafer); color: var(--choc); min-width: 0; container-type: inline-size; }
+.win-card .big { font-family: var(--display); font-size: min(clamp(56px, 6.4vw, 96px), 20cqw); line-height: .92; text-transform: uppercase; }
+.win-card h3 { font-size: 22px; margin-top: 10px; }
+.win-card p:not(.big) { font-size: 18px; line-height: 1.3; margin-top: 6px; font-weight: 500; }
+.win-card:nth-child(1), .win-card:nth-child(9) { background: var(--red); color: #fff; }
+.win-card:nth-child(2), .win-card:nth-child(7) { background: var(--pista); }
+.win-card:nth-child(3), .win-card:nth-child(8) { background: var(--mango); }
+.win-card:nth-child(4) { background: var(--berry); color: #fff; }
+.win-card:nth-child(5) { background: var(--sky); }
+.win-card:nth-child(6) { background: var(--choc); color: #fff; }
+
+.save { display: grid; grid-template-columns: 1fr 1.35fr; gap: 14px; }
+.save-total { background: var(--red); color: #fff; border-radius: 36px; padding: clamp(26px, 3.4vw, 46px); display: flex; flex-direction: column; container-type: inline-size; }
+.save-total .label { color: var(--mango); }
+.save-total .big { font-family: var(--display); font-size: min(clamp(84px, 10vw, 160px), 19cqw); line-height: .9; text-transform: uppercase; margin-top: 10px; white-space: nowrap; }
+.save-total p:last-child { margin-top: auto; padding-top: 18px; font-size: 20px; line-height: 1.3; }
+.save-list { background: var(--wafer); border-radius: 36px; padding: clamp(18px, 2.4vw, 30px) clamp(22px, 2.8vw, 36px); }
+.save-list li { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; padding: 12px 0; }
+.save-list li + li { border-top: 2px solid var(--vanilla); }
+.save-list .nm { font-size: 20px; font-weight: 800; line-height: 1.2; }
+.save-list .nm span { display: block; font-size: 16px; font-weight: 500; margin-top: 2px; }
+.save-list .amt { font-family: var(--display); font-size: clamp(32px, 3.2vw, 44px); line-height: 1; color: var(--red); white-space: nowrap; }
+.terms-h { display: block; margin-top: 18px; font-size: 13px; color: var(--red); }
+.terms { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 8px; }
+.terms li { background: var(--vanilla); border-radius: 99px; padding: 3px 14px; font-weight: 700; font-size: 16px; }
+
+.sent { background: var(--wafer); border-radius: 34px; padding: 8px clamp(22px, 2.8vw, 36px); }
+.sent li { display: grid; grid-template-columns: 150px 1fr; gap: 14px; padding: 13px 0; }
+.sent li + li { border-top: 2px solid var(--vanilla); }
+.sent time { font-weight: 800; font-size: 16px; color: var(--red); padding-top: 3px; white-space: nowrap; }
+.sent .nm { font-size: 20px; font-weight: 800; line-height: 1.22; }
+.sent .nm span { display: block; font-size: 16px; font-weight: 500; margin-top: 2px; }
+#insights .next { margin-top: 0; }
+#insights .next li:nth-child(4n) { background: var(--wafer); }
+
+.trips { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: clamp(36px, 4vw, 60px); }
+.trip { border-radius: 36px; padding: clamp(26px, 3.2vw, 44px); background: var(--vanilla); color: var(--choc); display: flex; flex-direction: column; min-width: 0; }
+.trip + .trip { background: var(--mango); }
+.trip > .label { font-size: 13px; color: var(--red); }
+.trip h3 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(44px, 4.8vw, 72px); line-height: .94; margin-top: 6px; }
+.trip .rstats b { color: var(--red); }
+.trip .desc { margin-top: 16px; font-size: 19px; line-height: 1.32; }
+.trip .ideas li { background: var(--berry); color: #fff; }
+
+@media (max-width: 1100px) {
+  .wins { grid-template-columns: 1fr 1fr; }
+  .save, .trips { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .wins { grid-template-columns: minmax(0, 1fr); }
+  .sent li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .save-list li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+}
+@media print {
+  .win-card, .save-total, .save-list, .sent, .trip { border: 1px solid #888; background: #fff !important; color: #000 !important; break-inside: avoid; }
+  .sent li, .save-list li { break-inside: avoid; }
+}
 </style>
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
 <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
-<section class="sky" id="diwali" data-section aria-label="A Diwali greeting">
-  <div class="sky-stage">
-    <canvas id="skyCanvas" aria-hidden="true"></canvas>
-    <h1 class="sky-title">Happy Diwali</h1>
-    <p class="sky-deva" id="skyDeva" lang="hi">शुभ दीपावली</p>
-    <div class="sky-greet" id="skyGreet">
-      <p class="to">To Mr Jimmy Rana, Mr Zervin Rana and your families</p>
-      <p class="wish">May this festival of lights bring your homes health, happiness and prosperity, and may every step ahead be brighter than the last.</p>
-      <p class="sign">With warm wishes,<b>Shubham Saraff and family</b>and the STAIR Digital team</p>
-    </div>
-    <p class="sky-bridge" id="skyBridge">Our journey together</p>
-    <div class="sky-hint" id="skyHint"><b>Scroll to light up the sky</b></div>
-  </div>
-  <i data-stop style="top:10%"></i>
-  <i data-stop style="top:20%"></i>
-  <i data-stop style="top:30%"></i>
-  <i data-stop style="top:40%"></i>
-  <i data-stop style="top:50%"></i>
-  <i data-stop style="top:60%"></i>
-  <i data-stop style="top:70%"></i>
-  <i data-stop style="top:80%"></i>
-</section>
 <header class="site-nav">
   <div class="inner">
     <a class="brand" href="#top" aria-label="Dinshaw’s and STAIR Digital, back to the top of the journey"><img src="data:image/png;base64,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" alt="Dinshaw’s"><i aria-hidden="true">×</i><img class="st" src="data:image/png;base64,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" alt="STAIR Digital"></a>
     <nav class="nav-links" aria-label="Sections">
-      <a href="#start" data-nav="start">Where It Started</a>
-      <a href="#journey" data-nav="journey">Journey</a>
-      <a href="#results" data-nav="results">Results</a>
+      <a href="#insights" data-nav="insights">Key Insights</a>
+      <a href="#abroad" data-nav="abroad">Research Abroad</a>
+      <a href="#results" data-nav="results">Quick Commerce</a>
+      <a href="#research" data-nav="research">Research</a>
       <a href="#leadership" data-nav="leadership">Leadership</a>
       <a href="#decisions" data-nav="decisions">Decisions</a>
       <a href="#value" data-nav="value">Value Secured</a>
-      <a href="#research" data-nav="research">Research</a>
-      <a href="#next" data-nav="next">What’s Next</a>
+      <a href="#start" data-nav="start">Where It Started</a>
+      <a href="#journey" data-nav="journey">Journey</a>
     </nav>
     <div class="nav-tools">
       <button class="tool" type="button" id="btnPrint" aria-label="Print this page"><span class="t">Print</span></button>
@@ -465,11 +494,452 @@ html:not(.js) .sky-greet { position: static; visibility: visible; opacity: 1; }
   </div>
 </section>
 
-<!-- ===================== 01 WHERE IT STARTED ===================== -->
+<!-- ===================== 01 KEY INSIGHTS ===================== -->
+<section class="section" id="insights" data-section aria-labelledby="h-ins">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1430 6 1428 105 1390 105C1352 105 1350 6 1340 6C1326 6 1323 46 1270 46C1218 46 1215 6 1201 6C1189 6 1187 107 1142 107C1098 107 1096 6 1084 6C1071 6 1068 110 1019 110C970 110 967 6 954 6C940 6 937 38 882 38C827 38 824 6 810 6C795 6 792 31 736 31C681 31 678 6 663 6C644 6 641 90 570 90C499 90 496 6 477 6C467 6 465 100 426 100C386 100 384 6 374 6C364 6 362 54 324 54C287 54 285 6 275 6C259 6 256 90 194 90C133 90 130 6 114 6C103 6 100 100 57 100C14 100 11 6 0 6Z"/></svg>
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">01 · Key Insights</span></div>
+    <div class="sec-body">
+      <h2 class="sec-title" id="h-ins" data-reveal>What Has Been Delivered So Far</h2>
+      <p class="intro" data-reveal>The headlines first: what is done, what it has saved, what has been sent and what comes next. The detail, and the full 5-phase timeline, follow below.</p>
+
+      <div class="ins-block" data-stop>
+        <div class="sub-head" data-reveal><h3>Achievements Completed</h3></div>
+        <div class="wins">
+          <article class="win-card" data-reveal><p class="big num">4 of 7</p><h3>Senior Leaders Secured</h3><p>Business Heads for Dairy and Ice Cream, Sales Head Namkeen &amp; Bakery and the CHRO; the CFO is at offer stage.</p></article>
+          <article class="win-card" data-reveal><p class="big">SAP</p><h3>ERP Chosen and Under Way</h3><p>S/4HANA Public Cloud with a clean core, GFI as preferred partner; go-live targeted for January to February 2027.</p></article>
+          <article class="win-card" data-reveal><p class="big num">~₹5 Cr</p><h3>Blinkit Sales, Apr to Sep</h3><p>Against ~₹60 lakh in the same months last year.</p></article>
+          <article class="win-card" data-reveal><p class="big num">~5x</p><h3>Pune on Blinkit</h3><p>From ~₹4 lakh a month to ₹20.87 lakh in October, the strongest month since June.</p></article>
+          <article class="win-card" data-reveal><p class="big num">₹5 Cr+</p><h3>Instamart Budget Agreed</h3><p>A separate on-platform budget, set at the Bangalore working session on 28 October.</p></article>
+          <article class="win-card" data-reveal><p class="big num">₹2.38 Cr</p><h3>Energy Savings a Year</h3><p>Identified at the plant, on ~₹1.89 Cr of investment.</p></article>
+          <article class="win-card" data-reveal><p class="big">Base Plan</p><h3>Signed Off</h3><p>With a separate P&amp;L, balance sheet and cash flow for each vertical.</p></article>
+          <article class="win-card" data-reveal><p class="big">Board</p><h3>Governance Model Agreed</h3><p>Chairman, Managing Director and Executive Director roles, 2 committees and quarterly reviews.</p></article>
+          <article class="win-card" data-reveal><p class="big">Skyr</p><h3>New Product Focus Set</h3><p>Skyr and probiotic dahi chosen; PMG engaged for a 3-year plant upgrade.</p></article>
+        </div>
+      </div>
+
+      <div class="ins-block" data-stop>
+        <div class="sub-head" data-reveal><h3>Money Saved in New Deals</h3></div>
+        <div class="save" data-reveal>
+          <div class="save-total">
+            <p class="label">Saved or avoided</p>
+            <p class="big num">~₹30 lakh</p>
+            <p>Across 3 negotiated deals, before the better contract terms listed alongside.</p>
+          </div>
+          <div class="save-list">
+            <ol>
+              <li><span class="nm">Dildaar campaign PR fee<span>Re-scoped from ~₹30 lakh to ~₹7 lakh</span></span><span class="amt num">₹23 lakh</span></li>
+              <li><span class="nm">EMA Partners, Ice Cream search invoice<span>₹15.50 lakh brought down to ₹10 lakh + GST</span></span><span class="amt num">₹5.5 lakh</span></li>
+              <li><span class="nm">ZingHR HRMS pilot fee<span>Waived, so both vendors pilot at no cost</span></span><span class="amt num">₹2 lakh</span></li>
+            </ol>
+            <p class="label terms-h">Better terms secured</p>
+            <ul class="terms">
+              <li>Replacement guarantee 6 → 12 months</li>
+              <li>50% cancellation fee removed</li>
+              <li>Flat 8.33% search fee</li>
+              <li>Admin fee capped at ₹3.5 lakh</li>
+              <li>Only year-1 LTIP counted in fees</li>
+              <li>Pay only after 15 days</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="ins-block" data-stop>
+        <div class="sub-head" data-reveal><h3>Documents Made and Sent</h3></div>
+        <p class="ins-note" data-reveal>13 documents since late September. Of the 9 onboarding items Mr Jimmy Rana listed on 15 October, 7 are delivered; the reporting matrix and the business review matrix are next.</p>
+        <div class="sent" data-reveal>
+          <ol>
+            <li><time>12 Nov 2026</time><span class="nm">Joining Documents for Mr Venkataramani Santhanam and Mr Pravesh Kumar Mittal<span>Personal welcome, role, OKRs, authority and support, revised after review</span></span></li>
+            <li><time>9 Nov 2026</time><span class="nm">Functional Onboarding and the 30-60-90 Day Plan<span>With business expectations for Years 1, 2 and 3, for every member of the leadership team</span></span></li>
+            <li><time>8 Nov 2026</time><span class="nm">New Product Launch Research Framework<span>Yogurt, lassi and protein: decisions to settle, phased research and go or no-go gates</span></span></li>
+            <li><time>4 Nov 2026</time><span class="nm">Cultural Onboarding: The Dinshaw’s Way<span>Values and culture foundation, led by the Managing Director</span></span></li>
+            <li><time>Nov 2026</time><span class="nm">Leadership OKR Menu, Version 4<span>504 key results across 6 incoming roles, for the promoters to pick from</span></span></li>
+            <li><time>21–29 Oct 2026</time><span class="nm">Joining Policy for the Incoming Business Heads<span>Revised on 27 and 29 October after review</span></span></li>
+            <li><time>Oct 2026</time><span class="nm">PLI, LTIP and Car &amp; Driver Allowance Letter<span>How incentive, long-term plan and allowance work, for issue on Dinshaw’s letterhead</span></span></li>
+            <li><time>20 Oct 2026</time><span class="nm">Leadership Onboarding and Meet-and-Greet with Direct Reports<span>Day 1 and Day 2 sequence, readiness checklist and team handover</span></span></li>
+            <li><time>4 Oct 2026</time><span class="nm">Retail Formats Business Plan<span>Ice cream studio, company store and kiosk, with the first parlour layout</span></span></li>
+            <li><time>3 Oct 2026</time><span class="nm">Board Structure and Governance Framework<span>Revised on the promoters’ decisions of 3 October</span></span></li>
+            <li><time>3 Oct 2026</time><span class="nm">Promoter-Professional Engagement Framework<span>Induction to steady state; revised on the same decisions</span></span></li>
+            <li><time>3 Oct 2026</time><span class="nm">New Product Development Note, Updated<span>Skyr and probiotic dahi, casein for export and the full skyr research brief</span></span></li>
+            <li><time>29 Sep 2026</time><span class="nm">Africa Business Thesis<span>Counter-season demand, with BIDCO as a route to market</span></span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="ins-block" data-stop>
+        <div class="sub-head" data-reveal><h3>Next Steps</h3></div>
+        <ol class="next" aria-label="Scheduled next steps">
+          <li data-reveal><time>19–20 Nov 2026</time><h3>Leadership sessions, Nagpur</h3><p>Mr Shubham Saraff and Mr Shailesh Haribhakti meet the incoming Business Heads.</p></li>
+          <li data-reveal><time>Nov 2026</time><h3>HRMS pilots</h3><p>ZingHR and BlueTree tested on 2 months of plant data.</p></li>
+          <li data-reveal><time>Nov–Dec 2026</time><h3>Reporting and review matrix</h3><p>Reporting lines, reaching-out norms and the governing board’s review rhythm, completing the onboarding kit.</p></li>
+          <li data-reveal><time>To Be Fixed</time><h3>Yogurt strategy day</h3><p>A full day to close the yogurt strategy so plant work can begin, with PMG on plant design.</p></li>
+          <li data-reveal><time>Dec 2026</time><h3>Quick commerce intelligence</h3><p>Tracking competitors across 23 platforms goes live.</p></li>
+          <li data-reveal><time>4 Jan 2027</time><h3>Business Head Ice Cream joins</h3><p>Preceded by the strategy session he asked for, ahead of the summer season.</p></li>
+          <li data-reveal><time>Jan 2027</time><h3>CHRO joins; CFO seated</h3><p>CHRO expected mid-January, with the CFO in place by January.</p></li>
+          <li data-reveal><time>Jan–Feb 2027</time><h3>SAP S/4HANA go-live</h3><p>With product-wise costing and volume-based logistics allocation built in.</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 02 RESEARCH ABROAD ===================== -->
+<section class="section" id="abroad" data-section aria-labelledby="h-abroad">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1433 6 1431 66 1403 66C1375 66 1373 6 1366 6C1350 6 1347 48 1286 48C1226 48 1223 6 1207 6C1194 6 1192 77 1142 77C1093 77 1091 6 1078 6C1062 6 1059 42 1000 42C942 42 938 6 923 6C910 6 908 106 859 106C810 106 808 6 795 6C782 6 779 107 728 107C678 107 675 6 662 6C655 6 653 95 626 95C599 95 597 6 590 6C578 6 575 103 528 103C480 103 478 6 465 6C453 6 451 109 406 109C362 109 360 6 348 6C330 6 327 100 258 100C190 100 187 6 169 6C152 6 149 85 84 85C20 85 17 6 0 6Z"/></svg>
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">02 · Research Abroad</span></div>
+    <div class="sec-body">
+      <h2 class="sec-title" id="h-abroad" data-reveal>Seen on the Shelf, Tested at the Source</h2>
+      <p class="intro" data-reveal>2 field trips in Europe, to learn from mature ice cream and yogurt markets before Dinshaw’s commits capital to new products and a yogurt plant.</p>
+      <div class="trips">
+        <article class="trip" data-reveal>
+          <p class="label">Primary research · Sep 2026</p>
+          <h3>Spain &amp; Malta Shelf Research</h3>
+          <div class="rstats">
+            <div><b class="num">91</b><span>Images</span></div>
+            <div><b class="num">18</b><span>Videos</span></div>
+            <div><b class="num">8–9</b><span>Retailers</span></div>
+          </div>
+          <p class="desc">Inputs from retailers on pricing, private labels, packaging and channels, shared as a report and an image site.</p>
+          <div class="ideas">
+            <span class="label">Ideas taken forward</span>
+            <ul>
+              <li>Drip-free lolly packs</li>
+              <li>On-pack offers</li>
+              <li>Vertical freezers</li>
+              <li>Mini milk-ice sticks</li>
+            </ul>
+          </div>
+        </article>
+        <article class="trip" data-reveal>
+          <p class="label">Field research · Oct 2026</p>
+          <h3>Sweden &amp; Norway Dairy Visit</h3>
+          <div class="rstats">
+            <div><b class="num">~270</b><span>Questions prepared</span></div>
+            <div><b class="num">49</b><span>On Mr Jimmy Rana’s brief</span></div>
+            <div><b class="num">7</b><span>Launch hypotheses</span></div>
+          </div>
+          <p class="desc">Tetra Pak sessions in Sweden, the Diplom-Is factory in Norway and an Oslo shelf walk, to test the yogurt plant thesis.</p>
+          <div class="ideas">
+            <span class="label">Taken into the launch research</span>
+            <ul>
+              <li>Protein as the hero claim</li>
+              <li>No added sugar</li>
+              <li>“Lassi” over “drinking yogurt”</li>
+              <li>Bottle over cup for quick commerce</li>
+              <li>Protein shake at ~₹60</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 03 QUICK COMMERCE ===================== -->
+<section class="section tint" id="results" data-section aria-labelledby="h-results">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1433 6 1431 90 1404 90C1378 90 1376 6 1369 6C1361 6 1359 80 1327 80C1295 80 1293 6 1285 6C1276 6 1274 35 1241 35C1208 35 1206 6 1197 6C1188 6 1187 44 1154 44C1120 44 1119 6 1110 6C1096 6 1093 59 1041 59C989 59 986 6 972 6C956 6 953 47 892 47C830 47 827 6 811 6C802 6 800 34 767 34C734 34 732 6 723 6C708 6 705 37 646 37C587 37 584 6 569 6C560 6 559 59 526 59C492 59 491 6 482 6C468 6 465 87 413 87C361 87 358 6 344 6C330 6 328 82 276 82C223 82 221 6 207 6C197 6 195 105 159 105C123 105 121 6 111 6C103 6 101 45 70 45C40 45 38 6 30 6C27 6 26 81 15 81C4 81 3 6 0 6Z"/></svg>
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">03 · Quick Commerce</span></div>
+    <div class="sec-body">
+      <h2 class="sec-title" id="h-results" data-reveal>Focused Bets Are Already Paying Back</h2>
+      <p class="intro" data-reveal>Blinkit, Instamart and Project Pune, with figures as reported in the weekly quick commerce reviews, the marketing summaries and the Nagpur meetings.</p>
+
+      <div class="results">
+        <article class="result" data-reveal>
+          <p class="fig num">~₹5 Cr</p>
+          <p>Blinkit sales, April to September 2026, against ~₹60 lakh in the same months last year.</p>
+          <div class="chart" data-chart="blinkit">
+            <span class="cap" id="cap-blinkit">Blinkit sales, Apr to Sep</span>
+            <ul class="fallback" id="desc-blinkit">
+              <li><span class="k">2025</span><span class="b"><i class="prev" style="--w:9%"></i>₹0.6 Cr</span></li>
+              <li><span class="k">2026</span><span class="b"><i style="--w:72%"></i>₹5 Cr</span></li>
+            </ul>
+          </div>
+          <p class="src">Source: Instamart CEO brief, Oct 2026</p>
+        </article>
+
+        <article class="result" data-reveal>
+          <p class="fig num">3 → 20</p>
+          <p>Blinkit pockets served, across 32 cities and 5 distribution centres.</p>
+          <p class="src">Source: Instamart CEO brief, Oct 2026</p>
+        </article>
+
+        <article class="result" data-reveal>
+          <p class="fig num">~5x</p>
+          <p>Pune sales on Blinkit, from ~₹4 lakh a month to ₹20.87 lakh in October, with ₹11.69 lakh of advertising to 28 October.</p>
+          <div class="chart" data-chart="pune">
+            <span class="cap" id="cap-pune">Pune on Blinkit, a month</span>
+            <ul class="fallback" id="desc-pune">
+              <li><span class="k">Before</span><span class="b"><i class="prev" style="--w:12%"></i>₹4 lakh</span></li>
+              <li><span class="k">After</span><span class="b"><i style="--w:60%"></i>₹20.87 lakh</span></li>
+            </ul>
+          </div>
+          <p class="src">Source: Weekly review, 8 Sep; Pune update, 3 Nov 2026</p>
+        </article>
+
+        <article class="result" data-reveal>
+          <p class="fig num">₹1.61 Cr</p>
+          <p>Quick commerce sales across ice cream and dairy in October, to 30 October, against ₹1.47 Cr in September.</p>
+          <p class="src">Source: Marketing summary, Oct 2026</p>
+        </article>
+
+        <article class="result" data-reveal>
+          <p class="fig num">30x</p>
+          <p>Ghee on quick commerce: ₹50,000 of advertising returned ₹15 lakh of sales.</p>
+          <p class="src">Source: Nagpur review, 1 Oct 2026</p>
+        </article>
+
+        <article class="result" data-reveal>
+          <p class="fig num">₹5 Cr+</p>
+          <p>Separate on-platform budget for Instamart, starting with ice cream where General Trade presence is strong.</p>
+          <p class="src">Source: Bangalore working session, 28 Oct 2026</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 04 RESEARCH ===================== -->
+<section class="section tint" id="research" data-section aria-labelledby="h-res">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1428 6 1426 38 1382 38C1339 38 1336 6 1325 6C1312 6 1310 100 1262 100C1215 100 1212 6 1200 6C1187 6 1185 103 1136 103C1087 103 1085 6 1072 6C1061 6 1058 62 1016 62C973 62 970 6 959 6C946 6 943 79 892 79C840 79 838 6 824 6C812 6 810 108 764 108C718 108 716 6 704 6C696 6 695 83 666 83C638 83 636 6 629 6C614 6 611 33 552 33C493 33 490 6 475 6C467 6 465 30 434 30C402 30 400 6 392 6C382 6 380 91 340 91C301 91 299 6 289 6C273 6 270 99 208 99C146 99 143 6 127 6C120 6 118 70 92 70C65 70 63 6 56 6C50 6 49 84 28 84C7 84 6 6 0 6Z"/></svg>
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">04 · Research and Documents</span></div>
+    <div class="sec-body">
+      <h2 class="sec-title" id="h-res" data-reveal>Evidence Behind Every Recommendation</h2>
+      <p class="intro" data-reveal>Desk research, case studies and frameworks STAIR produced for Dinshaw’s, and the library of key documents.</p>
+
+      <div class="research">
+        <article class="rcard" data-reveal><p class="label">New products · Oct 2026</p><h3>Skyr &amp; Yogurt Strategy</h3><p>Mass-premium skyr built around protein, plus probiotic dahi, drinkable and fruit yogurt.</p></article>
+        <article class="rcard" data-reveal><p class="label">Dairy · Oct 2026</p><h3>Protein, Whey, Casein &amp; Cheese</h3><p>Mapping every product Dinshaw’s could make from protein, fat and lactose.</p></article>
+        <article class="rcard" data-reveal><p class="label">Economics · Oct 2026</p><h3>Value per Litre of Milk</h3><p>Judging each product by net value per litre after channel and cold-chain costs.</p></article>
+        <article class="rcard" data-reveal><p class="label">Case study · Apr 2026</p><h3>Milky Mist</h3><p>How a regional dairy built a value-added portfolio and scaled it.</p></article>
+        <article class="rcard" data-reveal><p class="label">Benchmarking · Sep 2026</p><h3>10 Listed Peers</h3><p>Dinshaw’s compared with listed Indian dairy and ice cream companies, FY24 to FY26.</p></article>
+        <article class="rcard" data-reveal><p class="label">Growth · Sep 2026</p><h3>Africa Opportunity</h3><p>Using opposite-hemisphere summers to fill India’s lean-season factory capacity.</p></article>
+        <article class="rcard" data-reveal><p class="label">Retail · Oct 2026</p><h3>Own Store Formats</h3><p>Ice cream studio, company store and kiosk, designed with Incubis.</p></article>
+        <article class="rcard" data-reveal><p class="label">Risk · May 2026</p><h3>Weather &amp; Cold Chain</h3><p>Seasonal forecast for Mumbai and its effect on cold-chain logistics.</p></article>
+        <article class="rcard" data-reveal><p class="label">Governance · Oct 2026</p><h3>Board &amp; Engagement Frameworks</h3><p>How the board governs, and how the incoming professionals write and are held to their own plans.</p></article>
+        <article class="rcard" data-reveal><p class="label">New products · Nov 2026</p><h3>Launch Research Framework</h3><p>Format, pack, price and audience for yogurt, lassi and protein, tested in 4 phases with go or no-go gates.</p></article>
+        <article class="rcard" data-reveal><p class="label">Leadership · Nov 2026</p><h3>Leadership OKR Menu</h3><p>504 key results across 6 incoming roles, drawn from each JD and skill matrix.</p></article>
+        <article class="rcard" data-reveal><p class="label">Onboarding · Nov 2026</p><h3>Leadership Onboarding Kit</h3><p>Meet-and-greet, joining policy, incentive letter, cultural and functional onboarding, and personal joining documents.</p></article>
+      </div>
+
+      <div class="library filterable" data-filterable="docs" data-stop>
+        <div class="sub-head" data-reveal><h3>Document Library</h3></div>
+        <div class="filters" role="group" aria-label="Filter documents by category" data-reveal style="margin-top:0">
+          <button type="button" data-filter="all" aria-pressed="true">All <span class="c">62</span></button>
+          <button type="button" data-filter="Hiring" aria-pressed="false">Hiring <span class="c">21</span></button>
+          <button type="button" data-filter="Research" aria-pressed="false">Research <span class="c">11</span></button>
+          <button type="button" data-filter="Digital" aria-pressed="false">Digital <span class="c">8</span></button>
+          <button type="button" data-filter="Factory" aria-pressed="false">Factory <span class="c">5</span></button>
+          <button type="button" data-filter="Strategy" aria-pressed="false">Strategy <span class="c">5</span></button>
+          <button type="button" data-filter="Governance" aria-pressed="false">Governance <span class="c">12</span></button>
+        </div>
+        <p class="status-line" aria-live="polite" data-status data-noun="docs">62 key documents shown, from 120+ logged</p>
+        <div class="lib-box" data-reveal style="margin-top:14px">
+          <ol class="lib">
+            <li data-cat="Hiring"><time>Sep 2025</time><span class="nm">CHRO job description and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Research"><time>Sep 2025</time><span class="nm">SalesCode.ai assessment<span class="cat">Research</span></span></li>
+            <li data-cat="Hiring"><time>Oct 2025</time><span class="nm">National Sales Head JD and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Nov 2025</time><span class="nm">Business Head KPI note and skill matrices<span class="cat">Hiring</span></span></li>
+            <li data-cat="Digital"><time>Nov 2025</time><span class="nm">SAP ERP Integration Report<span class="cat">Digital</span></span></li>
+            <li data-cat="Factory"><time>Nov 2025</time><span class="nm">Factory Ergonomics note<span class="cat">Factory</span></span></li>
+            <li data-cat="Hiring"><time>Dec 2025</time><span class="nm">CHRO KPI framework<span class="cat">Hiring</span></span></li>
+            <li data-cat="Strategy"><time>Dec 2025</time><span class="nm">Marketing Spends Gold Standard<span class="cat">Strategy</span></span></li>
+            <li data-cat="Governance"><time>Dec 2025</time><span class="nm">Values Manual for incoming leaders<span class="cat">Governance</span></span></li>
+            <li data-cat="Factory"><time>Dec 2025</time><span class="nm">Factory Optimisation and IoT Vendors List<span class="cat">Factory</span></span></li>
+            <li data-cat="Strategy"><time>Dec 2025</time><span class="nm">Agency brief with digital KPI framework<span class="cat">Strategy</span></span></li>
+            <li data-cat="Digital"><time>Mar 2026</time><span class="nm">SAP Scope of Work and ERP Blueprint<span class="cat">Digital</span></span></li>
+            <li data-cat="Digital"><time>Mar 2026</time><span class="nm">DMS Vendor Skill Assessment Matrix<span class="cat">Digital</span></span></li>
+            <li data-cat="Strategy"><time>Apr 2026</time><span class="nm">Note on Quick Commerce and Marketing<span class="cat">Strategy</span></span></li>
+            <li data-cat="Digital"><time>Apr 2026</time><span class="nm">ERP Evaluation: QAD vs SAP<span class="cat">Digital</span></span></li>
+            <li data-cat="Governance"><time>Apr 2026</time><span class="nm">Organisational Structure<span class="cat">Governance</span></span></li>
+            <li data-cat="Research"><time>Apr 2026</time><span class="nm">Milky Mist Strategic Case Study<span class="cat">Research</span></span></li>
+            <li data-cat="Hiring"><time>May 2026</time><span class="nm">CFO JD and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Research"><time>May 2026</time><span class="nm">Competitor analysis: GetAWay and Heritage Foods<span class="cat">Research</span></span></li>
+            <li data-cat="Research"><time>May 2026</time><span class="nm">Weather and cold-chain risk report<span class="cat">Research</span></span></li>
+            <li data-cat="Research"><time>May 2026</time><span class="nm">Food Pharmer note<span class="cat">Research</span></span></li>
+            <li data-cat="Hiring"><time>May 2026</time><span class="nm">Brand Manager and Marketing Coordinator JDs<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Jun 2026</time><span class="nm">Business Head Snack Foods JD and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Factory"><time>Jul 2026</time><span class="nm">QC Circle Gold Standard research report<span class="cat">Factory</span></span></li>
+            <li data-cat="Digital"><time>Jul 2026</time><span class="nm">SAP Vendor Gap Analysis Scope of Work<span class="cat">Digital</span></span></li>
+            <li data-cat="Governance"><time>Jul 2026</time><span class="nm">Nagpur Strategic Review minutes and action tracker<span class="cat">Governance</span></span></li>
+            <li data-cat="Governance"><time>Jul 2026</time><span class="nm">Q1 FY 2026-27 Strategic Progress Report<span class="cat">Governance</span></span></li>
+            <li data-cat="Factory"><time>Jul 2026</time><span class="nm">AI use-case priorities for IBOTIX<span class="cat">Factory</span></span></li>
+            <li data-cat="Factory"><time>Jul 2026</time><span class="nm">Plant Energy Audit review<span class="cat">Factory</span></span></li>
+            <li data-cat="Digital"><time>Aug 2026</time><span class="nm">SAP governance pack: process owners, steering committee, charter<span class="cat">Digital</span></span></li>
+            <li data-cat="Hiring"><time>Aug 2026</time><span class="nm">Role mandate confirmation template<span class="cat">Hiring</span></span></li>
+            <li data-cat="Governance"><time>Aug 2026</time><span class="nm">Proposed organisation structure<span class="cat">Governance</span></span></li>
+            <li data-cat="Hiring"><time>Aug 2026</time><span class="nm">Marketing Head, Alternate Channels JD<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Sep 2026</time><span class="nm">Sales Head Namkeen &amp; Bakery JD and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Sep 2026</time><span class="nm">Channel Commercial Head JD and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Sep 2026</time><span class="nm">Head IT JD and skill matrix<span class="cat">Hiring</span></span></li>
+            <li data-cat="Governance"><time>Sep 2026</time><span class="nm">Promoter-Professional Engagement Framework<span class="cat">Governance</span></span></li>
+            <li data-cat="Governance"><time>Sep 2026</time><span class="nm">Board Structure and Governance note<span class="cat">Governance</span></span></li>
+            <li data-cat="Research"><time>Sep 2026</time><span class="nm">Spain &amp; Malta primary research site and report<span class="cat">Research</span></span></li>
+            <li data-cat="Research"><time>Sep 2026</time><span class="nm">Peer benchmarking: 10 listed companies<span class="cat">Research</span></span></li>
+            <li data-cat="Research"><time>Sep 2026</time><span class="nm">Africa opportunity thesis<span class="cat">Research</span></span></li>
+            <li data-cat="Digital"><time>Sep 2026</time><span class="nm">HRMS note: ZingHR vs BlueTree<span class="cat">Digital</span></span></li>
+            <li data-cat="Research"><time>Oct 2026</time><span class="nm">New product note: skyr and probiotic dahi (updated 3 Oct)<span class="cat">Research</span></span></li>
+            <li data-cat="Governance"><time>Oct 2026</time><span class="nm">Board Structure and Governance Framework, revised<span class="cat">Governance</span></span></li>
+            <li data-cat="Governance"><time>Oct 2026</time><span class="nm">Promoter-Professional Engagement Framework, revised<span class="cat">Governance</span></span></li>
+            <li data-cat="Strategy"><time>Oct 2026</time><span class="nm">Retail Formats Business Plan<span class="cat">Strategy</span></span></li>
+            <li data-cat="Strategy"><time>Oct 2026</time><span class="nm">Instamart CEO brief and Blinkit journey<span class="cat">Strategy</span></span></li>
+            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Leadership travel and relocation policy<span class="cat">Hiring</span></span></li>
+            <li data-cat="Digital"><time>Oct 2026</time><span class="nm">Logistics costing in SAP note<span class="cat">Digital</span></span></li>
+            <li data-cat="Governance"><time>Oct 2026</time><span class="nm">Nagpur review notes and 32-item action plan<span class="cat">Governance</span></span></li>
+            <li data-cat="Governance"><time>Oct 2026</time><span class="nm">Q2 FY 2026-27 Progress Report<span class="cat">Governance</span></span></li>
+            <li data-cat="Governance"><time>Oct 2026</time><span class="nm">Nagpur visit minutes, 30 September and 1 October<span class="cat">Governance</span></span></li>
+            <li data-cat="Research"><time>Oct 2026</time><span class="nm">Yoghurt plant question bank for Tetra Pak<span class="cat">Research</span></span></li>
+            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Head, Quick Commerce &amp; Modern Trade JD<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Leadership onboarding and meet-and-greet process<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Joining policy for incoming Business Heads<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Draft PLI and LTIP letter<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Nov 2026</time><span class="nm">Cultural onboarding document<span class="cat">Hiring</span></span></li>
+            <li data-cat="Research"><time>Nov 2026</time><span class="nm">New product launch research framework<span class="cat">Research</span></span></li>
+            <li data-cat="Hiring"><time>Nov 2026</time><span class="nm">Functional onboarding, 30-60-90 day plan and Year 1–3 expectations<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Nov 2026</time><span class="nm">Leadership OKR menu, version 4<span class="cat">Hiring</span></span></li>
+            <li data-cat="Hiring"><time>Nov 2026</time><span class="nm">Joining documents: Business Head Dairy and Sales Head Namkeen &amp; Bakery<span class="cat">Hiring</span></span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 05 LEADERSHIP ===================== -->
+<section class="section" id="leadership" data-section aria-labelledby="h-lead">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1424 6 1421 107 1362 107C1302 107 1299 6 1283 6C1275 6 1273 109 1242 109C1212 109 1210 6 1202 6C1186 6 1183 111 1124 111C1066 111 1062 6 1047 6C1034 6 1031 34 980 34C928 34 926 6 912 6C897 6 894 77 837 77C780 77 777 6 762 6C749 6 747 97 699 97C651 97 649 6 636 6C619 6 615 43 550 43C486 43 482 6 465 6C449 6 446 88 386 88C327 88 324 6 308 6C293 6 290 66 235 66C180 66 177 6 162 6C146 6 143 78 81 78C19 78 16 6 0 6Z"/></svg>
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">05 · Leadership Team</span></div>
+    <div class="sec-body">
+      <h2 class="sec-title" id="h-lead" data-reveal>From Family-Run to Professionally Led</h2>
+      <p class="intro" data-reveal>7 senior roles were designed from scratch, each with a JD and a scored skill matrix. 4 are secured, including the CHRO, and the remaining 3 searches are active.</p>
+
+      <div class="roles">
+        <article class="role" data-reveal><h3>Business Head, Dairy</h3><span class="pill done">Signed</span><p class="who">Mr Venkataramani Santhanam</p><p class="when">Joining 16 November 2026</p></article>
+        <article class="role" data-reveal><h3>Business Head, Ice Cream</h3><span class="pill done">Signed</span><p class="who">Mr Aditya Mittal</p><p class="when">Joining 4 January 2027</p></article>
+        <article class="role" data-reveal><h3>Sales Head, Namkeen &amp; Bakery</h3><span class="pill done">Finalised</span><p class="who">Mr Pravesh Kumar Mittal</p><p class="when">Joining 12 November 2026</p></article>
+        <article class="role" data-reveal><h3>CHRO</h3><span class="pill done">Signed</span><p class="who">Mr Saurabh Pandey</p><p class="when">Offer signed; joining expected mid-January 2027</p></article>
+        <article class="role" data-reveal><h3>CFO</h3><span class="pill prog">Offer Stage</span><p class="who note">Preferred candidate cleared the promoter round</p><p class="when">Offer being prepared, November 2026</p></article>
+        <article class="role" data-reveal><h3>Head IT</h3><span class="pill prog">Interviewing</span><p class="who note">Systems role for SAP, plant IT and data</p><p class="when">In management round, November 2026</p></article>
+        <article class="role" data-reveal><h3>Channel Commercial Head</h3><span class="pill open">Search Active</span><p class="who note">Quick commerce and modern trade</p><p class="when">Brief narrowed 9 October 2026; interviews under way</p></article>
+      </div>
+
+      <div class="block" data-stop>
+        <div class="sub-head" data-reveal><h3>How Each Leader Is Hired</h3></div>
+        <ol class="process" data-reveal aria-label="The 6-step hiring process">
+          <li><span class="n">01</span><span class="t">JD and scored skill matrix</span></li>
+          <li><span class="n">02</span><span class="t">Mandate with search partner</span></li>
+          <li><span class="n">03</span><span class="t">Full candidate dossier</span></li>
+          <li><span class="n">04</span><span class="t">Virtual panel interviews</span></li>
+          <li><span class="n">05</span><span class="t">Salary verification</span></li>
+          <li><span class="n">06</span><span class="t">Full day in Nagpur with plant visit</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 06 DECISIONS ===================== -->
+<section class="section tint" id="decisions" data-section aria-labelledby="h-dec">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1428 6 1426 72 1381 72C1336 72 1334 6 1322 6C1312 6 1310 51 1272 51C1235 51 1233 6 1223 6C1204 6 1201 79 1130 79C1060 79 1056 6 1038 6C1024 6 1021 66 966 66C912 66 909 6 895 6C881 6 878 65 825 65C772 65 769 6 755 6C743 6 741 103 696 103C650 103 648 6 636 6C629 6 627 61 600 61C574 61 572 6 565 6C550 6 547 32 488 32C429 32 426 6 411 6C398 6 396 49 348 49C300 49 298 6 285 6C276 6 274 70 240 70C207 70 205 6 196 6C187 6 185 62 150 62C116 62 114 6 105 6C94 6 92 109 52 109C13 109 10 6 0 6Z"/></svg>
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">06 · Decisions Register</span></div>
+    <div class="sec-body filterable" data-filterable="decisions">
+      <h2 class="sec-title" id="h-dec" data-reveal>The Calls That Shaped the Company</h2>
+      <p class="intro" data-reveal>Major decisions taken by the promoters with STAIR’s input.</p>
+
+      <div class="filters" role="group" aria-label="Filter decisions by workstream" data-reveal>
+        <button type="button" data-filter="all" aria-pressed="true">All <span class="c">36</span></button>
+        <button type="button" data-filter="Leadership" aria-pressed="false">Leadership <span class="c">6</span></button>
+        <button type="button" data-filter="Marketing" aria-pressed="false">Marketing <span class="c">5</span></button>
+        <button type="button" data-filter="Digital" aria-pressed="false">Digital <span class="c">7</span></button>
+        <button type="button" data-filter="Factory" aria-pressed="false">Factory <span class="c">6</span></button>
+        <button type="button" data-filter="Strategy &amp; New Products" aria-pressed="false">Strategy &amp; New Products <span class="c">7</span></button>
+        <button type="button" data-filter="Governance" aria-pressed="false">Governance <span class="c">5</span></button>
+      </div>
+      <p class="status-line" aria-live="polite" data-status data-noun="decisions">Showing all 36 decisions</p>
+
+      <div class="register" data-reveal style="margin-top:14px">
+        <table class="rows">
+          <caption class="sr-only">Decisions register, December 2025 to October 2026</caption>
+          <thead><tr><th scope="col">Date</th><th scope="col">Decision and who decided</th><th scope="col" style="text-align:right">Workstream</th></tr></thead>
+          <tbody>
+            <tr data-cat="Marketing"><td class="d">10 Dec 2025</td><td class="what">Shift marketing to performance-led digital, away from conventional TV<span class="by">Recommended by STAIR; endorsed by Mr Shailesh Haribhakti</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
+            <tr data-cat="Leadership"><td class="d">15 Dec 2025</td><td class="what">Hire Business Heads for Dairy and Ice Cream instead of CEOs<span class="by">Promoters</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
+            <tr data-cat="Digital"><td class="d">15 Dec 2025</td><td class="what">Run a Dinshaw’s-specific AI programme after SAP goes live, not a generic one<span class="by">Promoters with STAIR</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Digital"><td class="d">13 Apr 2026</td><td class="what">SAP selected over QAD as the ERP<span class="by">Promoters, on STAIR’s evaluation</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Leadership"><td class="d">13 Apr 2026</td><td class="what">2-tier leadership model; hiring order set as CHRO, CFO, then Business Heads<span class="by">Promoters</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
+            <tr data-cat="Factory"><td class="d">20 Apr 2026</td><td class="what">Cold-room energy pilot approved, to extend to all 60 cold rooms if it works<span class="by">Promoters</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">30 Apr 2026</td><td class="what">Dairy to focus on value-added and niche products, not volume-led fresh milk<span class="by">Nagpur review</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Digital"><td class="d">30 Apr 2026</td><td class="what">Clean-core SAP S/4HANA Public Cloud architecture<span class="by">Nagpur review</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Factory"><td class="d">2 Jun 2026</td><td class="what">Use low-cost AI vision on existing CCTV rather than heavy IoT<span class="by">On STAIR’s recommendation</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
+            <tr data-cat="Leadership"><td class="d">13 Jun 2026</td><td class="what">Bakery and Namkeen role repositioned as a sales-led head<span class="by">Mr Jimmy Rana, on STAIR’s recommendation</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
+            <tr data-cat="Digital"><td class="d">4 Jul 2026</td><td class="what">GFI preferred as SAP partner: 7-month build plus 12 months of support<span class="by">Strategic review</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Factory"><td class="d">4 Jul 2026</td><td class="what">AI after ERP stabilises; vendors as technology partners, business logic kept in-house<span class="by">Strategic review</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
+            <tr data-cat="Factory"><td class="d">4 Jul 2026</td><td class="what">Solar project to proceed only with guaranteed performance<span class="by">Promoters</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
+            <tr data-cat="Factory"><td class="d">10 Jul 2026</td><td class="what">AI rollout starts in Ice Cream, without biometrics or facial recognition<span class="by">Promoters with STAIR</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
+            <tr data-cat="Leadership"><td class="d">30 Jul 2026</td><td class="what">Every search runs on a signed, role-specific mandate document<span class="by">Promoters</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
+            <tr data-cat="Leadership"><td class="d">1 Aug 2026</td><td class="what">Pay philosophy: at least 65% fixed, variable pay and 36-month retention; no joining bonus<span class="by">Promoters</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">13 Aug 2026</td><td class="what">Ice Cream and Dairy confirmed as the 2 primary verticals<span class="by">Nagpur visit</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Factory"><td class="d">13 Aug 2026</td><td class="what">4 factory priorities: Hygiene, FIFO, Manpower and Energy, low-capex first<span class="by">Nagpur visit</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
+            <tr data-cat="Marketing"><td class="d">21 Aug 2026</td><td class="what">Project Pune is the quick commerce priority to mid-November<span class="by">Mr Zervin Rana</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
+            <tr data-cat="Marketing"><td class="d">26 Aug 2026</td><td class="what">New city launches wait until Pune performs<span class="by">Promoters with STAIR</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
+            <tr data-cat="Governance"><td class="d">2 Sep 2026</td><td class="what">Set up a governance board with independent and executive directors<span class="by">Mr Jimmy Rana with STAIR</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">21 Sep 2026</td><td class="what">R&amp;D focus on skyr; yogurt plant designed to global standards<span class="by">Mr Jimmy Rana</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">21 Sep 2026</td><td class="what">Africa expansion revisited once plant upgrades progress<span class="by">Promoters</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Governance"><td class="d">30 Sep 2026</td><td class="what">Professionals get phased authority, with full ownership including budget by 24 months<span class="by">Promoters</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
+            <tr data-cat="Governance"><td class="d">30 Sep 2026</td><td class="what">Non-statutory governance board first, meeting quarterly; statutory board later<span class="by">Promoters</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">1 Oct 2026</td><td class="what">Only 2 plans: Base and Aspiration. Base Plan signed off<span class="by">Promoters</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">1 Oct 2026</td><td class="what">Build the cheese market on sourced product for ~1 year before any plant<span class="by">Promoters</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Digital"><td class="d">1 Oct 2026</td><td class="what">Logistics cost allocated by crate volume in SAP, not by sales value<span class="by">Promoters</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Governance"><td class="d">1 Oct 2026</td><td class="what">Separate P&amp;L, balance sheet and cash flow for each vertical<span class="by">Promoters</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
+            <tr data-cat="Marketing"><td class="d">1 Oct 2026</td><td class="what">Pune target reset to a top-3 position with ~20% share<span class="by">Promoters</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
+            <tr data-cat="Strategy &amp; New Products"><td class="d">1 Oct 2026</td><td class="what">Own stores are company-owned and company-operated; design Proposal 1 chosen<span class="by">Promoters</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
+            <tr data-cat="Governance"><td class="d">3 Oct 2026</td><td class="what">1 person each as Chairman, Managing Director and Executive Director; 2 board committees in place of 3<span class="by">Promoters</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
+            <tr data-cat="Leadership"><td class="d">9 Oct 2026</td><td class="what">Channel Commercial mandate narrowed to quick commerce and modern trade<span class="by">Promoters with STAIR</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
+            <tr data-cat="Digital"><td class="d">9 Oct 2026</td><td class="what">HRMS pilots run one after the other on 2 months of real data<span class="by">Mr Zervin Rana</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Digital"><td class="d">13 Oct 2026</td><td class="what">CPD Division removed from the SAP structure; its sales move to the existing divisions<span class="by">Dinshaw’s</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
+            <tr data-cat="Marketing"><td class="d">28 Oct 2026</td><td class="what">Separate on-platform budget of ₹5 Cr+ for Instamart, starting with ice cream where GT presence is strong<span class="by">Bangalore meeting</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 07 VALUE SECURED ===================== -->
+<section class="section" id="value" data-section aria-labelledby="h-val">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1433 6 1431 66 1403 66C1375 66 1373 6 1366 6C1350 6 1347 48 1286 48C1226 48 1223 6 1207 6C1194 6 1192 77 1142 77C1093 77 1091 6 1078 6C1062 6 1059 42 1000 42C942 42 938 6 923 6C910 6 908 106 859 106C810 106 808 6 795 6C782 6 779 107 728 107C678 107 675 6 662 6C655 6 653 95 626 95C599 95 597 6 590 6C578 6 575 103 528 103C480 103 478 6 465 6C453 6 451 109 406 109C362 109 360 6 348 6C330 6 327 100 258 100C190 100 187 6 169 6C152 6 149 85 84 85C20 85 17 6 0 6Z"/></svg>
+  <div class="wrap grid">
+    <div class="sec-label"><span class="label">07 · Value Secured</span></div>
+    <div class="sec-body">
+      <h2 class="sec-title" id="h-val" data-reveal>Better Terms, Negotiated on Dinshaw’s Behalf</h2>
+      <p class="intro" data-reveal>Every partner contract and invoice was reviewed clause by clause. These are the outcomes in full.</p>
+
+      <div class="values">
+        <article class="value" data-reveal><div class="top"><h3>Ad Factors · Dildaar PR</h3><time>Mar 2026</time></div><p class="out num">~₹30 lakh → ~₹7 lakh</p><p>PR fee re-scoped to the core brief.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>EMA Partners · Ice Cream search invoice</h3><time>Sep 2026</time></div><p class="out num">₹15.50 lakh → ₹10 lakh + GST</p><p>Stage 3 billing brought back in line with the parent agreement.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>EMA Partners · Search agreement</h3><time>Nov 2025</time></div><p class="out num">Replacement guarantee 6 → 12 months</p><p>Admin fee capped at ₹3.5 lakh or 10% of the fee, whichever is lower; first 3 candidate assessments included.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>EMA Partners · Fee base</h3><time>Jul 2026</time></div><p class="out">Only year-1 LTIP counted in fees</p><p>Applies to every ongoing mandate.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>Executive Access · Agreement</h3><time>Jul–Aug 2026</time></div><p class="out num">50% cancellation fee removed</p><p>Replaced with milestone payments; STAIR’s own referral fee waived for Dinshaw’s.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>Executive Access · CFO budget</h3><time>Aug 2026</time></div><p class="out num">Search run at ₹1.20 Cr budget</p><p>Against a market benchmark of ~₹1.50 Cr for the role.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>Questa Search Partners</h3><time>Jul 2026</time></div><p class="out num">Tiered 8.33–16% → flat 8.33%</p><p>For roles up to ₹40 lakh fixed pay; invoice only after the hire completes 15 days.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>Prompt Personnel</h3><time>Sep 2026</time></div><p class="out num">Pay only after 15 days</p><p>Free replacement if the hire leaves within 6 months.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>ZingHR · HRMS pilot</h3><time>Oct 2026</time></div><p class="out num">₹2 lakh pilot fee waived</p><p>Agreed directly with the founder, so both HRMS vendors pilot on equal terms.</p></article>
+        <article class="value" data-reveal><div class="top"><h3>IoT freezer monitoring pilot</h3><time>Apr 2026</time></div><p class="out num">₹7,800 per unit</p><p>Negotiated unit cost for the freezer asset-tracking proof of concept.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 08 WHERE IT STARTED ===================== -->
 <section class="section tint" id="start" data-section aria-labelledby="h-start">
   <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1430 6 1428 105 1390 105C1352 105 1350 6 1340 6C1326 6 1323 46 1270 46C1218 46 1215 6 1201 6C1189 6 1187 107 1142 107C1098 107 1096 6 1084 6C1071 6 1068 110 1019 110C970 110 967 6 954 6C940 6 937 38 882 38C827 38 824 6 810 6C795 6 792 31 736 31C681 31 678 6 663 6C644 6 641 90 570 90C499 90 496 6 477 6C467 6 465 100 426 100C386 100 384 6 374 6C364 6 362 54 324 54C287 54 285 6 275 6C259 6 256 90 194 90C133 90 130 6 114 6C103 6 100 100 57 100C14 100 11 6 0 6Z"/></svg>
   <div class="wrap grid">
-    <div class="sec-label"><span class="label">01 · Where It Started</span></div>
+    <div class="sec-label"><span class="label">08 · Where It Started</span></div>
     <div class="sec-body">
       <h2 class="sec-title" id="h-start" data-reveal>One Hiring Conversation Became a Full Transformation Agenda</h2>
       <p class="intro" data-reveal>The engagement began in September 2025 with a single brief: help Dinshaw’s find its first CHRO. By the first plant visit 6 weeks later, the promoters and STAIR had agreed a far wider agenda.</p>
@@ -495,12 +965,13 @@ html:not(.js) .sky-greet { position: static; visibility: visible; opacity: 1; }
   </div>
 </section>
 
-<!-- ===================== 02 THE JOURNEY ===================== -->
+<!-- ===================== 09 THE JOURNEY ===================== -->
 <section class="section" id="journey" data-section aria-labelledby="h-journey">
   <div class="wrap grid">
-    <div class="sec-label"><span class="label">02 · The Journey</span></div>
+    <div class="sec-label"><span class="label">09 · The Journey</span></div>
     <div class="sec-body">
       <h2 class="sec-title" id="h-journey" data-reveal>5 Phases, Each One a Step Up</h2>
+      <p class="intro" data-reveal>The full timeline, phase by phase, from the first hiring brief to today.</p>
 
       </div></div>
 <div class="journey">
@@ -607,10 +1078,12 @@ html:not(.js) .sky-greet { position: static; visibility: visible; opacity: 1; }
               <li><time datetime="2026-10-08">8 Oct 2026</time><span>CHRO final offer issued; Head IT interviews begin</span></li>
               <li class="win"><time datetime="2026-10-09">9 Oct 2026</time><span>Q2 progress report issued; HRMS pilot secured from both vendors <strong>at no cost</strong></span></li>
               <li><time datetime="2026-10-12">12 Oct 2026</time><span>Tetra Pak sessions in Sweden, followed by Diplom-Is in Norway and an Oslo shelf walk, to validate the yoghurt plant</span></li>
-              <li><time>Oct 2026</time><span>Leadership onboarding and joining policy documents prepared for the incoming Business Heads</span></li>
+              <li><time>20–29 Oct 2026</time><span>Leadership onboarding, joining policy and incentive letter sent for the incoming Business Heads</span></li>
               <li class="win"><time datetime="2026-10-28">28 Oct 2026</time><span>Working session with Swiggy Instamart in Bangalore: alignment on ice cream listings, freezers, dairy supply and joint new products</span></li>
               <li class="win"><time>Oct 2026</time><span>Pune on Blinkit has its strongest month since June, closing at <strong>₹20.87 lakh</strong></span></li>
               <li class="win"><time datetime="2026-11-03">3 Nov 2026</time><span>CHRO offer letter signed</span></li>
+              <li><time>4–9 Nov 2026</time><span>Cultural and functional onboarding sent, with the 30-60-90 day plan and Year 1–3 expectations; launch research framework for yogurt, lassi and protein shared</span></li>
+              <li class="win"><time datetime="2026-11-12">12 Nov 2026</time><span>Personal joining documents issued for Mr Venkataramani Santhanam and Mr Pravesh Kumar Mittal</span></li>
             </ol>
             <div class="decision"><span class="label">Key Decision</span><p>Skyr over Greek yogurt: high protein, low fat, no added sugar, sold through quick commerce and corporate channels (30 Sep).</p></div>
           
@@ -619,344 +1092,11 @@ html:not(.js) .sky-greet { position: static; visibility: visible; opacity: 1; }
 </div>
 </section>
 
-<!-- ===================== 03 RESULTS ===================== -->
-<section class="section tint" id="results" data-section aria-labelledby="h-results">
-  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1433 6 1431 90 1404 90C1378 90 1376 6 1369 6C1361 6 1359 80 1327 80C1295 80 1293 6 1285 6C1276 6 1274 35 1241 35C1208 35 1206 6 1197 6C1188 6 1187 44 1154 44C1120 44 1119 6 1110 6C1096 6 1093 59 1041 59C989 59 986 6 972 6C956 6 953 47 892 47C830 47 827 6 811 6C802 6 800 34 767 34C734 34 732 6 723 6C708 6 705 37 646 37C587 37 584 6 569 6C560 6 559 59 526 59C492 59 491 6 482 6C468 6 465 87 413 87C361 87 358 6 344 6C330 6 328 82 276 82C223 82 221 6 207 6C197 6 195 105 159 105C123 105 121 6 111 6C103 6 101 45 70 45C40 45 38 6 30 6C27 6 26 81 15 81C4 81 3 6 0 6Z"/></svg>
-  <div class="wrap grid">
-    <div class="sec-label"><span class="label">03 · Results So Far</span></div>
-    <div class="sec-body">
-      <h2 class="sec-title" id="h-results" data-reveal>Focused Bets Are Already Paying Back</h2>
-      <p class="intro" data-reveal>Figures as reported in the weekly quick commerce reviews, the marketing summaries and the Nagpur meetings.</p>
-
-      <div class="results">
-        <article class="result" data-reveal>
-          <p class="fig num">~₹5 Cr</p>
-          <p>Blinkit sales, April to September 2026, against ~₹60 lakh in the same months last year.</p>
-          <div class="chart" data-chart="blinkit">
-            <span class="cap" id="cap-blinkit">Blinkit sales, Apr to Sep</span>
-            <ul class="fallback" id="desc-blinkit">
-              <li><span class="k">2025</span><span class="b"><i class="prev" style="--w:9%"></i>₹0.6 Cr</span></li>
-              <li><span class="k">2026</span><span class="b"><i style="--w:72%"></i>₹5 Cr</span></li>
-            </ul>
-          </div>
-          <p class="src">Source: Instamart CEO brief, Oct 2026</p>
-        </article>
-
-        <article class="result" data-reveal>
-          <p class="fig num">3 → 20</p>
-          <p>Blinkit pockets served, across 32 cities and 5 distribution centres.</p>
-          <p class="src">Source: Instamart CEO brief, Oct 2026</p>
-        </article>
-
-        <article class="result" data-reveal>
-          <p class="fig num">~5x</p>
-          <p>Pune sales on Blinkit, from ~₹4 lakh a month to ₹20.87 lakh in October, with ₹11.69 lakh of advertising to 28 October.</p>
-          <div class="chart" data-chart="pune">
-            <span class="cap" id="cap-pune">Pune on Blinkit, a month</span>
-            <ul class="fallback" id="desc-pune">
-              <li><span class="k">Before</span><span class="b"><i class="prev" style="--w:12%"></i>₹4 lakh</span></li>
-              <li><span class="k">After</span><span class="b"><i style="--w:60%"></i>₹20.87 lakh</span></li>
-            </ul>
-          </div>
-          <p class="src">Source: Weekly review, 8 Sep; Pune update, 3 Nov 2026</p>
-        </article>
-
-        <article class="result" data-reveal>
-          <p class="fig num">₹1.61 Cr</p>
-          <p>Quick commerce sales across ice cream and dairy in October, to 30 October, against ₹1.47 Cr in September.</p>
-          <p class="src">Source: Marketing summary, Oct 2026</p>
-        </article>
-
-        <article class="result" data-reveal>
-          <p class="fig num">30x</p>
-          <p>Ghee on quick commerce: ₹50,000 of advertising returned ₹15 lakh of sales.</p>
-          <p class="src">Source: Nagpur review, 1 Oct 2026</p>
-        </article>
-
-        <article class="result" data-reveal>
-          <p class="fig num">₹2.38 Cr</p>
-          <p>Annual energy savings identified at the plant, on ~₹1.89 Cr of investment.</p>
-          <p class="src">Source: Plant energy audit, Jul 2026</p>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 04 LEADERSHIP ===================== -->
-<section class="section" id="leadership" data-section aria-labelledby="h-lead">
-  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1424 6 1421 107 1362 107C1302 107 1299 6 1283 6C1275 6 1273 109 1242 109C1212 109 1210 6 1202 6C1186 6 1183 111 1124 111C1066 111 1062 6 1047 6C1034 6 1031 34 980 34C928 34 926 6 912 6C897 6 894 77 837 77C780 77 777 6 762 6C749 6 747 97 699 97C651 97 649 6 636 6C619 6 615 43 550 43C486 43 482 6 465 6C449 6 446 88 386 88C327 88 324 6 308 6C293 6 290 66 235 66C180 66 177 6 162 6C146 6 143 78 81 78C19 78 16 6 0 6Z"/></svg>
-  <div class="wrap grid">
-    <div class="sec-label"><span class="label">04 · Leadership Team</span></div>
-    <div class="sec-body">
-      <h2 class="sec-title" id="h-lead" data-reveal>From Family-Run to Professionally Led</h2>
-      <p class="intro" data-reveal>7 senior roles were designed from scratch, each with a JD and a scored skill matrix. 4 are secured, including the CHRO, and the remaining 3 searches are active.</p>
-
-      <div class="roles">
-        <article class="role" data-reveal><h3>Business Head, Dairy</h3><span class="pill done">Signed</span><p class="who">Mr Venkataramani Santhanam</p><p class="when">Joining 16 November 2026</p></article>
-        <article class="role" data-reveal><h3>Business Head, Ice Cream</h3><span class="pill done">Signed</span><p class="who">Mr Aditya Mittal</p><p class="when">Joining 4 January 2027</p></article>
-        <article class="role" data-reveal><h3>Sales Head, Namkeen &amp; Bakery</h3><span class="pill done">Finalised</span><p class="who">Mr Pravesh Kumar Mittal</p><p class="when">Joining 12 November 2026</p></article>
-        <article class="role" data-reveal><h3>CHRO</h3><span class="pill done">Signed</span><p class="who">Mr Saurabh Pandey</p><p class="when">Offer signed; joining expected mid-January 2027</p></article>
-        <article class="role" data-reveal><h3>CFO</h3><span class="pill prog">Offer Stage</span><p class="who note">Preferred candidate cleared the promoter round</p><p class="when">Offer being prepared, November 2026</p></article>
-        <article class="role" data-reveal><h3>Head IT</h3><span class="pill prog">Interviewing</span><p class="who note">Systems role for SAP, plant IT and data</p><p class="when">In management round, November 2026</p></article>
-        <article class="role" data-reveal><h3>Channel Commercial Head</h3><span class="pill open">Search Active</span><p class="who note">Quick commerce and modern trade</p><p class="when">Brief narrowed 9 October 2026; interviews under way</p></article>
-      </div>
-
-      <div class="block" data-stop>
-        <div class="sub-head" data-reveal><h3>How Each Leader Is Hired</h3></div>
-        <ol class="process" data-reveal aria-label="The 6-step hiring process">
-          <li><span class="n">01</span><span class="t">JD and scored skill matrix</span></li>
-          <li><span class="n">02</span><span class="t">Mandate with search partner</span></li>
-          <li><span class="n">03</span><span class="t">Full candidate dossier</span></li>
-          <li><span class="n">04</span><span class="t">Virtual panel interviews</span></li>
-          <li><span class="n">05</span><span class="t">Salary verification</span></li>
-          <li><span class="n">06</span><span class="t">Full day in Nagpur with plant visit</span></li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 05 DECISIONS ===================== -->
-<section class="section tint" id="decisions" data-section aria-labelledby="h-dec">
-  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1428 6 1426 72 1381 72C1336 72 1334 6 1322 6C1312 6 1310 51 1272 51C1235 51 1233 6 1223 6C1204 6 1201 79 1130 79C1060 79 1056 6 1038 6C1024 6 1021 66 966 66C912 66 909 6 895 6C881 6 878 65 825 65C772 65 769 6 755 6C743 6 741 103 696 103C650 103 648 6 636 6C629 6 627 61 600 61C574 61 572 6 565 6C550 6 547 32 488 32C429 32 426 6 411 6C398 6 396 49 348 49C300 49 298 6 285 6C276 6 274 70 240 70C207 70 205 6 196 6C187 6 185 62 150 62C116 62 114 6 105 6C94 6 92 109 52 109C13 109 10 6 0 6Z"/></svg>
-  <div class="wrap grid">
-    <div class="sec-label"><span class="label">05 · Decisions Register</span></div>
-    <div class="sec-body filterable" data-filterable="decisions">
-      <h2 class="sec-title" id="h-dec" data-reveal>The Calls That Shaped the Company</h2>
-      <p class="intro" data-reveal>Major decisions taken by the promoters with STAIR’s input.</p>
-
-      <div class="filters" role="group" aria-label="Filter decisions by workstream" data-reveal>
-        <button type="button" data-filter="all" aria-pressed="true">All <span class="c">36</span></button>
-        <button type="button" data-filter="Leadership" aria-pressed="false">Leadership <span class="c">6</span></button>
-        <button type="button" data-filter="Marketing" aria-pressed="false">Marketing <span class="c">5</span></button>
-        <button type="button" data-filter="Digital" aria-pressed="false">Digital <span class="c">7</span></button>
-        <button type="button" data-filter="Factory" aria-pressed="false">Factory <span class="c">6</span></button>
-        <button type="button" data-filter="Strategy &amp; New Products" aria-pressed="false">Strategy &amp; New Products <span class="c">7</span></button>
-        <button type="button" data-filter="Governance" aria-pressed="false">Governance <span class="c">5</span></button>
-      </div>
-      <p class="status-line" aria-live="polite" data-status data-noun="decisions">Showing all 36 decisions</p>
-
-      <div class="register" data-reveal style="margin-top:14px">
-        <table class="rows">
-          <caption class="sr-only">Decisions register, December 2025 to October 2026</caption>
-          <thead><tr><th scope="col">Date</th><th scope="col">Decision and who decided</th><th scope="col" style="text-align:right">Workstream</th></tr></thead>
-          <tbody>
-            <tr data-cat="Marketing"><td class="d">10 Dec 2025</td><td class="what">Shift marketing to performance-led digital, away from conventional TV<span class="by">Recommended by STAIR; endorsed by Mr Shailesh Haribhakti</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
-            <tr data-cat="Leadership"><td class="d">15 Dec 2025</td><td class="what">Hire Business Heads for Dairy and Ice Cream instead of CEOs<span class="by">Promoters</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
-            <tr data-cat="Digital"><td class="d">15 Dec 2025</td><td class="what">Run a Dinshaw’s-specific AI programme after SAP goes live, not a generic one<span class="by">Promoters with STAIR</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
-            <tr data-cat="Digital"><td class="d">13 Apr 2026</td><td class="what">SAP selected over QAD as the ERP<span class="by">Promoters, on STAIR’s evaluation</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
-            <tr data-cat="Leadership"><td class="d">13 Apr 2026</td><td class="what">2-tier leadership model; hiring order set as CHRO, CFO, then Business Heads<span class="by">Promoters</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
-            <tr data-cat="Factory"><td class="d">20 Apr 2026</td><td class="what">Cold-room energy pilot approved, to extend to all 60 cold rooms if it works<span class="by">Promoters</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
-            <tr data-cat="Strategy &amp; New Products"><td class="d">30 Apr 2026</td><td class="what">Dairy to focus on value-added and niche products, not volume-led fresh milk<span class="by">Nagpur review</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
-            <tr data-cat="Digital"><td class="d">30 Apr 2026</td><td class="what">Clean-core SAP S/4HANA Public Cloud architecture<span class="by">Nagpur review</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
-            <tr data-cat="Factory"><td class="d">2 Jun 2026</td><td class="what">Use low-cost AI vision on existing CCTV rather than heavy IoT<span class="by">On STAIR’s recommendation</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
-            <tr data-cat="Leadership"><td class="d">13 Jun 2026</td><td class="what">Bakery and Namkeen role repositioned as a sales-led head<span class="by">Mr Jimmy Rana, on STAIR’s recommendation</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
-            <tr data-cat="Digital"><td class="d">4 Jul 2026</td><td class="what">GFI preferred as SAP partner: 7-month build plus 12 months of support<span class="by">Strategic review</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
-            <tr data-cat="Factory"><td class="d">4 Jul 2026</td><td class="what">AI after ERP stabilises; vendors as technology partners, business logic kept in-house<span class="by">Strategic review</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
-            <tr data-cat="Factory"><td class="d">4 Jul 2026</td><td class="what">Solar project to proceed only with guaranteed performance<span class="by">Promoters</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
-            <tr data-cat="Factory"><td class="d">10 Jul 2026</td><td class="what">AI rollout starts in Ice Cream, without biometrics or facial recognition<span class="by">Promoters with STAIR</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
-            <tr data-cat="Leadership"><td class="d">30 Jul 2026</td><td class="what">Every search runs on a signed, role-specific mandate document<span class="by">Promoters</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
-            <tr data-cat="Leadership"><td class="d">1 Aug 2026</td><td class="what">Pay philosophy: at least 65% fixed, variable pay and 36-month retention; no joining bonus<span class="by">Promoters</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
-            <tr data-cat="Strategy &amp; New Products"><td class="d">13 Aug 2026</td><td class="what">Ice Cream and Dairy confirmed as the 2 primary verticals<span class="by">Nagpur visit</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
-            <tr data-cat="Factory"><td class="d">13 Aug 2026</td><td class="what">4 factory priorities: Hygiene, FIFO, Manpower and Energy, low-capex first<span class="by">Nagpur visit</span></td><td class="ws"><span class="tag">Factory</span></td></tr>
-            <tr data-cat="Marketing"><td class="d">21 Aug 2026</td><td class="what">Project Pune is the quick commerce priority to mid-November<span class="by">Mr Zervin Rana</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
-            <tr data-cat="Marketing"><td class="d">26 Aug 2026</td><td class="what">New city launches wait until Pune performs<span class="by">Promoters with STAIR</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
-            <tr data-cat="Governance"><td class="d">2 Sep 2026</td><td class="what">Set up a governance board with independent and executive directors<span class="by">Mr Jimmy Rana with STAIR</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
-            <tr data-cat="Strategy &amp; New Products"><td class="d">21 Sep 2026</td><td class="what">R&amp;D focus on skyr; yogurt plant designed to global standards<span class="by">Mr Jimmy Rana</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
-            <tr data-cat="Strategy &amp; New Products"><td class="d">21 Sep 2026</td><td class="what">Africa expansion revisited once plant upgrades progress<span class="by">Promoters</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
-            <tr data-cat="Governance"><td class="d">30 Sep 2026</td><td class="what">Professionals get phased authority, with full ownership including budget by 24 months<span class="by">Promoters</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
-            <tr data-cat="Governance"><td class="d">30 Sep 2026</td><td class="what">Non-statutory governance board first, meeting quarterly; statutory board later<span class="by">Promoters</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
-            <tr data-cat="Strategy &amp; New Products"><td class="d">1 Oct 2026</td><td class="what">Only 2 plans: Base and Aspiration. Base Plan signed off<span class="by">Promoters</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
-            <tr data-cat="Strategy &amp; New Products"><td class="d">1 Oct 2026</td><td class="what">Build the cheese market on sourced product for ~1 year before any plant<span class="by">Promoters</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
-            <tr data-cat="Digital"><td class="d">1 Oct 2026</td><td class="what">Logistics cost allocated by crate volume in SAP, not by sales value<span class="by">Promoters</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
-            <tr data-cat="Governance"><td class="d">1 Oct 2026</td><td class="what">Separate P&amp;L, balance sheet and cash flow for each vertical<span class="by">Promoters</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
-            <tr data-cat="Marketing"><td class="d">1 Oct 2026</td><td class="what">Pune target reset to a top-3 position with ~20% share<span class="by">Promoters</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
-            <tr data-cat="Strategy &amp; New Products"><td class="d">1 Oct 2026</td><td class="what">Own stores are company-owned and company-operated; design Proposal 1 chosen<span class="by">Promoters</span></td><td class="ws"><span class="tag">Strategy &amp; New Products</span></td></tr>
-            <tr data-cat="Governance"><td class="d">3 Oct 2026</td><td class="what">1 person each as Chairman, Managing Director and Executive Director; 2 board committees in place of 3<span class="by">Promoters</span></td><td class="ws"><span class="tag">Governance</span></td></tr>
-            <tr data-cat="Leadership"><td class="d">9 Oct 2026</td><td class="what">Channel Commercial mandate narrowed to quick commerce and modern trade<span class="by">Promoters with STAIR</span></td><td class="ws"><span class="tag">Leadership</span></td></tr>
-            <tr data-cat="Digital"><td class="d">9 Oct 2026</td><td class="what">HRMS pilots run one after the other on 2 months of real data<span class="by">Mr Zervin Rana</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
-            <tr data-cat="Digital"><td class="d">13 Oct 2026</td><td class="what">CPD Division removed from the SAP structure; its sales move to the existing divisions<span class="by">Dinshaw’s</span></td><td class="ws"><span class="tag">Digital</span></td></tr>
-            <tr data-cat="Marketing"><td class="d">28 Oct 2026</td><td class="what">Separate on-platform budget of ₹5 Cr+ for Instamart, starting with ice cream where GT presence is strong<span class="by">Bangalore meeting</span></td><td class="ws"><span class="tag">Marketing</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 06 VALUE SECURED ===================== -->
-<section class="section" id="value" data-section aria-labelledby="h-val">
-  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1433 6 1431 66 1403 66C1375 66 1373 6 1366 6C1350 6 1347 48 1286 48C1226 48 1223 6 1207 6C1194 6 1192 77 1142 77C1093 77 1091 6 1078 6C1062 6 1059 42 1000 42C942 42 938 6 923 6C910 6 908 106 859 106C810 106 808 6 795 6C782 6 779 107 728 107C678 107 675 6 662 6C655 6 653 95 626 95C599 95 597 6 590 6C578 6 575 103 528 103C480 103 478 6 465 6C453 6 451 109 406 109C362 109 360 6 348 6C330 6 327 100 258 100C190 100 187 6 169 6C152 6 149 85 84 85C20 85 17 6 0 6Z"/></svg>
-  <div class="wrap grid">
-    <div class="sec-label"><span class="label">06 · Value Secured</span></div>
-    <div class="sec-body">
-      <h2 class="sec-title" id="h-val" data-reveal>Better Terms, Negotiated on Dinshaw’s Behalf</h2>
-      <p class="intro" data-reveal>Every partner contract and invoice was reviewed clause by clause. These are the outcomes.</p>
-
-      <div class="values">
-        <article class="value" data-reveal><div class="top"><h3>Ad Factors · Dildaar PR</h3><time>Mar 2026</time></div><p class="out num">~₹30 lakh → ~₹7 lakh</p><p>PR fee re-scoped to the core brief.</p></article>
-        <article class="value" data-reveal><div class="top"><h3>EMA Partners · Ice Cream search invoice</h3><time>Sep 2026</time></div><p class="out num">₹15.50 lakh → ₹10 lakh + GST</p><p>Stage 3 billing brought back in line with the parent agreement.</p></article>
-        <article class="value" data-reveal><div class="top"><h3>EMA Partners · Search agreement</h3><time>Nov 2025</time></div><p class="out num">Replacement guarantee 6 → 12 months</p><p>Admin fee capped at ₹3.5 lakh or 10% of the fee, whichever is lower; first 3 candidate assessments included.</p></article>
-        <article class="value" data-reveal><div class="top"><h3>EMA Partners · Fee base</h3><time>Jul 2026</time></div><p class="out">Only year-1 LTIP counted in fees</p><p>Applies to every ongoing mandate.</p></article>
-        <article class="value" data-reveal><div class="top"><h3>Executive Access · Agreement</h3><time>Jul–Aug 2026</time></div><p class="out num">50% cancellation fee removed</p><p>Replaced with milestone payments; STAIR’s own referral fee waived for Dinshaw’s.</p></article>
-        <article class="value" data-reveal><div class="top"><h3>Executive Access · CFO budget</h3><time>Aug 2026</time></div><p class="out num">Search run at ₹1.20 Cr budget</p><p>Against a market benchmark of ~₹1.50 Cr for the role.</p></article>
-        <article class="value" data-reveal><div class="top"><h3>Questa Search Partners</h3><time>Jul 2026</time></div><p class="out num">Tiered 8.33–16% → flat 8.33%</p><p>For roles up to ₹40 lakh fixed pay; invoice only after the hire completes 15 days.</p></article>
-        <article class="value" data-reveal><div class="top"><h3>Prompt Personnel</h3><time>Sep 2026</time></div><p class="out num">Pay only after 15 days</p><p>Free replacement if the hire leaves within 6 months.</p></article>
-        <article class="value" data-reveal><div class="top"><h3>ZingHR · HRMS pilot</h3><time>Oct 2026</time></div><p class="out num">₹2 lakh pilot fee waived</p><p>Agreed directly with the founder, so both HRMS vendors pilot on equal terms.</p></article>
-        <article class="value" data-reveal><div class="top"><h3>IoT freezer monitoring pilot</h3><time>Apr 2026</time></div><p class="out num">₹7,800 per unit</p><p>Negotiated unit cost for the freezer asset-tracking proof of concept.</p></article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 07 RESEARCH ===================== -->
-<section class="section tint" id="research" data-section aria-labelledby="h-res">
-  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1428 6 1426 38 1382 38C1339 38 1336 6 1325 6C1312 6 1310 100 1262 100C1215 100 1212 6 1200 6C1187 6 1185 103 1136 103C1087 103 1085 6 1072 6C1061 6 1058 62 1016 62C973 62 970 6 959 6C946 6 943 79 892 79C840 79 838 6 824 6C812 6 810 108 764 108C718 108 716 6 704 6C696 6 695 83 666 83C638 83 636 6 629 6C614 6 611 33 552 33C493 33 490 6 475 6C467 6 465 30 434 30C402 30 400 6 392 6C382 6 380 91 340 91C301 91 299 6 289 6C273 6 270 99 208 99C146 99 143 6 127 6C120 6 118 70 92 70C65 70 63 6 56 6C50 6 49 84 28 84C7 84 6 6 0 6Z"/></svg>
-  <div class="wrap grid">
-    <div class="sec-label"><span class="label">07 · Research and Documents</span></div>
-    <div class="sec-body">
-      <h2 class="sec-title" id="h-res" data-reveal>Evidence Behind Every Recommendation</h2>
-      <p class="intro" data-reveal>Primary research, case studies and frameworks STAIR produced for Dinshaw’s.</p>
-
-      <div class="research">
-        <article class="rcard wide" data-reveal>
-          <p class="label">Primary research · Sep 2026</p>
-          <h3>Spain &amp; Malta Ice Cream and Yogurt Shelves</h3>
-          <div class="rstats">
-            <div><b class="num">91</b><span>Images</span></div>
-            <div><b class="num">18</b><span>Videos</span></div>
-            <div><b class="num">8–9</b><span>Retailers</span></div>
-          </div>
-          <p class="desc">Inputs from retailers on pricing, private labels, packaging and channels.</p>
-          <div class="ideas">
-            <span class="label">Ideas taken forward</span>
-            <ul>
-              <li>Drip-free lolly packs</li>
-              <li>On-pack offers</li>
-              <li>Vertical freezers</li>
-              <li>Mini milk-ice sticks</li>
-            </ul>
-          </div>
-        </article>
-        <article class="rcard" data-reveal><p class="label">New products · Oct 2026</p><h3>Skyr &amp; Yogurt Strategy</h3><p>Mass-premium skyr built around protein, plus probiotic dahi, drinkable and fruit yogurt.</p></article>
-        <article class="rcard" data-reveal><p class="label">Dairy · Oct 2026</p><h3>Protein, Whey, Casein &amp; Cheese</h3><p>Mapping every product Dinshaw’s could make from protein, fat and lactose.</p></article>
-        <article class="rcard" data-reveal><p class="label">Economics · Oct 2026</p><h3>Value per Litre of Milk</h3><p>Judging each product by net value per litre after channel and cold-chain costs.</p></article>
-        <article class="rcard" data-reveal><p class="label">Case study · Apr 2026</p><h3>Milky Mist</h3><p>How a regional dairy built a value-added portfolio and scaled it.</p></article>
-        <article class="rcard" data-reveal><p class="label">Benchmarking · Sep 2026</p><h3>10 Listed Peers</h3><p>Dinshaw’s compared with listed Indian dairy and ice cream companies, FY24 to FY26.</p></article>
-        <article class="rcard" data-reveal><p class="label">Growth · Sep 2026</p><h3>Africa Opportunity</h3><p>Using opposite-hemisphere summers to fill India’s lean-season factory capacity.</p></article>
-        <article class="rcard" data-reveal><p class="label">Retail · Oct 2026</p><h3>Own Store Formats</h3><p>Ice cream studio, company store and kiosk, designed with Incubis.</p></article>
-        <article class="rcard" data-reveal><p class="label">Risk · May 2026</p><h3>Weather &amp; Cold Chain</h3><p>Seasonal forecast for Mumbai and its effect on cold-chain logistics.</p></article>
-        <article class="rcard" data-reveal><p class="label">Field research · Oct 2026</p><h3>Sweden &amp; Norway Visit</h3><p>Tetra Pak sessions, the Diplom-Is factory and an Oslo shelf walk, to test the yoghurt plant thesis.</p></article>
-        <article class="rcard" data-reveal><p class="label">Yoghurt plant · Oct 2026</p><h3>Plant Question Bank</h3><p>About 270 questions prepared before the trip, 49 framed on Mr Jimmy Rana’s brief.</p></article>
-        <article class="rcard" data-reveal><p class="label">Governance · Oct 2026</p><h3>Board &amp; Engagement Frameworks</h3><p>How the board governs, and how the incoming professionals write and are held to their own plans.</p></article>
-      </div>
-
-      <div class="library filterable" data-filterable="docs" data-stop>
-        <div class="sub-head" data-reveal><h3>Document Library</h3></div>
-        <div class="filters" role="group" aria-label="Filter documents by category" data-reveal style="margin-top:0">
-          <button type="button" data-filter="all" aria-pressed="true">All <span class="c">55</span></button>
-          <button type="button" data-filter="Hiring" aria-pressed="false">Hiring <span class="c">18</span></button>
-          <button type="button" data-filter="Research" aria-pressed="false">Research <span class="c">10</span></button>
-          <button type="button" data-filter="Digital" aria-pressed="false">Digital <span class="c">8</span></button>
-          <button type="button" data-filter="Factory" aria-pressed="false">Factory <span class="c">5</span></button>
-          <button type="button" data-filter="Strategy" aria-pressed="false">Strategy <span class="c">4</span></button>
-          <button type="button" data-filter="Governance" aria-pressed="false">Governance <span class="c">10</span></button>
-        </div>
-        <p class="status-line" aria-live="polite" data-status data-noun="docs">55 key documents shown, from 120+ logged</p>
-        <div class="lib-box" data-reveal style="margin-top:14px">
-          <ol class="lib">
-            <li data-cat="Hiring"><time>Sep 2025</time><span class="nm">CHRO job description and skill matrix<span class="cat">Hiring</span></span></li>
-            <li data-cat="Research"><time>Sep 2025</time><span class="nm">SalesCode.ai assessment<span class="cat">Research</span></span></li>
-            <li data-cat="Hiring"><time>Oct 2025</time><span class="nm">National Sales Head JD and skill matrix<span class="cat">Hiring</span></span></li>
-            <li data-cat="Hiring"><time>Nov 2025</time><span class="nm">Business Head KPI note and skill matrices<span class="cat">Hiring</span></span></li>
-            <li data-cat="Digital"><time>Nov 2025</time><span class="nm">SAP ERP Integration Report<span class="cat">Digital</span></span></li>
-            <li data-cat="Factory"><time>Nov 2025</time><span class="nm">Factory Ergonomics note<span class="cat">Factory</span></span></li>
-            <li data-cat="Hiring"><time>Dec 2025</time><span class="nm">CHRO KPI framework<span class="cat">Hiring</span></span></li>
-            <li data-cat="Strategy"><time>Dec 2025</time><span class="nm">Marketing Spends Gold Standard<span class="cat">Strategy</span></span></li>
-            <li data-cat="Governance"><time>Dec 2025</time><span class="nm">Values Manual for incoming leaders<span class="cat">Governance</span></span></li>
-            <li data-cat="Factory"><time>Dec 2025</time><span class="nm">Factory Optimisation and IoT Vendors List<span class="cat">Factory</span></span></li>
-            <li data-cat="Strategy"><time>Dec 2025</time><span class="nm">Agency brief with digital KPI framework<span class="cat">Strategy</span></span></li>
-            <li data-cat="Digital"><time>Mar 2026</time><span class="nm">SAP Scope of Work and ERP Blueprint<span class="cat">Digital</span></span></li>
-            <li data-cat="Digital"><time>Mar 2026</time><span class="nm">DMS Vendor Skill Assessment Matrix<span class="cat">Digital</span></span></li>
-            <li data-cat="Strategy"><time>Apr 2026</time><span class="nm">Note on Quick Commerce and Marketing<span class="cat">Strategy</span></span></li>
-            <li data-cat="Digital"><time>Apr 2026</time><span class="nm">ERP Evaluation: QAD vs SAP<span class="cat">Digital</span></span></li>
-            <li data-cat="Governance"><time>Apr 2026</time><span class="nm">Organisational Structure<span class="cat">Governance</span></span></li>
-            <li data-cat="Research"><time>Apr 2026</time><span class="nm">Milky Mist Strategic Case Study<span class="cat">Research</span></span></li>
-            <li data-cat="Hiring"><time>May 2026</time><span class="nm">CFO JD and skill matrix<span class="cat">Hiring</span></span></li>
-            <li data-cat="Research"><time>May 2026</time><span class="nm">Competitor analysis: GetAWay and Heritage Foods<span class="cat">Research</span></span></li>
-            <li data-cat="Research"><time>May 2026</time><span class="nm">Weather and cold-chain risk report<span class="cat">Research</span></span></li>
-            <li data-cat="Research"><time>May 2026</time><span class="nm">Food Pharmer note<span class="cat">Research</span></span></li>
-            <li data-cat="Hiring"><time>May 2026</time><span class="nm">Brand Manager and Marketing Coordinator JDs<span class="cat">Hiring</span></span></li>
-            <li data-cat="Hiring"><time>Jun 2026</time><span class="nm">Business Head Snack Foods JD and skill matrix<span class="cat">Hiring</span></span></li>
-            <li data-cat="Factory"><time>Jul 2026</time><span class="nm">QC Circle Gold Standard research report<span class="cat">Factory</span></span></li>
-            <li data-cat="Digital"><time>Jul 2026</time><span class="nm">SAP Vendor Gap Analysis Scope of Work<span class="cat">Digital</span></span></li>
-            <li data-cat="Governance"><time>Jul 2026</time><span class="nm">Nagpur Strategic Review minutes and action tracker<span class="cat">Governance</span></span></li>
-            <li data-cat="Governance"><time>Jul 2026</time><span class="nm">Q1 FY 2026-27 Strategic Progress Report<span class="cat">Governance</span></span></li>
-            <li data-cat="Factory"><time>Jul 2026</time><span class="nm">AI use-case priorities for IBOTIX<span class="cat">Factory</span></span></li>
-            <li data-cat="Factory"><time>Jul 2026</time><span class="nm">Plant Energy Audit review<span class="cat">Factory</span></span></li>
-            <li data-cat="Digital"><time>Aug 2026</time><span class="nm">SAP governance pack: process owners, steering committee, charter<span class="cat">Digital</span></span></li>
-            <li data-cat="Hiring"><time>Aug 2026</time><span class="nm">Role mandate confirmation template<span class="cat">Hiring</span></span></li>
-            <li data-cat="Governance"><time>Aug 2026</time><span class="nm">Proposed organisation structure<span class="cat">Governance</span></span></li>
-            <li data-cat="Hiring"><time>Aug 2026</time><span class="nm">Marketing Head, Alternate Channels JD<span class="cat">Hiring</span></span></li>
-            <li data-cat="Hiring"><time>Sep 2026</time><span class="nm">Sales Head Namkeen &amp; Bakery JD and skill matrix<span class="cat">Hiring</span></span></li>
-            <li data-cat="Hiring"><time>Sep 2026</time><span class="nm">Channel Commercial Head JD and skill matrix<span class="cat">Hiring</span></span></li>
-            <li data-cat="Hiring"><time>Sep 2026</time><span class="nm">Head IT JD and skill matrix<span class="cat">Hiring</span></span></li>
-            <li data-cat="Governance"><time>Sep 2026</time><span class="nm">Promoter-Professional Engagement Framework<span class="cat">Governance</span></span></li>
-            <li data-cat="Governance"><time>Sep 2026</time><span class="nm">Board Structure and Governance note<span class="cat">Governance</span></span></li>
-            <li data-cat="Research"><time>Sep 2026</time><span class="nm">Spain &amp; Malta primary research site and report<span class="cat">Research</span></span></li>
-            <li data-cat="Research"><time>Sep 2026</time><span class="nm">Peer benchmarking: 10 listed companies<span class="cat">Research</span></span></li>
-            <li data-cat="Research"><time>Sep 2026</time><span class="nm">Africa opportunity thesis<span class="cat">Research</span></span></li>
-            <li data-cat="Digital"><time>Sep 2026</time><span class="nm">HRMS note: ZingHR vs BlueTree<span class="cat">Digital</span></span></li>
-            <li data-cat="Research"><time>Oct 2026</time><span class="nm">New product note: skyr and probiotic dahi<span class="cat">Research</span></span></li>
-            <li data-cat="Strategy"><time>Oct 2026</time><span class="nm">Instamart CEO brief and Blinkit journey<span class="cat">Strategy</span></span></li>
-            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Leadership travel and relocation policy<span class="cat">Hiring</span></span></li>
-            <li data-cat="Digital"><time>Oct 2026</time><span class="nm">Logistics costing in SAP note<span class="cat">Digital</span></span></li>
-            <li data-cat="Governance"><time>Oct 2026</time><span class="nm">Nagpur review notes and 32-item action plan<span class="cat">Governance</span></span></li>
-            <li data-cat="Governance"><time>Oct 2026</time><span class="nm">Q2 FY 2026-27 Progress Report<span class="cat">Governance</span></span></li>
-            <li data-cat="Governance"><time>Oct 2026</time><span class="nm">Nagpur visit minutes, 30 September and 1 October<span class="cat">Governance</span></span></li>
-            <li data-cat="Research"><time>Oct 2026</time><span class="nm">Yoghurt plant question bank for Tetra Pak<span class="cat">Research</span></span></li>
-            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Head, Quick Commerce &amp; Modern Trade JD<span class="cat">Hiring</span></span></li>
-            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Leadership onboarding and meet-and-greet process<span class="cat">Hiring</span></span></li>
-            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Joining policy for incoming Business Heads<span class="cat">Hiring</span></span></li>
-            <li data-cat="Hiring"><time>Oct 2026</time><span class="nm">Draft PLI and LTIP letter<span class="cat">Hiring</span></span></li>
-            <li data-cat="Hiring"><time>Nov 2026</time><span class="nm">Cultural onboarding document<span class="cat">Hiring</span></span></li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 08 WHAT'S NEXT ===================== -->
-<section class="section" id="next" data-section aria-labelledby="h-next">
-  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H1440V6C1425 6 1422 57 1366 57C1310 57 1307 6 1292 6C1279 6 1277 94 1228 94C1179 94 1177 6 1164 6C1148 6 1145 91 1084 91C1022 91 1019 6 1003 6C984 6 980 96 908 96C837 96 833 6 814 6C802 6 800 88 756 88C712 88 710 6 698 6C682 6 678 33 616 33C555 33 551 6 535 6C517 6 514 34 446 34C377 34 374 6 356 6C337 6 334 51 263 51C192 51 189 6 170 6C159 6 156 46 113 46C70 46 67 6 56 6C50 6 49 37 28 37C7 37 6 6 0 6Z"/></svg>
-  <div class="wrap grid">
-    <div class="sec-label"><span class="label">08 · What’s Next</span></div>
-    <div class="sec-body">
-      <h2 class="sec-title" id="h-next" data-reveal>The Next Steps, Already Scheduled</h2>
-      <p class="intro" data-reveal>Q3 FY 2026-27 and beyond.</p>
-    </div>
-    <div class="sec-full">
-      <ol class="next" aria-label="Scheduled next steps">
-        <li data-reveal><time>12 Nov 2026</time><h3>Sales Head, Namkeen &amp; Bakery joins</h3><p>Building the sales and distribution engine for the new vertical.</p></li>
-        <li data-reveal><time>16 Nov 2026</time><h3>Business Head Dairy joins</h3><p>First professional business head in place.</p></li>
-        <li data-reveal><time>19–20 Nov 2026</time><h3>Leadership sessions, Nagpur</h3><p>Mr Shubham Saraff and Mr Shailesh Haribhakti meet the incoming Business Heads.</p></li>
-        <li data-reveal><time>Nov 2026</time><h3>HRMS pilots</h3><p>ZingHR and BlueTree tested on 2 months of plant data.</p></li>
-        <li data-reveal><time>Dec 2026</time><h3>Quick commerce intelligence</h3><p>Tracking competitors across 23 platforms goes live.</p></li>
-        <li data-reveal><time>4 Jan 2027</time><h3>Business Head Ice Cream joins</h3><p>Ahead of the summer season.</p></li>
-        <li data-reveal><time>Jan 2027</time><h3>CHRO joins; CFO targeted</h3><p>CHRO expected mid-January, with the CFO appointment targeted by January.</p></li>
-        <li data-reveal><time>Jan–Feb 2027</time><h3>SAP S/4HANA go-live</h3><p>With product-wise costing and volume-based logistics allocation built in.</p></li>
-      </ol>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer class="site-footer">
   <div class="wrap grid">
-    <p class="l"><b>STAIR Digital</b> · Prepared for the Board of Dinshaw’s · Updated 9 November 2026<br><button class="intro-replay" type="button" onclick="window.scrollTo(0,0)">Replay the Diwali greeting</button></p>
+    <p class="l"><b>STAIR Digital</b> · Prepared for the Board of Dinshaw’s · Updated 18 November 2026</p>
     <p class="r">Source: STAIR engagement journal, September 2025 to November 2026 · 42 Free Press House, Nariman Point, Mumbai</p>
   </div>
 </footer>
@@ -981,7 +1121,6 @@ document.addEventListener('DOMContentLoaded', function () {
       lenis = new window.Lenis({ duration: 1.05, smoothWheel: true });
       if (hasGsap) { lenis.on('scroll', window.ScrollTrigger.update); window.gsap.ticker.add(function (t) { lenis.raf(t * 1000); }); window.gsap.ticker.lagSmoothing(0); }
       else (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })(0);
-      if (window.__introOpen) { lenis.stop(); window.addEventListener('intro:end', function () { lenis.start(); }, { once: true }); }
     } catch (e) { lenis = null; }
   }
 
@@ -1096,335 +1235,6 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', function () { ST.refresh(); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { ST.refresh(); });
 });
-</script>
-<script>
-/* The Diwali sky. Scrolling sends up rockets of different kinds; each one rises and blasts
-   in its own way. Three last rockets blast into the words of the greeting. */
-(function () {
-  'use strict';
-  var sec = document.getElementById('diwali'), canvas = document.getElementById('skyCanvas');
-  if (!sec || !canvas) return;
-  var ctx = canvas.getContext('2d');
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var greet = document.getElementById('skyGreet'), hint = document.getElementById('skyHint'), deva = document.getElementById('skyDeva'), bridge = document.getElementById('skyBridge');
-  var NEON = ['#FF2E93', '#00E5FF', '#B6FF00', '#FFD000', '#FF6A00', '#B26BFF', '#FF1E3C', '#FFFFFF', '#2BFFB0', '#FF7AD9'];
-  var LETTERS = ['#FFD000', '#FF2E93', '#00E5FF', '#B6FF00', '#FF6A00', '#FF7AD9', '#2BFFB0', '#FFD000', '#00E5FF', '#FF2E93', '#B6FF00', '#FF6A00'];
-  var SKIES = [[0, '#04021A', '#14063C'], [.22, '#16043F', '#5A0B78'], [.45, '#03143A', '#0A5A86'], [.68, '#2A0033', '#8A0B52'], [.88, '#0A0326', '#2C0A5C'], [1, '#DE251E', '#DE251E']];
-  var W, H, DPR, phone, stars = [], rockets = [], bursts = [], embers = [], plan = [], toran, toranH = 0, diyas = [], words = null, queue = [], lastLaunch = 0, lastIdle = 0, p = 0, last = 0;
-  var TITLE_AT = .46;
-
-  function rand(a, b) { return a + Math.random() * (b - a); }
-  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
-  function clamp01(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
-  function ramp(v, a, b) { return clamp01((v - a) / (b - a)); }
-  function smooth(v) { return v * v * (3 - 2 * v); }
-  function hex(c) { return [parseInt(c.slice(1, 3), 16), parseInt(c.slice(3, 5), 16), parseInt(c.slice(5, 7), 16)]; }
-  function mix(a, b, v) { var x = hex(a), y = hex(b); return 'rgb(' + Math.round(x[0] + (y[0] - x[0]) * v) + ',' + Math.round(x[1] + (y[1] - x[1]) * v) + ',' + Math.round(x[2] + (y[2] - x[2]) * v) + ')'; }
-
-  /* ---- what each scroll position launches ---- */
-  var TYPES = ['classic', 'whistler', 'shell', 'bottle', 'zigzag', 'chakra'];
-  var BLASTS = ['peony', 'chrysanthemum', 'ring', 'willow', 'palm', 'crossette', 'strobe', 'star', 'doublering', 'heart'];
-  function buildPlan() {
-    plan = []; var n = 34;
-    for (var i = 0; i < n; i++) plan.push({ at: .015 + i / n * (TITLE_AT - .03), type: TYPES[i % TYPES.length], blast: BLASTS[i % BLASTS.length], x: phone ? rand(.12, .88) : ((i * .381966) % 1) * .84 + .08, fired: false });
-    var after = 16;
-    for (var j = 0; j < after; j++) plan.push({ at: TITLE_AT + .2 + j / after * .2, type: TYPES[(j + 2) % TYPES.length], blast: BLASTS[(j * 3) % BLASTS.length], x: j % 2 ? rand(.03, .24) : rand(.76, .97), high: true, fired: false });
-  }
-
-  function launch(spec) {
-    var R = reach(), lo = Math.min(R * .92, W / 2), hi = Math.max(W - R * .92, W / 2), cx = Math.max(lo, Math.min(hi, spec.x * W + rand(-70, 70)));
-    var dur = rand(1.15, 1.6), x0 = cx + rand(-40, 40), x1 = cx, top = Math.min(R * .8 + 10, H * .42);
-    rockets.push({ t: last, dur: dur, x0: x0, x1: x1, y0: H + 30, y1: spec.y !== undefined ? spec.y : Math.max(top, (spec.high ? rand(.1, .34) : rand(.12, .5)) * H), type: spec.type, blast: spec.blast, c: pick(NEON), c2: pick(NEON), phase: Math.random() * 6.28, onBlast: spec.onBlast });
-  }
-  function rocketPos(r, u) {
-    var e = 1 - (1 - u) * (1 - u), x = r.x0 + (r.x1 - r.x0) * e, y = r.y0 + (r.y1 - r.y0) * e, s = phone ? .6 : 1;
-    if (r.type === 'whistler') x += Math.sin(u * 15 + r.phase) * 34 * s * (1 - u * .4);
-    if (r.type === 'zigzag') x += (Math.abs(((u * 5 + r.phase) % 2) - 1) - .5) * 92 * s;
-    if (r.type === 'chakra') x += Math.sin(u * 7 + r.phase) * 20 * s;
-    return { x: x, y: y };
-  }
-
-  /* ---- blasts ---- */
-  function blast(x, y, kind, c, c2) {
-    var S = scale(), T = 6.2832, n, i, a, v, list = [];
-    var b = { t: last, x: x, y: y, kind: kind, c: c, c2: c2, k: 1.75, g: 88, L: 2.3, tl: .1, w: 2, dots: false, pts: list };
-    function add(vx, vy, second) { list.push({ vx: vx * S, vy: vy * S, s: second ? 1 : 0, h: Math.random() }); }
-    if (kind === 'peony') { n = 150; b.L = 1.9; b.tl = .05; for (i = 0; i < n; i++) { a = Math.random() * T; v = Math.sqrt(Math.random()) * 400; add(Math.cos(a) * v, Math.sin(a) * v, i % 3 === 0); } }
-    else if (kind === 'chrysanthemum') { n = 120; b.tl = .38; b.w = 1.4; b.L = 2.4; for (i = 0; i < n; i++) { a = i / n * T; v = rand(300, 430); add(Math.cos(a) * v, Math.sin(a) * v, i % 2); } }
-    else if (kind === 'ring') { n = 90; b.tl = .06; b.L = 1.9; var tilt = rand(-.8, .8), sq = rand(.35, .7); for (i = 0; i < n; i++) { a = i / n * T; var rx = Math.cos(a) * 350, ry = Math.sin(a) * 350 * sq; add(rx * Math.cos(tilt) - ry * Math.sin(tilt), rx * Math.sin(tilt) + ry * Math.cos(tilt), false); } }
-    else if (kind === 'doublering') { n = 110; b.tl = .05; b.L = 1.9; for (i = 0; i < n; i++) { a = i / n * T; v = i % 2 ? 400 : 215; add(Math.cos(a) * v, Math.sin(a) * v, i % 2); } }
-    else if (kind === 'willow') { n = 100; b.c = '#FFC83D'; b.c2 = '#FFE9A8'; b.k = 1.05; b.g = 118; b.L = 3.3; b.tl = .85; b.w = 1.2; for (i = 0; i < n; i++) { a = Math.random() * T; v = rand(90, 320); add(Math.cos(a) * v, Math.sin(a) * v, i % 4 === 0); } }
-    else if (kind === 'palm') { n = 13; b.k = 1.4; b.g = 130; b.L = 2.6; b.tl = .55; b.w = 3.4; for (i = 0; i < n; i++) { a = i / n * T + rand(-.08, .08); v = rand(330, 420); add(Math.cos(a) * v, Math.sin(a) * v, i % 2); } }
-    else if (kind === 'crossette') { n = 18; b.L = 2.4; b.tl = .12; b.w = 2.4; b.split = .62; for (i = 0; i < n; i++) { a = i / n * T; v = rand(290, 350); add(Math.cos(a) * v, Math.sin(a) * v, i % 2); } }
-    else if (kind === 'strobe') { n = 170; b.L = 2.9; b.k = 2.2; b.g = 48; b.dots = true; b.strobe = true; for (i = 0; i < n; i++) { a = Math.random() * T; v = Math.sqrt(Math.random()) * 470; add(Math.cos(a) * v, Math.sin(a) * v, i % 2); } }
-    else if (kind === 'star') { n = 150; b.tl = .05; b.L = 2; for (i = 0; i < n; i++) { a = i / n * T; var r5 = 240 + 190 * Math.pow(Math.abs(Math.cos(a * 2.5 + .314)), 2.2); add(Math.cos(a) * r5, Math.sin(a) * r5, false); } }
-    else { n = 130; b.tl = .05; b.L = 2; b.c = '#FF2E93'; b.c2 = '#FF7AD9'; for (i = 0; i < n; i++) { a = i / n * T; add(21 * Math.pow(Math.sin(a), 3) * 17.5, -(13 * Math.cos(a) - 5 * Math.cos(2 * a) - 2 * Math.cos(3 * a) - Math.cos(4 * a)) * 17.5, false); } }
-    bursts.push(b);
-  }
-  function scale() { return Math.min(W, H * 1.25) / 1150; }
-  function reach() { return 300 * scale(); }
-  function at(b, q, a) { var f = (1 - Math.exp(-b.k * a)) / b.k; return { x: b.x + q.vx * f, y: b.y + q.vy * f + b.g * (a - f) / b.k }; }
-  function drawBursts(now, dim) {
-    ctx.globalCompositeOperation = 'lighter'; ctx.lineCap = 'round';
-    for (var bi = bursts.length - 1; bi >= 0; bi--) {
-      var b = bursts[bi], age = now - b.t;
-      if (age > b.L) { bursts.splice(bi, 1); continue; }
-      if (age < .22) { var fl = 1 - age / .22, r = 150 * (.4 + age * 3) * (phone ? .6 : 1), g = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, r); g.addColorStop(0, 'rgba(255,255,255,' + .9 * fl * dim + ')'); g.addColorStop(1, 'rgba(255,255,255,0)'); ctx.fillStyle = g; ctx.fillRect(b.x - r, b.y - r, r * 2, r * 2); }
-      var life = 1 - age / b.L, alpha = Math.min(1, life * 2.1) * dim;
-      for (var pass = 0; pass < 2; pass++) {
-        ctx.beginPath(); ctx.strokeStyle = ctx.fillStyle = pass ? b.c2 : b.c; ctx.lineWidth = b.w; ctx.globalAlpha = alpha;
-        for (var i = 0; i < b.pts.length; i++) {
-          var q = b.pts[i]; if (q.s !== pass) continue;
-          if (b.strobe && age > .55 && Math.sin(age * 26 + q.h * 40) < .15) continue;
-          if (b.split && age > b.split) continue;
-          var a1 = at(b, q, age);
-          if (b.dots) { ctx.rect(a1.x, a1.y, 2.6, 2.6); continue; }
-          var a0 = at(b, q, Math.max(0, age - b.tl - q.h * b.tl * .3)); ctx.moveTo(a0.x, a0.y); ctx.lineTo(a1.x, a1.y);
-        }
-        if (b.dots) ctx.fill(); else ctx.stroke();
-      }
-      if (b.split && age > b.split) {
-        var sa = age - b.split, sp = 150 * (phone ? .62 : 1), sf = (1 - Math.exp(-2.1 * sa)) / 2.1;
-        ctx.beginPath(); ctx.strokeStyle = b.c2; ctx.lineWidth = 1.8; ctx.globalAlpha = alpha;
-        for (var c = 0; c < b.pts.length; c++) {
-          var o = at(b, b.pts[c], b.split), d = sp * sf, d0 = sp * Math.max(0, sf - .07), dy = 50 * sa * sa;
-          for (var m = 0; m < 4; m++) { var ang = m * 1.5708 + .785; ctx.moveTo(o.x + Math.cos(ang) * d0, o.y + Math.sin(ang) * d0 + dy); ctx.lineTo(o.x + Math.cos(ang) * d, o.y + Math.sin(ang) * d + dy); }
-        }
-        ctx.stroke();
-      }
-    }
-    ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
-  }
-
-  /* ---- rockets of different kinds ---- */
-  function drawRocketBody(r, pos, angle, now) {
-    var s = phone ? 8.5 : Math.max(11, Math.min(W * .0125, 18));
-    ctx.save(); ctx.translate(pos.x, pos.y);
-    if (r.type === 'chakra') {
-      ctx.rotate(now * 22);
-      ctx.fillStyle = r.c; ctx.beginPath(); ctx.arc(0, 0, s * .9, 0, 6.29); ctx.fill();
-      ctx.strokeStyle = '#fff'; ctx.lineWidth = 2; ctx.beginPath();
-      for (var i = 0; i < 6; i++) { var a = i * 1.047; ctx.moveTo(0, 0); ctx.lineTo(Math.cos(a) * s * 1.8, Math.sin(a) * s * 1.8); }
-      ctx.stroke(); ctx.fillStyle = r.c2; ctx.beginPath(); ctx.arc(0, 0, s * .36, 0, 6.29); ctx.fill();
-      ctx.restore(); return;
-    }
-    ctx.rotate(angle);
-    if (r.type === 'shell') { var g = ctx.createRadialGradient(0, 0, 0, 0, 0, s * 2.4); g.addColorStop(0, '#fff'); g.addColorStop(.3, r.c); g.addColorStop(1, 'rgba(0,0,0,0)'); ctx.globalCompositeOperation = 'lighter'; ctx.fillStyle = g; ctx.fillRect(-s * 2.4, -s * 2.4, s * 4.8, s * 4.8); ctx.globalCompositeOperation = 'source-over'; ctx.restore(); return; }
-    if (r.type === 'bottle') {
-      ctx.strokeStyle = '#E9D2A8'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(0, -s * .2); ctx.lineTo(0, s * 5); ctx.stroke();
-      ctx.fillStyle = r.c; ctx.fillRect(-s * .42, -s * 1.5, s * .84, s * 1.9);
-      ctx.fillStyle = '#fff'; ctx.fillRect(-s * .42, -s * .9, s * .84, s * .3);
-      ctx.fillStyle = r.c2; ctx.beginPath(); ctx.moveTo(-s * .42, -s * 1.5); ctx.lineTo(0, -s * 2.3); ctx.lineTo(s * .42, -s * 1.5); ctx.fill();
-      ctx.restore(); return;
-    }
-    if (r.type === 'zigzag') {
-      ctx.fillStyle = r.c; ctx.fillRect(-s * .6, -s * .9, s * 1.2, s * 2.1);
-      ctx.fillStyle = '#fff'; for (var k = 0; k < 3; k++) ctx.fillRect(-s * .6, -s * .7 + k * s * .7, s * 1.2, s * .2);
-      ctx.fillStyle = r.c2; ctx.beginPath(); ctx.arc(0, -s * .9, s * .6, 3.14, 0); ctx.fill();
-      ctx.restore(); return;
-    }
-    if (r.type === 'whistler') {
-      ctx.fillStyle = r.c2; ctx.beginPath(); ctx.moveTo(-s * .5, s * 1.1); ctx.lineTo(-s * .95, s * 2); ctx.lineTo(s * .95, s * 2); ctx.lineTo(s * .5, s * 1.1); ctx.fill();
-      ctx.fillStyle = r.c; ctx.fillRect(-s * .5, -s, s, s * 2.2);
-      ctx.fillStyle = '#FFD000'; ctx.beginPath(); ctx.moveTo(-s * .5, -s); ctx.quadraticCurveTo(0, -s * 2.6, s * .5, -s); ctx.fill();
-      ctx.restore(); return;
-    }
-    /* classic: striped body, nose cone, fins */
-    ctx.fillStyle = r.c2; ctx.beginPath(); ctx.moveTo(-s * .7, s * .4); ctx.lineTo(-s * 1.5, s * 1.9); ctx.lineTo(-s * .7, s * 1.5); ctx.moveTo(s * .7, s * .4); ctx.lineTo(s * 1.5, s * 1.9); ctx.lineTo(s * .7, s * 1.5); ctx.fill();
-    ctx.fillStyle = '#FFFFFF'; ctx.fillRect(-s * .7, -s * 1.1, s * 1.4, s * 2.7);
-    ctx.fillStyle = r.c; ctx.fillRect(-s * .7, -s * .5, s * 1.4, s * .55); ctx.fillRect(-s * .7, s * .55, s * 1.4, s * .55);
-    ctx.fillStyle = r.c2; ctx.beginPath(); ctx.moveTo(-s * .7, -s * 1.1); ctx.quadraticCurveTo(0, -s * 3, s * .7, -s * 1.1); ctx.fill();
-    ctx.restore();
-  }
-  function drawRockets(now, dim) {
-    for (var i = rockets.length - 1; i >= 0; i--) {
-      var r = rockets[i], u = (now - r.t) / r.dur;
-      if (u >= 1) {
-        var end = rocketPos(r, 1);
-        if (r.onBlast) r.onBlast(end.x, end.y, now); else blast(end.x, end.y, r.blast, r.c, r.c2);
-        rockets.splice(i, 1); continue;
-      }
-      var pos = rocketPos(r, u), prev = rocketPos(r, Math.max(0, u - .02)), angle = Math.atan2(pos.y - prev.y, pos.x - prev.x) + 1.5708;
-      ctx.globalCompositeOperation = 'lighter'; ctx.lineCap = 'round';
-      var steps = 16, span = r.type === 'shell' ? .28 : .2;
-      for (var k = 0; k < steps; k++) {
-        var a = rocketPos(r, Math.max(0, u - span * (k + 1) / steps)), b = rocketPos(r, Math.max(0, u - span * k / steps)), f = 1 - k / steps;
-        ctx.globalAlpha = f * .85 * dim; ctx.strokeStyle = k < 5 ? '#FFF2C4' : (r.type === 'whistler' ? r.c : '#FF9A2E'); ctx.lineWidth = (r.type === 'shell' ? 5 : 3.2) * f + .6;
-        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
-      }
-      ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
-      if (embers.length < 500) for (var e = 0; e < 3; e++) embers.push({ x: pos.x + rand(-4, 4), y: pos.y + rand(6, 22), vx: rand(-34, 34), vy: rand(30, 120), t: now, L: rand(.3, .75), c: r.type === 'chakra' ? r.c : '#FFC83D' });
-      ctx.globalAlpha = dim; drawRocketBody(r, pos, angle, now); ctx.globalAlpha = 1;
-    }
-    ctx.globalCompositeOperation = 'lighter';
-    for (var j = embers.length - 1; j >= 0; j--) { var m = embers[j], ag = now - m.t; if (ag > m.L) { embers.splice(j, 1); continue; } ctx.globalAlpha = (1 - ag / m.L) * dim; ctx.fillStyle = m.c; ctx.fillRect(m.x + m.vx * ag, m.y + m.vy * ag + 60 * ag * ag, 2, 2); }
-    ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
-  }
-
-  /* ---- the greeting, built from a blast ---- */
-  function buildWords() {
-    var lines = phone ? ['HAPPY', 'DIWALI'] : ['HAPPY DIWALI'];
-    var fs = phone ? Math.min(W * .34, H * .17) : Math.min(W * .178, H * .31);
-    var lh = fs * .9, top = phone ? H * .12 : H * .11, bottom = top + lines.length * lh;
-    var font = '900 ' + fs + 'px "Barlow Condensed", Impact, sans-serif';
-    var pad = Math.ceil(fs * .3), w = Math.ceil(W), h = Math.ceil(bottom + pad);
-    var crisp = document.createElement('canvas'); crisp.width = w * DPR; crisp.height = h * DPR;
-    var c = crisp.getContext('2d'); c.setTransform(DPR, 0, 0, DPR, 0, 0); c.font = font; c.textBaseline = 'alphabetic';
-    var a = document.createElement('canvas'); a.width = w; a.height = h;
-    var ac = a.getContext('2d', { willReadFrequently: true }); ac.font = font; ac.textBaseline = 'alphabetic';
-    var groups = [], letter = 0;
-    lines.forEach(function (ln, li) {
-      var tw = ac.measureText(ln).width, x0 = (W - tw) / 2, y = top + lh * (li + 1) - fs * .08;
-      for (var i = 0; i < ln.length; i++) {
-        var ch = ln[i], x = x0 + ac.measureText(ln.slice(0, i)).width;
-        if (ch === ' ') continue;
-        var col = LETTERS[letter % LETTERS.length]; letter++;
-        c.shadowColor = col; c.shadowBlur = fs * .13; c.fillStyle = col; c.fillText(ch, x, y);
-        ac.clearRect(0, 0, w, h); ac.fillStyle = '#000'; ac.fillText(ch, x, y);
-        var d = ac.getImageData(0, 0, w, h).data, step = phone ? 3 : 4, pts = [];
-        for (var py = 0; py < h; py += step) for (var px = 0; px < w; px += step) if (d[(py * w + px) * 4 + 3] > 110) pts.push({ x: px, y: py, h: Math.random(), a: Math.random() * 6.283, v: rand(150, 620) });
-        groups.push({ c: col, pts: pts });
-      }
-    });
-    words = { crisp: crisp, w: w, h: h, groups: groups, bottom: bottom, fs: fs, t: 0, on: false, origins: null, launched: false };
-    greet.style.setProperty('--top', Math.round(bottom + (phone ? 12 : H * .025)) + 'px');
-  }
-  function fireTitle() {
-    words.launched = true; words.origins = [];
-    var ys = H * (phone ? .22 : .3), xs = phone ? [.25, .5, .75] : [.2, .5, .8], pending = 3;
-    xs.forEach(function (fx, i) {
-      rockets.push({ t: last + i * .14, dur: 1.25, x0: fx * W + rand(-30, 30), x1: fx * W, y0: H + 30, y1: ys, type: ['classic', 'shell', 'classic'][i], c: ['#FF2E93', '#FFD000', '#00E5FF'][i], c2: '#FFFFFF', phase: 0,
-        onBlast: function (x, y, now) { words.origins.push({ x: x, y: y }); if (--pending === 0) { words.t = now; words.on = true; } blast(x, y, 'peony', '#FFFFFF', '#FFD000'); } });
-    });
-  }
-  function resetTitle() { if (!words) return; words.on = false; words.launched = false; words.origins = null; rockets = rockets.filter(function (r) { return !r.onBlast; }); }
-  function drawWords(now, dim) {
-    if (!words || !words.on || dim <= 0) return;
-    var age = now - words.t, settle = smooth(ramp(age, 1.9, 2.5));
-    if (settle < 1) {
-      ctx.globalCompositeOperation = 'lighter';
-      for (var g = 0; g < words.groups.length; g++) {
-        var gr = words.groups[g], o = words.origins[g % words.origins.length]; ctx.fillStyle = gr.c; ctx.globalAlpha = dim * (1 - settle * .65); ctx.beginPath();
-        for (var i = 0; i < gr.pts.length; i++) {
-          var q = gr.pts[i], out = 1 - Math.exp(-3.4 * Math.min(age, .55)), bx = o.x + Math.cos(q.a) * q.v * .42 * out, by = o.y + Math.sin(q.a) * q.v * .42 * out + 34 * Math.min(age, .55) * Math.min(age, .55);
-          var v = smooth(ramp(age, .4 + q.h * .5, 1.5 + q.h * .5)), x = bx + (q.x - bx) * v, y = by + (q.y - by) * v;
-          ctx.rect(x, y, phone ? 2.4 : 3, phone ? 2.4 : 3);
-        }
-        ctx.fill();
-      }
-      ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
-    }
-    if (settle > 0) { ctx.globalAlpha = settle * dim; ctx.drawImage(words.crisp, 0, 0, words.w, words.h); ctx.globalAlpha = 1; }
-  }
-
-  /* ---- marigold toran and diyas ---- */
-  function marigold(c, x, y, r) {
-    c.fillStyle = '#D9620A'; c.beginPath(); c.arc(x, y, r, 0, 6.29); c.fill();
-    for (var i = 0; i < 11; i++) { var a = i / 11 * 6.29; c.fillStyle = i % 2 ? '#FFB21A' : '#FF9110'; c.beginPath(); c.arc(x + Math.cos(a) * r * .72, y + Math.sin(a) * r * .72, r * .36, 0, 6.29); c.fill(); }
-    for (var j = 0; j < 6; j++) { var b = j / 6 * 6.29; c.fillStyle = '#FFD24A'; c.beginPath(); c.arc(x + Math.cos(b) * r * .32, y + Math.sin(b) * r * .32, r * .24, 0, 6.29); c.fill(); }
-  }
-  function leaf(c, x, y, r, a) { c.save(); c.translate(x, y); c.rotate(a); c.fillStyle = '#3F8F3C'; c.beginPath(); c.moveTo(0, 0); c.quadraticCurveTo(r * .55, r, 0, r * 2); c.quadraticCurveTo(-r * .55, r, 0, 0); c.fill(); c.restore(); }
-  function buildToran() {
-    var sag = phone ? 22 : 36, r = phone ? 7 : 10, span = phone ? 130 : 230, n = Math.max(2, Math.round(W / span)), sw = W / n, drop = r * 7.4;
-    toranH = sag + drop + r * 2;
-    toran = document.createElement('canvas'); toran.width = Math.ceil(W * DPR); toran.height = Math.ceil(toranH * DPR);
-    var c = toran.getContext('2d'); c.setTransform(DPR, 0, 0, DPR, 0, 0);
-    for (var s = 0; s < n; s++) {
-      var count = Math.round(sw / (r * 1.62)), i, u;
-      for (i = 0; i <= count; i++) { u = i / count; if (i % 3 === 1) leaf(c, s * sw + u * sw, r + 3 + sag * 4 * u * (1 - u) + r * .4, r * .9, (u - .5) * .9); }
-      for (i = 0; i <= count; i++) { u = i / count; marigold(c, s * sw + u * sw, r + 3 + sag * 4 * u * (1 - u), r); }
-    }
-    for (var t = 0; t <= n; t++) { var x = t * sw; leaf(c, x - r * .9, r * 2.2, r, .5); leaf(c, x + r * .9, r * 2.2, r, -.5); for (var q = 1; q <= 3; q++) marigold(c, x, r + 3 + q * r * 1.75, r * (1.05 - q * .08)); c.fillStyle = '#FFD000'; c.beginPath(); c.arc(x, r * 7.4, r * .55, 0, 6.29); c.fill(); }
-  }
-  function flame(x, y, h, w, col) { ctx.fillStyle = col; ctx.beginPath(); ctx.moveTo(x, y); ctx.bezierCurveTo(x - w * 1.3, y - h * .25, x - w * .4, y - h * .7, x, y - h); ctx.bezierCurveTo(x + w * .4, y - h * .7, x + w * 1.3, y - h * .25, x, y); ctx.fill(); }
-  function drawDiya(d, now, lit, dim) {
-    var s = d.size, x = d.x, y = d.y; ctx.globalAlpha = dim;
-    if (lit > 0) { var g = ctx.createRadialGradient(x, y - s, 0, x, y - s, s * 7); g.addColorStop(0, 'rgba(255,170,60,' + .55 * lit + ')'); g.addColorStop(1, 'rgba(255,140,30,0)'); ctx.fillStyle = g; ctx.fillRect(x - s * 7, y - s * 8, s * 14, s * 14); }
-    ctx.fillStyle = lit > 0 ? '#E0632A' : '#4E3430';
-    ctx.beginPath(); ctx.moveTo(x - s * 1.05, y - s * .12); ctx.quadraticCurveTo(x - s * .55, y + s * .75, x, y + s * .65); ctx.quadraticCurveTo(x + s * .55, y + s * .75, x + s * 1.3, y - s * .34); ctx.quadraticCurveTo(x, y + s * .12, x - s * 1.05, y - s * .12); ctx.fill();
-    if (lit > 0) { var h = s * (1.8 + Math.sin(now * 9 + d.seed) * .12) * lit, fx = x + s * .72, fy = y - s * .26; flame(fx, fy, h, h * .34, '#FF8A1F'); flame(fx, fy, h * .68, h * .2, '#FFD860'); flame(fx, fy, h * .34, h * .1, '#FFF7E0'); }
-    ctx.globalAlpha = 1;
-  }
-
-  function layout() {
-    DPR = Math.min(window.devicePixelRatio || 1, 2); W = window.innerWidth; H = window.innerHeight; phone = W <= 760;
-    canvas.width = Math.round(W * DPR); canvas.height = Math.round(H * DPR); ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    stars = []; for (var s = 0; s < (phone ? 80 : 190); s++) stars.push({ x: Math.random() * W, y: Math.random() * H, r: rand(.4, 1.4), p: Math.random() * 6.28 });
-    var n = phone ? 5 : Math.min(13, Math.round(W / 120)), size = phone ? 11 : 18;
-    diyas = []; for (var d = 0; d < n; d++) diyas.push({ x: (d + .5) / n * W, y: H - size * 1.3, size: size, seed: d * 3.1, order: Math.abs(d - (n - 1) / 2) / ((n - 1) / 2) });
-    buildPlan(); buildToran(); buildWords();
-    rockets = []; bursts = []; embers = []; queue = [];
-  }
-
-  function progress() { var r = sec.getBoundingClientRect(); return clamp01(-r.top / (r.height - H)); }
-  function style(el, o, y) { el.style.opacity = o; el.style.transform = 'translate3d(0,' + y + 'px,0)'; el.style.visibility = o > .01 ? 'visible' : 'hidden'; }
-
-  function frame(ms) {
-    requestAnimationFrame(frame);
-    var now = ms / 1000; last = now;
-    var r = sec.getBoundingClientRect();
-    if (r.bottom < 0 || r.top > H) return;
-    p = progress();
-
-    /* sky colour */
-    var i = 0; while (i < SKIES.length - 2 && p > SKIES[i + 1][0]) i++;
-    var v = smooth(ramp(p, SKIES[i][0], SKIES[i + 1][0])), g = ctx.createLinearGradient(0, 0, 0, H);
-    g.addColorStop(0, mix(SKIES[i][1], SKIES[i + 1][1], v)); g.addColorStop(1, mix(SKIES[i][2], SKIES[i + 1][2], v));
-    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
-    var dim = 1 - smooth(ramp(p, .9, .985));
-
-    ctx.fillStyle = '#fff';
-    stars.forEach(function (s) { ctx.globalAlpha = (.55 + .35 * Math.sin(now * 1.4 + s.p)) * dim; ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.29); ctx.fill(); });
-    ctx.globalAlpha = 1;
-
-    /* scrolling down releases the rockets; scrolling back re-arms them */
-    plan.forEach(function (q) { if (!q.fired && p >= q.at) { q.fired = true; queue.push(q); } else if (q.fired && p < q.at - .025) q.fired = false; });
-    if (queue.length > 7) queue.splice(0, queue.length - 7);
-    if (queue.length && now - lastLaunch > .13) { launch(queue.shift()); lastLaunch = now; }
-    /* the sky keeps going while the reader pauses */
-    if (now - lastIdle > (p < .03 ? 1.3 : 2.2) && !queue.length && rockets.length < 3 && p < .9) { lastIdle = now; launch({ type: pick(TYPES), blast: pick(BLASTS), x: words && p > TITLE_AT ? pick([rand(.03, .22), rand(.78, .97)]) : rand(.1, .9), high: p > TITLE_AT }); }
-
-    if (words) {
-      if (!words.launched && p >= TITLE_AT) fireTitle();
-      else if (words.launched && p < TITLE_AT - .03) resetTitle();
-    }
-
-    drawBursts(now, dim * (p > TITLE_AT + .12 ? .62 : 1));
-    drawRockets(now, dim);
-    drawWords(now, 1 - smooth(ramp(p, .86, .91)));
-
-    diyas.forEach(function (d) { drawDiya(d, now, ramp(p, .02 + d.order * .1, .1 + d.order * .12), dim); });
-    var te = smooth(ramp(p, TITLE_AT + .02, TITLE_AT + .1));
-    if (te > 0 && dim > 0) { ctx.globalAlpha = dim; ctx.drawImage(toran, 0, -(1 - te) * (toranH + 8) - 4 + Math.sin(now * 1.1) * 1.5, W, toranH); ctx.globalAlpha = 1; }
-
-    style(hint, 1 - smooth(ramp(p, .015, .05)), 0);
-    style(deva, smooth(ramp(p, .05, .1)) * (1 - smooth(ramp(p, TITLE_AT - .08, TITLE_AT - .02))), (1 - smooth(ramp(p, .05, .12))) * 30);
-    var go = smooth(ramp(p, TITLE_AT + .12, TITLE_AT + .2)) * (1 - smooth(ramp(p, .86, .91)));
-    style(greet, go, (1 - smooth(ramp(p, TITLE_AT + .12, TITLE_AT + .22))) * 40);
-    style(bridge, smooth(ramp(p, .93, .975)), (1 - smooth(ramp(p, .93, .99))) * 40);
-  }
-
-  function still() {
-    /* reduced motion: the finished greeting, no rockets */
-    sec.classList.add('is-still');
-    layout();
-    var g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#16043F'); g.addColorStop(1, '#5A0B78'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
-    ctx.drawImage(words.crisp, 0, 0, words.w, words.h); ctx.drawImage(toran, 0, 0, W, toranH);
-    diyas.forEach(function (d) { drawDiya(d, 0, 1, 1); });
-    style(greet, 1, 0); style(hint, 0, 0); style(deva, 0, 0); style(bridge, 0, 0);
-  }
-
-  function start() {
-    try {
-      if (reduce) { still(); window.addEventListener('resize', still); return; }
-      layout();
-      var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(layout, 120); });
-      requestAnimationFrame(frame);
-    } catch (e) { sec.classList.add('is-still'); greet.style.opacity = 1; greet.style.visibility = 'visible'; }
-  }
-  var fonts = document.fonts && document.fonts.load ? Promise.race([document.fonts.load('900 100px "Barlow Condensed"'), new Promise(function (r) { setTimeout(r, 1500); })]) : Promise.resolve();
-  fonts.then(start, start);
-})();
 </script>
 </body>
 </html>
